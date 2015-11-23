@@ -1,0 +1,10 @@
+Libro Java. Programación orientada a eventos en Java.
+Liang, Y.D., Introduction to Java Programming, Prentice Hall, 2009.
+Companion website
+Companion Web Site (w/ Text Support Materials)
+
+------------------------------------
+
+Libro Android. Android General.
+W.Frank Ableson, Robi Sen y Cris King, Android in Action Second Edition, Manning Publication Co.2011.
+

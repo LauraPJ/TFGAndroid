@@ -1,0 +1,114 @@
+Nov. 9
+- Primera toma de contacto.
++ Le pido a Laura que decida sobre qué será su TFG (tema, app a desarrollar).
++ Que vaya mirando git como respositorio de trabajo.
++ Que vaya mirando IDEs de desarrollo: Eclipse+plugin, AndroidStudio, ....
+x================================
+Nov. 16
+
+TRABAJO: 
+- Búsqueda en www de apps 'universitarias':
+  - Apps + Moodle
+  http://bibliotecas.usal.es/aplicaciones-moviles-0
+	http://www.ticbeat.com/devs/universitas-alumnos-una-app-para-realizar-gestiones-universitarias/
+- Memoria TFG ¿latex?
++ Android Studio. Instalar. Tutorial. ¿linux?
++ Prog. orientada a eventos en Java. Estudiar.
++ Cuenta en github
+
+
+
+Si hay tiempo
++ Tutoriales de programación en Android. Los más elementales:
+  http://developer.android.com/training/basics/firstapp/index.html
+
+Interesa que avances con alguno/s de los tutoriales de Android.
+Tal vez puedas avanzar todo lo posible en [1] y hacer algunos de los básicos de    developer.android.com [2].
+
+    Building Your First App
+    Supporting Different Devices
+    Managing the Activity Lifecycle
+
+Para la próxima semana (espero que ya sí nos veamos el lunes) habría que
+concretar el objetivo de tu TFG.
+He visto que la web hay bastante información para trabajar con beacons, pero
+pienso que antes de meterte con ello en serio (suponiendo de nuevo que
+trabajes con esto en tu TFG, a lo que yo ya te he dicho que me parece una
+buena idea) deberías ganar cierta soltura con programación de apps sencillas
+en Android.
+
+[1] http://www.tutorialspoint.com/android/index.htm
+[2] http://developer.android.com/training/index.html
+x================================
+Dic 7
+
+- Búsqueda de proyectos similares en repositorios institucionales.
+  http://www.uco.es/servicios/biblioteca/formacion/trabajofingrado-repositorios.htm
+  Keywords: android, bluetooth, beacon, servicios universitarios
+
+- Instalar, probar alguno de los tutoriales con el Eclipse+ADT plugin:
+  http://developer.android.com/intl/es/sdk/installing/installing-adt.html
+
+- Seguir haciendo unos cuantos tutoriales de
+  http://developer.android.com/intl/es/training/basics
+	http://developer.android.com/intl/es/training/index.html
+  REFLEJAR EN LA BIBLIOGRAFÍA (Con una referencia a ellos) los que hayas
+	cursado.
+
+- Procesar la información sobre beacons de JC Hdez Perdomo 
+
+-- primer borrador del doc. de objetivos del TFG. Beacons.
+  Elige 3-4 casos de uso de la app usando beacons en el contexto de la ULL
+  Aplicación móvil de la ULL. Dentro de ella, tú desarrollas un módulo
+	concreto. Búscale nombre
+	http://www.ups.edu.ec/noticias?articleId=2991264
+
+- Echar un vistazo (google) a repositorios universitarios de apps para
+	móviles.
+  http://www.fib.upc.edu/es/serveis/github-aplicacions-mobils.html
+
+- Latex: haz una copia 'limpia' de la memoria del TFG en latex.
+  Ve rellenando alguno de los apartaados primeros "Introducción", "Objetivos"
+
+- Tutoriales ya más concretos:
+  http://www.tutorialspoint.com/android/android_bluetooth.htm
+	http://developer.android.com/intl/es/guide/topics/connectivity/bluetooth.html
+	https://altbeacon.github.io/android-beacon-library/samples.html
+x================================
+Dic 14
+
+Le escribía para comentarle que esta semana se me ha complicado la cosa y no
+voy a poder asistir a la reunión de mañana. Los únicos días que tengo
+disponibles esta semana son el jueves o el viernes, como me había comentado
+que el viernes le suele venir mal, ¿Podemos pasarla al jueves día 17 o ya para
+el lunes de la próxima semana?
+x================================
+Dic 21
+
+De interés (buscar similares):
+https://play.google.com/store/apps/details?id=es.ucm.ucmovil
+https://play.google.com/store/apps/details?id=es.uc3m.aulaglobal
+https://play.google.com/store/apps/details?id=com.proyectosUGR.ugr
+https://play.google.com/store/apps/details?id=es.uji
+
+
+- Descargar y estudiar alguno de los proyectos de ejemplos de:
+http://developer.android.com/intl/es/samples/BatchStepSensor/index.html
+
+-- ESCRIBIR un capítulo sobre apps "de universidades". Tu trabajo se
+	incorporaría como parte de una appULL.
+
+-- ESCRIBIR en Latex un capítulo titulado "Tecnlogía Beacon" (genérico) donde se
+	explique: 
+	- Qué son
+	- para qué se usan / pueden usar
+	- características (bluetooth, ...)
+	- Cómo se programan
+	- Posibilidades
+
+	- Incorpora a este capítulo imagenes, vídeo?
+
+x================================
+x================================
+x================================
+x================================

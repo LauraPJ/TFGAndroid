@@ -109,6 +109,34 @@ http://developer.android.com/intl/es/samples/BatchStepSensor/index.html
 	- Incorpora a este capítulo imagenes, vídeo?
 
 x================================
+
+
+Ene 11
+
+- Ponle un nombre (y un 'acrónimo' o nombre corto) al TFG, para usarlo en el
+  texto de la memoria.
+
+- Introduce los capítulos en la memoria y escribe en su lugar adecuado las
+  referencias bibliográficas que ya has hallado.
+- Posible Esquema de Capítulos:
+  1.- Objetivos
+  2.- Herramientas de desarrollo utilizadas
+  3.- Tecnologías
+
+  4.- La aplicación XXX
+     - Aplicaciones móviles en entornos universitarios
+     - Posibles usos de la tecnología Beacon en entornos universitarios
+     http://www.slideshare.net/ValaAfshar/9381-16usesofbeaconsinedu-v3/18
+     http://www.huffingtonpost.com/vala-afshar/15-uses-of-beacon-technol_b_7040410.html
+     http://www.securedgenetworks.com/blog/3-brilliant-examples-of-how-beacon-technology-is-transforming-mobility
+     http://www.theprimacy.com/blog/5-ways-beacon-technology-will-help-boost-enrollment-in-higher-education/
+     - 4 Casos de uso de Beacons en la ULL
+     - Despliegue
+  5.- Conclusiones y Trabajos futuros
+  6. Presupuesto
+- Hacer propuestas (más) sobre qué podría hacer la app que se desarrolle.
+- Antes de la próxima semana tendré la memoria de proyecto previa y acceso al github.
+
 x================================
 x================================
 x================================

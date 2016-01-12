@@ -1,0 +1,25 @@
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_swipe"
+        android:text="Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="bottom|right"
+        ... <!-- Definicion del resto de caracteristicas del menu -->	
+        fab:menu_labels_maxLines="-1">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/mapa_swipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/map_icon_def_white"
+            android:onClick="irMapa"
+            fab:fab_size="mini"
+            fab:fab_label="Mapa" />
+	... <!-- Definicion del resto de botones -->
+
+    </com.github.clans.fab.FloatingActionMenu>

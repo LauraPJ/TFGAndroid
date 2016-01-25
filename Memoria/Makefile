@@ -18,9 +18,9 @@ SRC      =                                                          \
 						Preface.tex 			                    \
 						Cap1_Goals.tex                              \
 						Cap2_SoftwareTools.tex                      \
-						Cap3_Technology.tex                         
-						#											\
-						#Cap4_Development.tex                       \
+						Cap3_Technology.tex                         \
+						Cap4_TheApplication.tex                     
+						#\
 						#Cap5_Deployment.tex		                \
 						#Cap6_.tex                                  \
 						#Cap7_SummaryClonclusions.tex               \

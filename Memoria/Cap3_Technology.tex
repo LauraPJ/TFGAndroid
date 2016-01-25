@@ -15,31 +15,9 @@ En este capítulo se habla de las principales tecnologías que han sido utilizad
 
 \section{Beacons}
 
-\textit{''Beacons''} \cite{URL::Beacons} cuya traducción del inglés equivaldría a \textit{''balizas''} o \textit{''faros''}, es una tecnología emergente que desde algunos años se está intentando abrir paso en el mercado. Como su propio nombre indica, estos dispositivos intentan dar una mejor solución al posicionamiento en interiores, siendo un mecanismo de guía en lugares donde otras tecnologías, como el GPS o el Wifi dejan de funcionar o resultan imprecisas. 
-
+\textit{''Beacons''} \cite{URL::Beacon} cuya traducción del inglés equivaldría a \textit{''balizas''} o \textit{''faros''}, es una tecnología emergente que desde algunos años se está intentando abrir paso en el mercado. Como su propio nombre indica, estos dispositivos intentan dar una mejor solución al posicionamiento en interiores, siendo un mecanismo de guía en lugares donde otras tecnologías, como el GPS o el Wifi dejan de funcionar o resultan imprecisas. 
 
 Sin embargo, estos no son los únicos usos de los beacons, actualmente muchas empresas están ampliando sus usos a otros campos, y el diseño de estos beacons se está presentando en tamaños tan pequeños y con un tiempo de funcionamiento tan elevado, que se pueden desplegar prácticamente en cualquier lugar sin dificultades.
-
-%\begin{figure}[h]
-%	\left
-%	\includegraphics[width=\columnwidth]{estimoteBeacon.png}
-%	\caption{Uno de los beacons de la compañia Estimote}
-%	\label{fig:estimote_Beacon}
-%\end{figure}
-
-%\begin{figure}[h]
-%	\middle
-%	\includegraphics[width=\columnwidth]{estimoteBeaconSticker.png}
-%	\caption{Uno de los beacons de la compañia Estimote en formato Pegatina}
-%	\label{fig:estimote_Beacon_Sticker}
-%\end{figure}
-
-%\begin{figure}[h]
-%	\right
-%	\includegraphics[width=\columnwidth]{BluesenseBeacon.png}
-%	\caption{Uno de los beacons de la compañia BlueSense}
-%	\label{fig:bluesense_Beacon}
-%\end{figure}
 
 A continuación se intentará responder a las preguntas más frecuentes que nos pueden surgir con respecto a esta tecnología:
 
@@ -54,11 +32,23 @@ A continuación se intentará responder a las preguntas más frecuentes que nos 
 \item ¿Qué empresas trabajan con esta tecnología?
 \end{itemize}
 
+\begin{figure}[!h]
+        \begin{floatrow}
+        \ffigbox{\includegraphics[width=\textwidth/2]{estimoteBeacon}}{\caption{Uno de los beacons de la compañia Estimote}\label{fig:estimote_Beacon}}
+        \ffigbox{\includegraphics[width=\textwidth/2]{estimoteSticker}}{\caption{Uno de los beacons de la compañia Estimote en formato Pegatina}\label{fig:estimote_Beacon_Sticker}}
+        \end{floatrow}
+\end{figure}
+
 \subsection{¿Qué es un Beacon?}
 
 Para los que no hayan oido este término, en el marco en el que nos movemos, hace referencia a un pequeño dispositivo (sus tamaños varían de uno a otro, pero siempre de tamaño reducido) que emite señales de onda corta utilizando la tecnología Bluetooth \cite{URL::Bluetooth}. Estas señales contienen una pequeña cantidad de información y son recibidas por dispositivos móviles con tecnología Bluetooth dentro de un rango de cobertura variable dependiendo del propio dipositivo. Normalmente, la fuerza de esta señal y su frecuencia son configurables.
 
-%Foto de algo que tenga que ver con el Bluetooth 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\columnwidth]{beaconPhone}
+	\caption{Representación de un beacon emitiendo mediante Bluetooth a un dispositivo móvil}
+	\label{fig:beaconBluetooth}
+\end{figure}
 
 El funcionamiento de un beacon es sencillo: El beacon emite una señal ininterrumpida que es captada por los dispositivos móviles dentro de su radio de cobertura, esta señal contiene información capaz de definir una localización, detectar y localizar otros dispositivos. A continuación la señal es captada por una aplicación movil previamente instalada, que dependiendo de la señal recibida, puede lanzar una acción en dicho dispositivo.
 
@@ -69,9 +59,12 @@ Hay que tener en cuenta que esta señal es unilateral: los beacons son capaces d
 
 Los beacons usan Bluetooth Low Energy (BLE) \cite{URL::BluetoothLowEnergy}, una version del protocolo Bluetooth diseñada para usar mucha menos energía y enviar menos información. Los beacons funcionan con baterías cuyo tiempo de vida depende de la configuración establecida, teniendo en cuenta la emisión de la señal (fuerza y frencuencia) y tiempo de hibernación. Sus tiempos de vida son variables, pudiendo durar desde un mes hasta varios años. 
 
-
-
-%Foto de una beacon de aruba por dentro con las baterías a la vista.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\columnwidth]{estimoteBeaconInside}
+	\caption{Interior de un beacon de Estimote}
+	\label{fig:beaconInside}
+\end{figure}
 
 Independientemente de lo que se pueda pensar, los beacons en si mismas no transmiten información significativa, transmiten identificadores cortos junto con información customizable breve, que son interpretadas por una aplicación que sabe lo que tiene que hacer con esa información y que es la que se encarga de procesar la información y realizar una acción pertinente.
 
@@ -83,7 +76,12 @@ Este identificador se divide en tres partes:
 \item ID Inferior: customizables y utilizadas al igual que la superior con un significado específico que se puede usar para identificar una acción o parámetro.
 \end{itemize}
 
-%Imagen del numero identificativo de la Beacon.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\columnwidth]{identity}
+	\caption{Numeros identificativos de los beacons}
+	\label{fig:beaconId}
+\end{figure}
 
 \subsection{¿Qué rango de alcance poseen?}
 
@@ -96,6 +94,13 @@ Los beacons además trabajan con tres rangos de distancia principalmente:
 \item Cerca: diseñado para que el dispositivo móvil pueda lanzar una acción cuando estás en el rango interior del beacon. 
 \item Inmediato: Diseñado para que el dispositivo móvil pueda lanzar una acción cuando te encuentres manejando el beacon, la posición del beacon cambia.
 \end{itemize}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\columnwidth]{BeaconsRange}
+	\caption{Ejemplificación del rango de un beacon}
+	\label{fig:beaconRange}
+\end{figure}
 
 \subsection{¿Con qué dispositivos funcionan?}
 
@@ -132,25 +137,87 @@ En cuanto a las desventajes que nos podemos encontrar destacamos:
 
 \subsection{¿Qué usos se le ha dado a esta tecnología hasta ahora?}
 
+Por ahora esta tecnología se ha utilizado en ambiente muy diversos y con distintas funcionalidades. De los más conocidos podríamos destacar los siguientes: 
 
+\vspace{5mm}
+
+\textsl{\textbf{{Clevedon School (K-12)}}}
+
+\vspace{2mm}
+
+Este ejemplo es bastante significativo ya que se aplicó en el mismo entorno en el que queremos trabajar, una institución de enseñanza universitaria. Después de desplegar cerca de 1200 iPads  la universidad de Clevedon utilizó esta tecnología junto con su aplicación universitaria ya existente. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\columnwidth]{ClevedonApp}
+	\caption{La aplicación de Clevedon School}
+	\label{fig:beaconRange}
+\end{figure}
+
+
+Han sido capaces de crear una manera fácil para que los profesores puedan añadir recursos que se envian automáticamente a los alumnos transitando diferentes zonas en diferentes horarios.Para realizar este trabajo de manera eficiente fue necesario la creación de una Interface para la gestión de los recursos en las diferentes Beacons.
+
+
+Esta interfaz junto con la aplicación móvil es capaz de: 
+
+\begin{itemize}
+\item Programar los recursos para distribuirse a una hora del día especificada. 
+\item Programar el material para ser distribuido en un momento determinado durante una clase o evento. 
+\item Poner los recursos a disposición de los alumos que se encuentren en una localización específica.
+\end{itemize}
+
+Utilizando estos tres recursos, la aplicación, la interfaz y los beacons han sido capaces de crear un entorno interactivo y eficiente motivando tanto a profesores como estudiantes. 
+
+\vspace{5mm}
+
+\textsl{\textbf{{Cleveland Cavaliers Stadium y Levi's Stadium}}}
+
+\vspace{2mm}
+
+Dos de los ejemplos más conocidos han sido los despliegues que se han realizado en estos dos estadios. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\columnwidth]{LevisStadium}
+	\caption{La aplicación de Levi's Stadium}
+	\label{fig:levisStadium}
+\end{figure}
+
+Por un lado tenemos el despliegue del estadio de Levi's , cuya intención ha sido la de ayudar a sus fans a navegar por el estadio dadas sus dimensiones.En este caso los beacons (de la comañía Aruba Networks) se utilizan en conjunto con puntos de acceso y repetidores situados por toda la infraestructura de manera que queda el estadio cubierto. Con la aplicación los fans también son capaces de ver repeticiones de las jugadas y pedir comida directamente desde sus dispositivos móviles.
+
+
+Un punto importante de este  despliegue ha sido la monitorización continua del funcionamiento de los beacons, incluyendo si estan en funcionamiento o necesitan bateria nueva. Los beacons son también más económicos que los puntos de acceso WiFi, lo cual les ha beneficiado.
+
+En el caso del estadio de Cleveland, los beacons se encargan de proveer al usuario de información personalizada dependiendo del lugar y la hora. En algunos casos videos, ofertas promocionales y contenido adicional.
+
+\vspace{5mm}
+
+\textsl{\textbf{{Orlando Int'l Airport}}}
+
+\vspace{2mm}
+
+Otro despliegue exitoso de esta tecnología ha sido en el Aeropuerto Internacional de Orlando , donde mediante el uso de los beacons y de una aplicación móvil propia han sido capaces de proporcionar una serie de funcionalidades de vital importancia en una infraestructura como el aeropuerto: 
+
+\begin{itemize}
+\item Navegación paso por paso a través de cerca de1000 establecimientos o servicios dentro del aeropuerto. 
+\item Actualizaciones inmediatas de la información de los vuelos. 
+\item Intrucciones a puntos de interés criticos como puntos de recogida de equipaje, puertas de embarque o puestos de información.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\columnwidth]{orlandoAirport}
+	\caption{La aplicación del Aeropuerto Internacional de Orlando}
+	\label{fig:orlandoAirport}
+\end{figure}
+
+El siguiente punto sería ampliar la opción a los establecimientos de ofrecer anuncios o promociones, opción que mantienen abierta y no se descarta en un futuro.
+
+%Articulos sacados de: \cite{URL::Ariculo} http://www.securedgenetworks.com/blog/3-brilliant-examples-of-how-beacon-technology-is-transforming-mobility
 
 \subsection{¿Qué empresas trabajan con esta tecnología?}
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=\columnwidth]{poly.png}
-%	\caption{Representación poliédrica de dos bucles anidados}
-%	\label{fig:polytope_1}
-%\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%La Matriz \ref{ec:matrix_1} que representa las restricciones de la serie de bucles 
-%anidados en el Listado \ref{code:polycode1}, delimitará el espacio de iteraciones descrito 
-%mediante un polígono regular. 
-%Al tratarse en este caso de un polígono de dos dimensiones se trata de un poliedro, pero 
-%en general, para espacios de iteraciones $n$-dimensionales, cuando existen $n$ 
-%bucles anidados, se habla del concepto topológico de politopo.
 

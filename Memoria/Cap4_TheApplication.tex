@@ -44,18 +44,18 @@ Sin embargo, para utilizar esta tecnología es necesario cumplir una serie de co
 En el caso de dispositivos Apple no es necesario tener activado el bluetooth ya que el SO se encarga de captar las señales BLE, aparte tampoco es necesario que la app esté despierta ya que nuevamente el SO se encarga de despertar a la aplicación involucrada. Sin embargo Apple no ha desarrollado un IBeacon físico aún, aunque en un futuro, se espera que sus dispositivos móviles puedan funcionar como un beacon bidirecional.
 
 
-Asimismo podemos afirmar que prácticamente hoy en día la mayoría de las universidades cuentan con una disposición amplia en los que se refiere a servicios y despliegue de medios. Como ejemplo podemos coger la Universidad de la Laguna, la cual cuenta con una red WiFi con un rango de cobertura casi completo de sus instalaciones y una amplia carta de servicios disponibles a sus alumnos por una serie de medios. Además cuenta con una serie de dispositivos beacons, que podrían ser instalados adecuadamente en lugares estratégicos. 
+Asimismo podemos afirmar que prácticamente hoy en día la mayoría de las universidades cuentan con una disposición amplia en los que se refiere a servicios y despliegue de medios. Como ejemplo podemos coger la Universidad de la Laguna, la cual cuenta con una red WiFi con un rango de cobertura casi completo de sus instalaciones y una amplia carta de servicios disponibles para sus alumnos. Además cuenta con una serie de dispositivos beacons facilitados, que podrían ser instalados adecuadamente en lugares estratégicos. 
 
-Partiendo de esta base, procederemos a explorar posibles casos de uso para los beacons en entornos universitarios tomando la ULL como referente:
+Partiendo de esta base, procederemos a explorar posibles casos de uso para los beacons en entornos universitarios como referente:
 
-\subsection{Guía a través del Campus de la ULL}
+\subsection{Guía a través del Campus de la Universidad}
 
 Este caso de uso cubre la funcionalidad destacada de un beacon, el posicionamiento y guia tanto en exteriores como en interiores. 
 
 Como interesados podríamos destacar: 
 
 \begin{itemize}
-\item Personal invitado a jornadas o eventos en instalaciones de la ULL.
+\item Personal invitado a jornadas o eventos en instalaciones de la Universidad.
 \item Alumnos de intercambio en programas internacionales.
 \item Alumnos de nuevo acceso.
 \item Personas con discapacidad.
@@ -64,13 +64,13 @@ Como interesados podríamos destacar:
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\columnwidth]{locationMobileBeacon}
-	\caption{Servicios de localización a través de la ULL}
+	\caption{Servicios de localización a través de la Universidad}
 	\label{fig:beaconLocation}
 \end{figure}
 
 El funcionamiento sería el siguiente: 
 
-El usuario transita por las inmediaciones del campus universitario. En cuanto entra el el rango delimitado por el beacon, su movil vibra. El usuario mira su móvvil y ha recibido una notificación de la aplicación de la ULL. La notificación le informa que ha entrado en el rango del campus y si quiere entrar al sistema de navegación. Si el usuario acepta, la aplicación le muestra el camino mostrándole en todo momento su ubicación como un punto de color sobre el mapa de la ULL. Este mapa tiene marcados puntos de interés que contienen información de diferente tipo dependiendo del punto marcado, nombre, historia, página web, teléfono de contacto, trámites asociados a realizar,etc. El mapa se va actualizando dependiendo de la posición del usuario pudiendo volver a la vista más alejada en cualquier momento para una visualización más general.
+El usuario transita por las inmediaciones del campus universitario. En cuanto entra el el rango delimitado por el beacon, su movil vibra. El usuario mira su móvil y ha recibido una notificación de la aplicación de la Universidad. La notificación le informa que ha entrado en el rango del campus y si quiere entrar al sistema de navegación. Si el usuario acepta, la aplicación le muestra el camino mostrándole en todo momento su ubicación como un punto de color sobre el mapa de la ULL. Este mapa tiene marcados puntos de interés que contienen información de diferente tipo dependiendo del punto marcado: nombre, historia, página web, teléfono de contacto, trámites asociados son algunos de los datos que podría mostrar. El mapa se va actualizando dependiendo de la posición del usuario permitiendo volver a la vista más alejada en cualquier momento para una visualización más general.
 
 
 \subsection{Descarga automática de material}
@@ -92,11 +92,17 @@ El funcionamiento sería el siguiente:
 El personal de la Ull tendría la aplicación en su móvil, al acercarse a la barra del parking, el usuario activaría el bluetooth de su móvil. El beacon por su parte registraría un nuevo punto entrando en el rango de acción del parking. La aplicación comprobaría que el usuario está autorizado a entrar en el parking y procedería a abrir la puerta del parking dejando entrar al vehículo. Cuando el vehículo saliese del rango del beacon por el rango interior, la aplicación registraría entonces un nuevo acceso al parking y contabilizaría otro vehículo dentro de parking. Al salir del parking el proceso sería el mismo, por lo tanto la aplicación sería capaz de informar al usuario de las plazas ocupadas en tiempo real.
 
 
-\subsection{Gestión de eventos e información, check in automático}
+\subsection{Gestión de eventos e información, entrada automática}
 
 El funcionamiento sería el siguiente: 
 
-Los alumnos transitan los interiores de la ULL de camino a sus clases. Los beacons están desplegados en las inmediaciones de lugares de interés, tipo aularium, paraninfo, clases que se utilicen a modo de salas de reuniones o seminarios. Al pasar por las inmediaciones de estos lugares de interés la aplicación alertaría al usuario de eventos que se celebrán en esos lugares, proporcionandole información de diversa índole, ponientes, tema de la charla, acceso, teléfono de contacto o otra información similar.  Al mismo tiempo la aplicación también cuenta con un tablón donde se muestran posibles eventos futuros. Estos eventos pueden ser muy variados y corresponder a diferentes tipos de actividades. Al mismo tiempo se podría confirmar la entrada al evento en el caso de haberla, mediante un código de acceso identificativo generado al realizar el pago del evento.
+Los alumnos transitan los interiores de la Universidad de camino a sus clases. Los beacons están desplegados en las inmediaciones de lugares de interés, tipo aularium, paraninfo, clases que se utilicen a modo de salas de reuniones o seminarios. Al pasar por las inmediaciones de estos lugares de interés la aplicación alertaría al usuario de eventos que se celebrán en esos lugares, proporcionandole información de diversa índole, ponientes, tema de la charla, acceso, teléfono de contacto o otra información similar.  Al mismo tiempo la aplicación también cuenta con un tablón donde se muestran posibles eventos futuros. Estos eventos pueden ser muy variados y corresponder a diferentes tipos de actividades. Al mismo tiempo se podría confirmar la entrada al evento en el caso de haberla, mediante un código de acceso identificativo generado al realizar el pago del evento.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\columnwidth]{BeaconEvent}
+	\label{fig:eventBeacon}
+\end{figure}
 
 \subsection{Despacho del profesorado e información}
 
@@ -116,10 +122,27 @@ Este caso de uso podría ir ligado al de Descarga automática de material, el fu
 
 El alumno conectaría el bluetooth de su móvil al iniciar la clase, en este momento la aplicación detectaría los dispositivos con los identificadores de alu de los alumnos y los dejaría registrados a la clase en el horario establecido. Los profesores serían capaces en todo momento desde su perfil de profesor de consultar asistencia. Si lo unimos con la descarga atomática de material proporcionaría comodidad tanto a alumnos como a profesores. Sin embargo un impedimento podría ser el rango del beacon o la necesidad de activar el bluetooth, ya que si  no tienes batería tendría que haber  un método secundario igualmente. 
 
-\subsection{}
+\subsection{Control de acceso a instalaciones}
+
+En control de acceso a las aulas y edificios puede ser un tema abordable mediante el uso de estos dispositivos, los lectores de tarjetas pasarían a ser algo innecesario. El alumno simplemente tendría que activar el bluetooth cerca del punto de acceso, se comprobaría su identificador y procedería a darle a acceso o a informarle de su falta de permiso para acceder. El acceso a estos puntos podría quedar guardado en algún tipo de plataforma donde se monitorizen los accesos dependiendo de la seguridad de acceso al aula.
+
+\subsection{Biblioteca Informativa}
+
+Otro posible uso que se le podría dar a esta tecnología tiene que ver con las bibliotecas o lugares de almacenamiento de material. El alumno se acercaría a la biblioteca buscando un libro específico, en la aplicación estaría registrado la localización de los libros disponibles en los estantes, lo que le indicaría al alumno la posición del libro que busca. Para lugares amplios donde hay gran cantidad de material incluso podría guiar al usuario como un punto por las instalaciones hasta llegar a su objetivo, informarle de si quedan ejemplares disponibles o de fecha prevista de entrada de algún material, de esta manera el alumno agilizaría su búsqueda en gran medida.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\columnwidth]{BibliotecaSalamanca}
+	\caption{La biblioteca de la Universidad de Salamanca (USAL) contiene más de 1.000.000 de ejemplares lo que puede hacer dificil la localización de algunos títulos.}
+	\label{fig:bibliotecaUSAL}
+\end{figure}
+
+\subsection{Actividades interactivas por el Campus, jornadas de acogida u otros eventos}
+
+En un aspecto más recreativo, se podría tener en cuenta el uso de los beacons para organizar juegos o actividades divertidas para los alumnos. Estos eventos dependerían de los organizadores, pero podrían consistir en alguna actividad que implicase movimiento y colaboración. Los alumnos tendrían que registrarse con su identificador, una ruta a través del campus con adivinanzas o puzzles que tengan que ver con diferentes temáticas por ejemplo fomentaría a los alumnos a trabajar en equipo y utilizar su ingenio.Al mismo tiempo se podría aplicar algún tipo de recompensa para los ganadores, descuentos o bonos tramitados por medio de la aplicación, lo que fomentaría la participación estudiantil.
 
 \section{4 Casos de uso elegidos}
-%Arreglar una vez elija el caso de uso 
+
 
 
 \section{Despliegue}

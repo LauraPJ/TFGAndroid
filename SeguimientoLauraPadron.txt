@@ -17,7 +17,6 @@ TRABAJO:
 + Cuenta en github
 
 
-
 Si hay tiempo
 + Tutoriales de programación en Android. Los más elementales:
   http://developer.android.com/training/basics/firstapp/index.html
@@ -95,10 +94,10 @@ https://play.google.com/store/apps/details?id=es.uji
 - Descargar y estudiar alguno de los proyectos de ejemplos de:
 http://developer.android.com/intl/es/samples/BatchStepSensor/index.html
 
--- ESCRIBIR un capítulo sobre apps "de universidades". Tu trabajo se
++- ESCRIBIR un capítulo sobre apps "de universidades". Tu trabajo se
 	incorporaría como parte de una appULL.
 
--- ESCRIBIR en Latex un capítulo titulado "Tecnlogía Beacon" (genérico) donde se
+++ ESCRIBIR en Latex un capítulo titulado "Tecnlogía Beacon" (genérico) donde se
 	explique: 
 	- Qué son
 	- para qué se usan / pueden usar
@@ -113,16 +112,15 @@ x================================
 
 Ene 11
 
-- Ponle un nombre (y un 'acrónimo' o nombre corto) al TFG, para usarlo en el
++ Ponle un nombre (y un 'acrónimo' o nombre corto) al TFG, para usarlo en el
   texto de la memoria.
 
-- Introduce los capítulos en la memoria y escribe en su lugar adecuado las
+~- Introduce los capítulos en la memoria y escribe en su lugar adecuado las
   referencias bibliográficas que ya has hallado.
 - Posible Esquema de Capítulos:
   1.- Objetivos
   2.- Herramientas de desarrollo utilizadas
   3.- Tecnologías
-
   4.- La aplicación XXX
      - Aplicaciones móviles en entornos universitarios
      - Posibles usos de la tecnología Beacon en entornos universitarios
@@ -132,11 +130,35 @@ Ene 11
      http://www.theprimacy.com/blog/5-ways-beacon-technology-will-help-boost-enrollment-in-higher-education/
      - 4 Casos de uso de Beacons en la ULL
      - Despliegue
-  5.- Conclusiones y Trabajos futuros
-  6. Presupuesto
-- Hacer propuestas (más) sobre qué podría hacer la app que se desarrolle.
-- Antes de la próxima semana tendré la memoria de proyecto previa y acceso al github.
+-  5.- Conclusiones y Trabajos futuros
+-  6. Presupuesto
++ Hacer propuestas (más) sobre qué podría hacer la app que se desarrolle.
++ Antes de la próxima semana tendré la memoria de proyecto previa y acceso al github.
 
 x================================
+Ene 27
+- Hacer que las URLs aparezcan en la bibliografía de la Memria
+- Memoria. Resumen: escribir como 'algo que ya está hecho' y no como algo que
+	se hará.
+
+- Meter en el Cap 3 un apartado (3.1 El S.O. Android) y referencias a los
+	tutoriales cursados.
+	- Si algún tutorial es particularmente importante/interesante para el TFG,
+		no te cortes en explicar lo que ahí se estudia/aprende.
+
+- Hacer una mínima app de prueba que 'haga algo' con un Beacon.
+
+- Hacer "algo" (mínimo: estudiar, códigos de ejemplo, etc. Máximo: alguna
+	pequeña app desarrollada por ti) con la librería Android Beacon Library:
+	https://altbeacon.github.io/android-beacon-library/index.html
+
+- Buscar EN INGLÉS información sobre proyectos (con código disponible) de apps
+	que trabajen con beacons y de los que puedas aprender:
+	Busca en Google "android beacon source code application" y analiza alguno/s
+	de los códigos que encuentres. A ver qué aprendes.
+
+- El título del TFG será: "BulletPoint: bla, bla bla...."
+
+
 x================================
 x================================

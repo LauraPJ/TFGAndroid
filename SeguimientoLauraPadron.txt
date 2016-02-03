@@ -162,4 +162,20 @@ Ene 27
 - Finalizar el documento de la Actividad2, para darlo por acabado.
 
 x================================
+Reunión de hoy día 03/02
+		
+Con respecto a la reunión de hoy no voy a poder asistir, se me ha complicado
+la cosa y no tengo medio para llegar a la laguna. 
+
+Por mi parte sigo avanzando en el código, hoy subiré al repositorio un
+proyecto en el que he estado trabajando estos días. He conseguido utilizar la
+librería que habíamos visto para que detecte el beacon, obtener su posición y
+mostrar mensajes dependiendo de la distancia a la que se encuentre. 
+
+ Mi intención es escribirle hoy o mañana a Juan Carlos para ver si podría
+comentarme algo de los SDK de Aruba y encaminar lo del parking. En cuanto a
+los documentos de aquí a mañana subiré una versión corrigiendo los detalles de
+los que habíamos hablado y modificando las referencias.
+x================================
+x================================
 x================================

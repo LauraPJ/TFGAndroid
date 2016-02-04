@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.bulletpoint.ull.ullframe.ScanActivity">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@drawable/horizontalbutton"
+        android:text="@string/monitoringbtn"
+        android:textColor="#fff"
+        android:onClick="startScan"
+        android:id="@+id/moritoringbtn"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignLeft="@+id/scanningbtn"
+        android:layout_alignStart="@+id/scanningbtn" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@drawable/horizontalbutton"
+        android:text="@string/distancescanbtn"
+        android:textColor="#fff"
+        android:onClick="startDistanceScan"
+        android:id="@+id/scanningbtn"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/moritoringbtn"
+        android:layout_alignLeft="@+id/stopscanbtn"
+        android:layout_alignStart="@+id/stopscanbtn" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@drawable/horizontalbutton"
+        android:text="@string/stopscanbtn"
+        android:textColor="#fff"
+        android:onClick="stopScan"
+        android:id="@+id/stopscanbtn"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/scanningbtn"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/statusText"
+        android:layout_below="@+id/stopscanbtn"
+        android:hint="@string/info"
+        android:layout_marginTop="40dp"/>
+
+</RelativeLayout>
+

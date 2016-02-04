@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ULLFrame</string>
+    <string name="headerText">ULL</string>
+    <string name="buttonStart">Start Scanning</string>
+    <string name="starting">Starting...</string>
+    <string name="monitoringbtn">Monitoring</string>
+    <string name="distancescanbtn">Scan Distance</string>
+    <string name="stopscanbtn">Stop Scan</string>
+    <string name="info">Information</string>
+</resources>

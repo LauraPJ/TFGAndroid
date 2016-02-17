@@ -137,18 +137,18 @@ Ene 11
 
 x================================
 Ene 27
-- Hacer que las URLs aparezcan en la bibliografía de la Memria
-- Memoria. Resumen: escribir como 'algo que ya está hecho' y no como algo que
+-- Hacer que las URLs aparezcan en la bibliografía de la Memria
++ Memoria. Resumen: escribir como 'algo que ya está hecho' y no como algo que
 	se hará.
 
-- Meter en el Cap 3 un apartado (3.1 El S.O. Android) y referencias a los
+~ Meter en el Cap 3 un apartado (3.1 El S.O. Android) y referencias a los
 	tutoriales cursados.
 	- Si algún tutorial es particularmente importante/interesante para el TFG,
 		no te cortes en explicar lo que ahí se estudia/aprende.
 
-- Hacer una mínima app de prueba que 'haga algo' con un Beacon.
++ Hacer una mínima app de prueba que 'haga algo' con un Beacon.
 
-- Hacer "algo" (mínimo: estudiar, códigos de ejemplo, etc. Máximo: alguna
++ Hacer "algo" (mínimo: estudiar, códigos de ejemplo, etc. Máximo: alguna
 	pequeña app desarrollada por ti) con la librería Android Beacon Library:
 	https://altbeacon.github.io/android-beacon-library/index.html
 
@@ -157,7 +157,7 @@ Ene 27
 	Busca en Google "android beacon source code application" y analiza alguno/s
 	de los códigos que encuentres. A ver qué aprendes.
 
-- El título del TFG será: "BulletPoint: bla, bla bla...."
+-- El título del TFG será: "BulletPoint: bla, bla bla...."
 
 - Finalizar el documento de la Actividad2, para darlo por acabado.
 
@@ -176,6 +176,17 @@ mostrar mensajes dependiendo de la distancia a la que se encuentre.
 comentarme algo de los SDK de Aruba y encaminar lo del parking. En cuanto a
 los documentos de aquí a mañana subiré una versión corrigiendo los detalles de
 los que habíamos hablado y modificando las referencias.
+x================================
+Feb 17
+
+- Comenzar el desarrollo real de un primer caso de estudio. El más simple.
+	Parada de guagua.
+
+- La 2ª de guaguas: salgo de la ULL y me dice cuál es mi próxima guagua.
+
+- Investigar APIs publicas cuyos datos pudiéramos usar. ¿OpenData?
+x================================
+x================================
 x================================
 x================================
 x================================

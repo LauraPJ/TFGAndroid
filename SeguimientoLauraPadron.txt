@@ -179,13 +179,33 @@ los que habíamos hablado y modificando las referencias.
 x================================
 Feb 17
 
-- Comenzar el desarrollo real de un primer caso de estudio. El más simple.
+~ Comenzar el desarrollo real de un primer caso de estudio. El más simple.
 	Parada de guagua.
 
 - La 2ª de guaguas: salgo de la ULL y me dice cuál es mi próxima guagua.
 
 - Investigar APIs publicas cuyos datos pudiéramos usar. ¿OpenData?
 x================================
+Feb 24
+
+Casos de Uso:
+  A.- Guagua1. Parada de guagua. Me dice a qué hora viene la siguiente.
+  B.- Guagua2. Detecta que salgo de la ULL y me dice a qué hora pasa la
+	    siguiente guagua y en qué parada(s) más cercanas la puedes coger.
+	C.- Eventos1. Eventos de la ULL. Estoy en una zona de eventos y me da indicaciones
+	    sobre el entorno.
+
+	Z.- Asistente de localización de evento en la ULL. Hay un evento en un
+	    edificio concreto de la ULL y la app me ayuda a llegar a ese edificio,
+			de diferentes formas dependiendo de dónde me encuentre con respecto a el
+			edificio.
+
+- Completar el desarrollo de Guagua1.
+- Comenzar el desarrollar OTRO caso de uso
+- Mejorar (definir) el aspecto visual del caso de uso Guagua1.
+- Completar definitivavmente Actividad2
+- Contacta con Juan Carlos Hdez. y concierta una cita para que nos veamos los
+	tres (junto con Jorge) a la hora que te digan (09:00 - 13:00).
 x================================
 x================================
 x================================

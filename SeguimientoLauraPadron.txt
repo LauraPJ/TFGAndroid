@@ -207,6 +207,14 @@ Casos de Uso:
 - Contacta con Juan Carlos Hdez. y concierta una cita para que nos veamos los
 	tres (junto con Jorge) a la hora que te digan (09:00 - 13:00).
 x================================
+Mar 2
+El 2 de marzo de 2016, 14:19, LAURA PADRÓN JORGE <alu0100703511@ull.edu.es>
+escribió:
+		    Esta semana no he tenido mucho tiempo para trabajar en la aplicación,
+				esta semana tendré más tiempo seguro. ¿ Sería posible aplazar la
+				reunión de hoy para la próxima semana ? Si le viene mejor podría ser
+				el lunes, con este tiempo tendré funcional algún caso de uso de lo que
+				discutimos la semana pasada.
 x================================
 x================================
 x================================

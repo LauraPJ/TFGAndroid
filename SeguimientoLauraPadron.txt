@@ -194,6 +194,11 @@ Casos de Uso:
 	    siguiente guagua y en qué parada(s) más cercanas la puedes coger.
 	C.- Eventos1. Eventos de la ULL. Estoy en una zona de eventos y me da indicaciones
 	    sobre el entorno.
+	D.- Parking2. Estoy delante de la barrera de un parking ULL y la app me
+	    indica cuantas plazas libre y ocupadas hay en ese parking.
+	E.- Parking2. Estoy delante de la barrera de un parking ULL y me muestra
+	    opciones correspondientes a esa barrera: entrar, salir, ambas y el usuario
+	    puede decidir y enviar la señal de apertura de la barrera.
 
 	Z.- Asistente de localización de evento en la ULL. Hay un evento en un
 	    edificio concreto de la ULL y la app me ayuda a llegar a ese edificio,
@@ -215,6 +220,15 @@ escribió:
 				reunión de hoy para la próxima semana ? Si le viene mejor podría ser
 				el lunes, con este tiempo tendré funcional algún caso de uso de lo que
 				discutimos la semana pasada.
+x================================
+Mar 9
+
+- Se ha dedicado al Caso de uso Parking1
+- Nos proponemos para la siguiente semana acabar Parking1.
+- Hacer experimentos con GPS+3Beacons para ver lo de la trilateración
+- El alg. de trilateración todavía no funciona del todo.
+x================================
+x================================
 x================================
 x================================
 x================================

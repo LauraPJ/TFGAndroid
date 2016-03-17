@@ -228,6 +228,25 @@ Mar 9
 - Hacer experimentos con GPS+3Beacons para ver lo de la trilateración
 - El alg. de trilateración todavía no funciona del todo.
 x================================
+Mar 16
+
+El 16 de marzo de 2016, 15:25, LAURA PADRÓN JORGE <alu0100703511@ull.edu.es>
+escribió:
+
+    Vale, entonces prefiero pasarlo para después de semana santa y seguir
+trabajando en ello. 
+     Por ahora sigo trabajando en ambos casos de uso, el del parking ya esta
+devolviendo resultados basados en la posición trilaterada (Me gustaría
+probarlo en alguno de los parkings con las latitudes bien fijadas para
+comprobar que realmente funciona, el jueves lo haré) y el de la guagua ya he
+conseguido utilizar la API de Titsa con los Xml (mucho más fácil que del otro
+modo) para devolver los datos de la hora a la que pasan las guaguas, sin
+embargo no me he centrado en la interfaz aún (me pondré con esto estos días).
+Estoy pendiente de si el proveedor de los beacons consigue el usuario y
+contraseña para poder configurar las Ids de los beacons y de Alberto para ver
+si puedo empezar a lanzar las peticiones a las barreras o ver como hacemos con
+esta parte. Conforme vayan saliendo los ire añadiendo a la memoria. Perdona la
+tardanza para avisarte y comentarte, he estado liada esta semana.
 x================================
 x================================
 x================================

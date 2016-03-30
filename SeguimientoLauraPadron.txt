@@ -248,6 +248,55 @@ si puedo empezar a lanzar las peticiones a las barreras o ver como hacemos con
 esta parte. Conforme vayan saliendo los ire añadiendo a la memoria. Perdona la
 tardanza para avisarte y comentarte, he estado liada esta semana.
 x================================
+Mar 30
+
+HE PROPUESTO POSPONER LA REUNIÓN POR MI CITA MÉDICA
+
+Por mí podemos pasarla a la próxima semana, por ahora sigo trabajando en ello.
+En el caso de uso de la guagua, me quedaría mejorar la interfaz y el
+rendimiento de la petición (debido a que la api de titsa no te muestra la
+ruta, estoy usando los  dos modos para extraer datos de titsa, xml y html
+parseado). En el caso del parking he estado probando lo de las coordenadas,
+utilizando la herramienta GPS Status y trilaterando la posición, sin embargo,
+en algunos casos resulta difícil ya que la posición que me da el GPS status es
+bastante inexacta (dependiendo de la zona y el numero de satélites disponibles
+como bien me comentaste en la última reunión). 
+
+He estado pensando que se podría utilizar el método de Aruba, en lugar de
+poner las coordenadas latitud y longitud se haría lo siguiente:
+
+  -En una imagen (a modo de mapa, con su escala) se seleccionarían los 3
+puntos con su posición X e Y.
+  -Utilizar el algoritmo de trilateración con estos datos y las distancias a
+las beacons (Con esto no habría problema).
+ - En la misma imagen se podría delimitar una zona para la acción de entrada,
+   por ejemplo un cuadrado delimitado por 4 puntos en la imagen, y una para la
+acción de salida. 
+ - La acción se lanzaría cuando detectase que te encuentras en la zona y
+   podría formarse como una URL para enviar al servidor de control de las
+barreras.
+ - Se me ocurre que como ya esto todo sería automático, para confirmar la
+   entrada en lugar de un botón podría intentar hacerlo con reconocimiento de
+voz de una palabra clave, tipo entrar, acceder, abrir.(Esto sería lo óptimo
+entiendo        yo)
+
+Adaptable al caso de uso de la biblioteca las zonas de acción se harían de la
+misma manera, las zonas podrían ser puntos de interés, los obstáculos en la
+imagen (a modo de mapa) podrían delimitarse en una capa de la imagen, otro
+color o método similar. Al entrar al lugar donde se encuentran los beacons la
+aplicación te avisaría de los puntos de interés y al seleccionar de una lista
+uno de ellos, procedería a guiarte a el sin pasar por los obstáculos
+mostrándote la imagen como mapa (Este caso de uso mezclaría la guía al lugar
+con el de la información).
+
+Como te comento puedo seguir trabajando en esto, espero para la próxima semana
+acabar por fin la parte de interfaz de usuario del caso de uso de las guaguas
+que me ha dado bastantes problemas por no tener experiencia con las vistas y
+el diseño. En cuanto al caso de uso del parking, creo que definitivamente esta
+va a ser la mejor opción, comenzaré a adaptar lo que tengo, no creo que tenga
+mucha dificultad en el backend, probablemente donde más problemas tenga sea en
+la interfaz. Cualquier cosa coméntame
+
 x================================
 x================================
 x================================

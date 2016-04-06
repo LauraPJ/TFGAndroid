@@ -196,7 +196,9 @@ Casos de Uso:
 	    sobre el entorno.
 	D.- Parking2. Estoy delante de la barrera de un parking ULL y la app me
 	    indica cuantas plazas libre y ocupadas hay en ese parking.
-	E.- Parking2. Estoy delante de la barrera de un parking ULL y me muestra
+	E.- Parking1. Estoy delante de la barrera de un parking ULL y la app envía
+     	una señal al servidor que me abre la barrera.
+  F.- Parking3. Esoy  delante de la barrera de un parking ULL y la app	me muestra
 	    opciones correspondientes a esa barrera: entrar, salir, ambas y el usuario
 	    puede decidir y enviar la señal de apertura de la barrera.
 
@@ -205,9 +207,9 @@ Casos de Uso:
 			de diferentes formas dependiendo de dónde me encuentre con respecto a el
 			edificio.
 
-- Completar el desarrollo de Guagua1.
-- Comenzar el desarrollar OTRO caso de uso
-- Mejorar (definir) el aspecto visual del caso de uso Guagua1.
++ Completar el desarrollo de Guagua1.
+~ Comenzar el desarrollar OTRO caso de uso
+~ Mejorar (definir) el aspecto visual del caso de uso Guagua1.
 - Completar definitivavmente Actividad2
 - Contacta con Juan Carlos Hdez. y concierta una cita para que nos veamos los
 	tres (junto con Jorge) a la hora que te digan (09:00 - 13:00).
@@ -298,5 +300,11 @@ mucha dificultad en el backend, probablemente donde más problemas tenga sea en
 la interfaz. Cualquier cosa coméntame
 
 x================================
+6.abril
+
+- El caso Parking1 está a la espera de probar el algoritmo de trilateración
+	usando una imagen y 3 becons ubicados en ella (X, Y). 
+	¿Con N>3 sube la precisión?
+- El caso Guagua1 está casi listo (90%). Falta afinar la GUI.
 x================================
 x================================

@@ -203,6 +203,17 @@ Casos de Uso:
 	    puede decidir y enviar la señal de apertura de la barrera.
 	5G.- Orientación en biblioteca
 	3H.- Información de edificio.
+	I.- 
+	Pones beacons en un aula y la app detecta que estás en esa aula y envías una
+	señal a algún servidor indicando quién eres (aluXXXXX + DNI +
+	Nombre+Apellidos)
+	para implementar algo parecido a un "control de presencia" en el aula.
+	Para sustituir al tener que pasar lista.
+	En este caso a lo mejor tendrías que implementer un mínimo servidor que sea
+	el que recoja los datos que envía la app.
+
+	Apúntalo y lo discutimos.
+	Saludos
 
 	Z.- Asistente de localización de evento en la ULL. Hay un evento en un
 	    edificio concreto de la ULL y la app me ayuda a llegar a ese edificio,

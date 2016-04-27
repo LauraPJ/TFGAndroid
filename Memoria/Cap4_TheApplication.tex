@@ -140,9 +140,72 @@ Otro posible uso que se le podría dar a esta tecnología tiene que ver con las 
 
 En un aspecto más recreativo, se podría tener en cuenta el uso de los beacons para organizar juegos o actividades divertidas para los alumnos. Estos eventos dependerían de los organizadores, pero podrían consistir en alguna actividad que implicase movimiento y colaboración. Los alumnos tendrían que registrarse con su identificador, una ruta a través del campus con adivinanzas o puzzles que tengan que ver con diferentes temáticas por ejemplo fomentaría a los alumnos a trabajar en equipo y utilizar su ingenio.Al mismo tiempo se podría aplicar algún tipo de recompensa para los ganadores, descuentos o bonos tramitados por medio de la aplicación, lo que fomentaría la participación estudiantil.
 
-\section{4 Casos de uso elegidos}
+\section{Casos de uso elegidos}
 
 
+\subsection{Titsa On The Move}
+
+
+\subsubsection{Objetivo}
+
+
+El objetivo de este caso de uso es el conocer, en tiempo real, que autobuses paran en la parada en la que me encuentro, hacia donde se dirigen, y cuanto tiempo falta para que llegen a la parada. En caso de necesidad de información adicional, la aplicación está preparada para permitirnos navegar a la página web de la empresa (TITSA) , donde podemos ver más datos sobre el autobus seleccionado.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\columnwidth]{TitsaOnTheMoveList}
+	\caption{Podemos conocer en tiempo real, autobuses que se acercan a la parada, junto con su destino y tiempo de llegada.}
+	\label{fig:titsaOnTheMoveList}
+\end{figure}
+
+
+\subsubsection{Funcionamiento}
+
+
+Mediante el uso de los beacons, permitimos a la aplicación identificar en que parada me encuentro. La aplicación identifica cada código de parada con su 
+
+Utilizando los beacons la aplicación es capaz de identificar en que parada nos encontramos, una vez que sabe la parada, se procede realizar dos peticiones a la página de TITSA: 
+
+\begin{itemize}
+\item La primera petición se hace sobre la API de TITSA que nos proporciona la información de los autobuses, el tiempo que queda para que llege dicho autobús a la parada. Para poder utilizar esta API nos pusimos en contacto con TITSA, la cual nos proporcionó una API KEY para poder utilizarla.
+\item La segunda petición se realiza sobre la página de TITSA directamente, el objetivo de esta petición es obtener de cada guagua, la información del recorrido del autobús.
+\end{itemize}
+
+En un principio, la idea era utilizar simplemente la API de Titsa, puesto que se creía que proporcionaría toda esta información, sin embargo en algunos casos, los destinos no se correspondían, y las rutas salían erróneas. Ante esta situación nos pusimos en contacto con alguien que estaba involucrado en esta API que nos comento que esto ocurría en algunos casos por la manera en la que estaba planteada la API.
+
+
+La solución a la que se llegó, fue utilizar ambos métodos para obtener la información completa. Ambos métodos serán desglosados a continuación: 
+
+
+En el primer método, utilizando una librería de peticiónes HTTP, se manda una consulta por GET a la API de TITSA que nos devuelve una respuesta en XML, esta respuesta se parsea con un Handler. Al mismo tiempo se inicia la petición a la página de titsa y utilizando JSOUP se obtiene el contenido de la página web.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\columnwidth]{BeaconEvent}
+	\label{fig:eventBeacon}
+\end{figure}
+
+
+Utilizando ambos conjuntos de datos, se va creando una estructura con los datos, donde se almacena la información sobre cada elemento, en última instancia se van añadiendo estos elementos a la vista.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\columnwidth]{BeaconEvent}
+	\label{fig:eventBeacon}
+\end{figure}
+
+
+\subsubsection{Dificultades}
+
+
+A la hora de plantear este caso de uso se han tenido dificultades: 
+
+\begin{itemize}
+\item A la hora de presentar los datos, la generación de la estructura era un proceso con el que no se estaba familiarizado y que ha llevado más tiempo del previsto, pero que ha servido de piedra angular para el desarrollo de los demás casos de uso.
+\item Otra dificultad ha sido el no poder obtener todos los datos necesarios del mismo modo, con una sola petición y tener que hacer uso de dos peticiones distintas, con el tratamiento posterior de estos datos, ya que no eran en absoluto similares.
+\end{itemize}
+
+Estos han sido las principales dificultades, sin embargo el trato por parte de la parte de TITSA siempre ha sido favorable, participando y respondiendo las consultas rápidamente y facilitando así el desarrollo.
 
 \section{Despliegue}
 

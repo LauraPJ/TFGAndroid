@@ -345,9 +345,17 @@ c) Darle al usuario un mapa (interfaz GMaps) del tipo de este:
 [1] https://osl.ull.es/osl/traslado-sede-la-osl-la-esit/
 
 d) Definir las zonas del plano donde te da cada informacion
-
-
 x================================
+4.mayo
+El 4 de mayo de 2016, 15:34, LAURA PADRÓN JORGE <alu0100703511@ull.edu.es>
+escribió:
+
+Hola buenas tardes, 
+Perdone que no le haya escrito antes, he estado muy ocupada estos días, en cuanto a los talleres, al ser por la mañana no voy a poder asistir. 
+
+La reunión de esta tarde, podríamos aplazarla a la próxima semana ?, no he podido escribirles aún a los chicos y esta tarde me han puesto una práctica de conducir, ineludible ya que mañana me presento al carnet. 
+
+Subiré los cambios al repositorio con las frases que habíamos comentado en cuanto pueda, y seguiré trabajando con la parte de las barreras del parking.
 x================================
 x================================
 x================================

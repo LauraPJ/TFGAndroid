@@ -194,15 +194,22 @@ Casos de Uso:
 	    siguiente guagua y en qué parada(s) más cercanas la puedes coger.
 	C.- Eventos1. Eventos de la ULL. Estoy en una zona de eventos y me da indicaciones
 	    sobre el entorno.
+	D.- Parking2. Estoy delante de la barrera de un parking ULL y la app me
+	    indica cuantas plazas libre y ocupadas hay en ese parking.
+	E.- Parking1. Estoy delante de la barrera de un parking ULL y la app envía
+     	una señal al servidor que me abre la barrera.
+  F.- Parking3. Esoy  delante de la barrera de un parking ULL y la app	me muestra
+	    opciones correspondientes a esa barrera: entrar, salir, ambas y el usuario
+	    puede decidir y enviar la señal de apertura de la barrera.
 
 	Z.- Asistente de localización de evento en la ULL. Hay un evento en un
 	    edificio concreto de la ULL y la app me ayuda a llegar a ese edificio,
 			de diferentes formas dependiendo de dónde me encuentre con respecto a el
 			edificio.
 
-- Completar el desarrollo de Guagua1.
-- Comenzar el desarrollar OTRO caso de uso
-- Mejorar (definir) el aspecto visual del caso de uso Guagua1.
++ Completar el desarrollo de Guagua1.
+~ Comenzar el desarrollar OTRO caso de uso
+~ Mejorar (definir) el aspecto visual del caso de uso Guagua1.
 - Completar definitivavmente Actividad2
 - Contacta con Juan Carlos Hdez. y concierta una cita para que nos veamos los
 	tres (junto con Jorge) a la hora que te digan (09:00 - 13:00).
@@ -215,6 +222,102 @@ escribió:
 				reunión de hoy para la próxima semana ? Si le viene mejor podría ser
 				el lunes, con este tiempo tendré funcional algún caso de uso de lo que
 				discutimos la semana pasada.
+x================================
+Mar 9
+
+- Se ha dedicado al Caso de uso Parking1
+- Nos proponemos para la siguiente semana acabar Parking1.
+- Hacer experimentos con GPS+3Beacons para ver lo de la trilateración
+- El alg. de trilateración todavía no funciona del todo.
+x================================
+Mar 16
+
+El 16 de marzo de 2016, 15:25, LAURA PADRÓN JORGE <alu0100703511@ull.edu.es>
+escribió:
+
+    Vale, entonces prefiero pasarlo para después de semana santa y seguir
+trabajando en ello. 
+     Por ahora sigo trabajando en ambos casos de uso, el del parking ya esta
+devolviendo resultados basados en la posición trilaterada (Me gustaría
+probarlo en alguno de los parkings con las latitudes bien fijadas para
+comprobar que realmente funciona, el jueves lo haré) y el de la guagua ya he
+conseguido utilizar la API de Titsa con los Xml (mucho más fácil que del otro
+modo) para devolver los datos de la hora a la que pasan las guaguas, sin
+embargo no me he centrado en la interfaz aún (me pondré con esto estos días).
+Estoy pendiente de si el proveedor de los beacons consigue el usuario y
+contraseña para poder configurar las Ids de los beacons y de Alberto para ver
+si puedo empezar a lanzar las peticiones a las barreras o ver como hacemos con
+esta parte. Conforme vayan saliendo los ire añadiendo a la memoria. Perdona la
+tardanza para avisarte y comentarte, he estado liada esta semana.
+x================================
+Mar 30
+
+HE PROPUESTO POSPONER LA REUNIÓN POR MI CITA MÉDICA
+
+Por mí podemos pasarla a la próxima semana, por ahora sigo trabajando en ello.
+En el caso de uso de la guagua, me quedaría mejorar la interfaz y el
+rendimiento de la petición (debido a que la api de titsa no te muestra la
+ruta, estoy usando los  dos modos para extraer datos de titsa, xml y html
+parseado). En el caso del parking he estado probando lo de las coordenadas,
+utilizando la herramienta GPS Status y trilaterando la posición, sin embargo,
+en algunos casos resulta difícil ya que la posición que me da el GPS status es
+bastante inexacta (dependiendo de la zona y el numero de satélites disponibles
+como bien me comentaste en la última reunión). 
+
+He estado pensando que se podría utilizar el método de Aruba, en lugar de
+poner las coordenadas latitud y longitud se haría lo siguiente:
+
+  -En una imagen (a modo de mapa, con su escala) se seleccionarían los 3
+puntos con su posición X e Y.
+  -Utilizar el algoritmo de trilateración con estos datos y las distancias a
+las beacons (Con esto no habría problema).
+ - En la misma imagen se podría delimitar una zona para la acción de entrada,
+   por ejemplo un cuadrado delimitado por 4 puntos en la imagen, y una para la
+acción de salida. 
+ - La acción se lanzaría cuando detectase que te encuentras en la zona y
+   podría formarse como una URL para enviar al servidor de control de las
+barreras.
+ - Se me ocurre que como ya esto todo sería automático, para confirmar la
+   entrada en lugar de un botón podría intentar hacerlo con reconocimiento de
+voz de una palabra clave, tipo entrar, acceder, abrir.(Esto sería lo óptimo
+entiendo        yo)
+
+Adaptable al caso de uso de la biblioteca las zonas de acción se harían de la
+misma manera, las zonas podrían ser puntos de interés, los obstáculos en la
+imagen (a modo de mapa) podrían delimitarse en una capa de la imagen, otro
+color o método similar. Al entrar al lugar donde se encuentran los beacons la
+aplicación te avisaría de los puntos de interés y al seleccionar de una lista
+uno de ellos, procedería a guiarte a el sin pasar por los obstáculos
+mostrándote la imagen como mapa (Este caso de uso mezclaría la guía al lugar
+con el de la información).
+
+Como te comento puedo seguir trabajando en esto, espero para la próxima semana
+acabar por fin la parte de interfaz de usuario del caso de uso de las guaguas
+que me ha dado bastantes problemas por no tener experiencia con las vistas y
+el diseño. En cuanto al caso de uso del parking, creo que definitivamente esta
+va a ser la mejor opción, comenzaré a adaptar lo que tengo, no creo que tenga
+mucha dificultad en el backend, probablemente donde más problemas tenga sea en
+la interfaz. Cualquier cosa coméntame
+
+x================================
+6.abril
+
+- El caso Parking1 está a la espera de probar el algoritmo de trilateración
+	usando una imagen y 3 becons ubicados en ella (X, Y). 
+	¿Con N>3 sube la precisión?
+- El caso Guagua1 está casi listo (90%). Falta afinar la GUI.
+x================================
+13.abril
+El 13 de abril de 2016, 10:37, LAURA PADRÓN JORGE <alu0100703511@ull.edu.es>
+escribió:
+Esta semana no he podido avanzar mucho, ¿podríamos cambiar la reunión
+de esta tarde para la próxima semana? 
+x================================
+x================================
+x================================
+x================================
+x================================
+x================================
 x================================
 x================================
 x================================

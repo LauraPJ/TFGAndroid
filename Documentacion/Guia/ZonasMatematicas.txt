@@ -1,22 +1,47 @@
+LAS TILDES
+
+
+
+
+Información relativa a edificios cercanos cuando estás en la puerta principal
+de uno.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Edificio de Matematicas*/
 
 
 //Planta Baja
 
-Zona 1 --> Te encuentras en el vestíbulo de la planta cero, en esta planta se encuentra la cafetería y el centro de cálculo.
+Zona 1 --> Te encuentras en el vestíbulo de la planta cero, en esta planta se encuentra la cafetería y el centro de cálculo del Departamento de Astrofísica.
 
 Zona 2 --> Te encuentras enfrente de la delegación de alumnos.
 
-Zona 3 --> Mas adelante pasando estas puertas se encuentran los despachos. 
+Zona 3 --> Más adelante pasando estas puertas se encuentran los despachos. 
 
 
 //Primer piso
 
 
-Zona 4 --> Te encuentras en la entrada principal del edificio de Fisica y Matematicas, justo enfrente tienes la conserjeria.
+Zona 4 --> Te encuentras en la entrada principal del edificio de Física y Matemáticas, justo enfrente tienes la conserjeria.
 
-Zona 5 --> En direccion norte puedes encontrar el aula magna, donde se llevan a cabo multiples eventos.
+Zona 5 --> En direccion norte puedes encontrar el aula magna, donde se llevan a cabo múltiples eventos.
 
 Zona 6 --> Siguiendo por este pasillo se encuentran las aulas de la 1 a la 10.
 

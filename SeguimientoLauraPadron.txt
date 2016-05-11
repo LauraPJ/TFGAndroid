@@ -189,18 +189,31 @@ x================================
 Feb 24
 
 Casos de Uso:
-  A.- Guagua1. Parada de guagua. Me dice a qué hora viene la siguiente.
+  1A.- Guagua1. Parada de guagua. Me dice a qué hora viene la siguiente.
   B.- Guagua2. Detecta que salgo de la ULL y me dice a qué hora pasa la
 	    siguiente guagua y en qué parada(s) más cercanas la puedes coger.
-	C.- Eventos1. Eventos de la ULL. Estoy en una zona de eventos y me da indicaciones
+	4C.- Eventos1. Eventos de la ULL. Estoy en una zona de eventos y me da indicaciones
 	    sobre el entorno.
 	D.- Parking2. Estoy delante de la barrera de un parking ULL y la app me
 	    indica cuantas plazas libre y ocupadas hay en ese parking.
-	E.- Parking1. Estoy delante de la barrera de un parking ULL y la app envía
+	2E.- Parking1. Estoy delante de la barrera de un parking ULL y la app envía
      	una señal al servidor que me abre la barrera.
   F.- Parking3. Esoy  delante de la barrera de un parking ULL y la app	me muestra
 	    opciones correspondientes a esa barrera: entrar, salir, ambas y el usuario
 	    puede decidir y enviar la señal de apertura de la barrera.
+	5G.- Orientación en biblioteca
+	3H.- Información de edificio.
+	I.- 
+	Pones beacons en un aula y la app detecta que estás en esa aula y envías una
+	señal a algún servidor indicando quién eres (aluXXXXX + DNI +
+	Nombre+Apellidos)
+	para implementar algo parecido a un "control de presencia" en el aula.
+	Para sustituir al tener que pasar lista.
+	En este caso a lo mejor tendrías que implementer un mínimo servidor que sea
+	el que recoja los datos que envía la app.
+
+	Apúntalo y lo discutimos.
+	Saludos
 
 	Z.- Asistente de localización de evento en la ULL. Hay un evento en un
 	    edificio concreto de la ULL y la app me ayuda a llegar a ese edificio,
@@ -313,7 +326,36 @@ escribió:
 Esta semana no he podido avanzar mucho, ¿podríamos cambiar la reunión
 de esta tarde para la próxima semana? 
 x================================
+27.abril
+
+- Ha resuelto lo del alg. de trilateración identificando 3 puntos en una
+	imagen, a nivel de píxeles. Falta medir en la realidad dónde poner los
+	beacons exactamente y lanzar peticiones a los servidores de GaloTecnia
+- Tiene que hablar con Alberto para definir el intercambio de datos.
+
+- Hacer el caso "Información Edificio ULL" (ESIT + Física/Matemticas).
+
+Usa estos 2 edificios.
+Informacion:
+a) Edificios cercanos: ESIT - Matemáticas - Biología - Aulario CajaCanarias
+b) Dependencias importantes en el edificio: Secretaría (ESIT) - Bar -
+Conserjería - Biblioteca - Despachos - Aulas
+
+c) Darle al usuario un mapa (interfaz GMaps) del tipo de este:
+[1] https://osl.ull.es/osl/traslado-sede-la-osl-la-esit/
+
+d) Definir las zonas del plano donde te da cada informacion
 x================================
+4.mayo
+El 4 de mayo de 2016, 15:34, LAURA PADRÓN JORGE <alu0100703511@ull.edu.es>
+escribió:
+
+Hola buenas tardes, 
+Perdone que no le haya escrito antes, he estado muy ocupada estos días, en cuanto a los talleres, al ser por la mañana no voy a poder asistir. 
+
+La reunión de esta tarde, podríamos aplazarla a la próxima semana ?, no he podido escribirles aún a los chicos y esta tarde me han puesto una práctica de conducir, ineludible ya que mañana me presento al carnet. 
+
+Subiré los cambios al repositorio con las frases que habíamos comentado en cuanto pueda, y seguiré trabajando con la parte de las barreras del parking.
 x================================
 x================================
 x================================

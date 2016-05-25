@@ -192,7 +192,7 @@ Casos de Uso:
   95% 1A.- Guagua1. Parada de guagua. Me dice a qué hora viene la siguiente.
   B.- Guagua2. Detecta que salgo de la ULL y me dice a qué hora pasa la
 	    siguiente guagua y en qué parada(s) más cercanas la puedes coger.
-	70% 4C.- Eventos1. Eventos de la ULL. Estoy en una zona de eventos y me da indicaciones
+	95% 4C.- Eventos1. Eventos de la ULL. Estoy en una zona de eventos y me da indicaciones
 	    sobre el entorno.
 	D.- Parking2. Estoy delante de la barrera de un parking ULL y la app me
 	    indica cuantas plazas libre y ocupadas hay en ese parking.
@@ -360,12 +360,12 @@ Subiré los cambios al repositorio con las frases que habíamos comentado en cua
 x================================
 11.mayo
 
-- Ve viendo el repositorio git de la ESIT porque allí tendremos que ponerlo
+-- Ve viendo el repositorio git de la ESIT porque allí tendremos que ponerlo
 	todo al final.
-- Ve viendo cómo poner en la memoria el asunto de que el TFG está acogido al
+-- Ve viendo cómo poner en la memoria el asunto de que el TFG está acogido al
 	programa de la OSL (Software Libre).
 - Ve pensando en la integración de las apps que has hecho en una sola.
-- Montar un servidor (o hablar con Víctor) para ver una aplicación externa
+~- Montar un servidor (o hablar con Víctor) para ver una aplicación externa
 	donde almacenar la info del caso 5:
 	aluXXX, DNI, Nombre, Apellidos, Sala, Fecha, Hora
 - AVANZAR !!!
@@ -377,6 +377,17 @@ escribió:
 
 Esta semana no he podido avanzar mucho, sería posible aplazar la reunión a la próxima semana?  
 x================================
+- NECESITO una planificación  con fechas del proyecto: 
+  a) App
+	b) memoria
+	c) Vídeo
+	d) Presentación
+	de todo lo que hay que hacer (hitos) antes de la defensa del TFG
+- Referencia a appTUI
+  http://www.observatoriotui.com/apptui
+
+- Ha trabajado en  4C.- Eventos1, que ahora está al 95%
+
 x================================
 x================================
 x================================

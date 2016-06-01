@@ -1,0 +1,32 @@
+--Ve viendo el repositorio git de la ESIT porque allí tendremos que ponerlo todo al final.
+
++https://github.com/ULL-ESIT-GRADOII-TFG --> Entiendo que es este...
+
+Habrá que hacer una lista con los pasos a seguir para poder probar la aplicación pero ahora mismo cada aplicación tiene sus propios requerimientos (los haría separados o conjuntos?), en el caso de la más nueva, la de la asistencia habría que indicar como configurar couchDB (y un par de cosas a tener en cuenta), lo demás iría por dependencias usando gradle...con lo que no sería un problema una vez acabada la aplicación/es.
+
+
+-- Ve viendo cómo poner en la memoria el asunto de que el TFG está acogido al programa de la OSL (Software Libre).
+
++http://osl.ull.es/programa-apoyo-trabajos-finales-libres/
+
+Indicar o refrendar en el proyecto del trabajo (Actividad 2, punto 1.Introduccion) la “intención de unirse al Programa de Apoyo a Trabajos Finales Libres (PATFL) de la Oficina del Software Libre de la ULL“ ? 
+
++Será posible aún participar ?
+
++Planificación
+
+Día 3 : Integración de los módulos de la aplicación usando una barra lateral y una pantalla inicial donde introducir la información del alumno. Hablar con Alberto para dejar claro lo que necesito en cuanto al parking. Petición para abrir la barrera con MAC y ALU en principio.
+
+Día 5 : Finalizar el módulo de asistencia. Finalizar el módulo de guaguas si queda algún detalle. Finalizar el módulo de eventos si queda algún detalle.
+
+Semana del 6 al 10 en Polonia por motivos de trabajo.
+
+Día 10 : Añadir los 3 casos de uso a la memoria, con fotos, detalles y bibliografía.
+
+Día 12: Haber probado satisfactoriamente los 3 casos de uso que requieren de la localización. Asistencia, guía y parking.
+
+Día 15 : Completar los casos de uso que dependen de la localización.
+
+Día 18: Añadir los casos de uso restantes a la memoria.
+
+En adelante comenzar con la validación de la memoria, realizar el vídeo demo de la aplicación.

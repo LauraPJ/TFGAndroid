@@ -8,7 +8,7 @@
 % ----------------------------------------------------
 %
 
-\chapter{La aplicación BulletPoint} \label{chap:laaplicacion} 
+\chapter{La aplicación BulletPoint} \label{chap:LaAplicacion} 
 
 En este capítulo trataremos diversos temas relacionados con la aplicación, comenzaremos por definir posibles casos de uso en el ámbito universitario, tocaremos diversos temas relacionados incluyendo dificultades durante el desarrollo y acabaremos discutiendo posibles líneas futuras de desarrollo.
 
@@ -159,21 +159,23 @@ Como ya hemos mencionado previamente, estos casos de uso se incluyen como parte 
 
 El objetivo de este caso de uso es el conocer, en tiempo real, qué autobuses pasan por la parada en la que nos encontramos, hacia donde se dirigen, y cuánto tiempo falta para que llegen a la parada. En caso de necesidad de información adicional, la aplicación está preparada para enviarnos a navegar por la página web de la empresa (TITSA) , donde podemos ver más datos sobre el autobús seleccionado.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\columnwidth]{TitsaOnTheMoveList}
-	\caption{Podemos conocer en tiempo real, autobuses que se acercan a la parada, junto con su destino y tiempo de llegada.}
-	\label{fig:titsaOnTheMoveList}
-\end{figure}
 
 \subsubsection{Despliegue}
 
 En este caso, sería necesario colocar un beacon en cada parada de guaguas. De esta manera cada parada de guagua queda identificada por un beacon. Si el usuario se encuentra cercano a dos paradas, la aplicación considera que le interesa la información de la parada más cercana a su posición y le proporcionará información únicamente de esta parada con el objetivo de no confundir al usuario.
 
+
 \subsubsection{Funcionamiento}
 
 
 Mediante el uso de los beacons, permitimos a la aplicación identificar en que parada se encuentra el usuario. La aplicación asocia la MAC de un beacon con el número identificativo de la parada. Este número identificativo de la parada es lo que utiliza TITSA para identificar sus paradas en la API y en toda su web.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\columnwidth]{titsaMap}
+	\caption{Actualmente la información mostrada por titsa en su página web.}
+	\label{fig:MapaTitsa}
+\end{figure}
 
 La aplicación ha sido programada enlazando los números identificativos de la parada con la dirección MAC de los beacons. Cuando la aplicación detecta un beacon es capaz de reconocer la parada en la que se encuentra el usuario. Una vez la aplicación conoce los datos de la parada, se procede a realizar dos peticiones de comunicación con el servicio de TITSA: 
 
@@ -182,27 +184,25 @@ La aplicación ha sido programada enlazando los números identificativos de la p
 \item La segunda petición se realiza sobre la página de TITSA directamente. El objetivo de esta petición es obtener de cada guagua la información del recorrido del autobús. Se obtiene el código de la página en html y para cada autobus se extrae la información relativa a su itinerario, la información no se encuentra en un formato óptimo en muchos casos, pero es un vistazo rápido al itinerario.
 \end{itemize}
 
+
 A parte de esta información por cada autobus se incluye un link a modo de botón, que redireciona al usuario a la página web de TITSA con el identificador de la línea, con lo que el usuario puede obtener más información en caso de duda.
 
 En un principio, la idea era utilizar simplemente la API de TITSA, puesto que se creía que proporcionaría toda esta información, sin embargo en algunos casos, los destinos no se correspondían, y las rutas salían erróneas. Ante esta situación, nos pusimos en contacto con alguien que estaba involucrado en esta API quien nos comentó que esto ocurría en algunos casos por la manera en la que estaba planteada la API.
 
+
 La solución a la que se llegó, fue utilizar ambos métodos para obtener la información completa. Ambos métodos serán desglosados a continuación: 
 
-En el primer método, utilizando una librería de peticiónes HTTP, se manda una consulta por GET a la API de TITSA que nos devuelve una respuesta en XML, esta respuesta se parsea con un Handler de XML. Al mismo tiempo, se inicia la petición a la página de TITSA y utilizando JSOUP, se obtiene el contenido de la página web. De este contenido en html, recopilamos únicamente el recorrido de los autobuses y el resto se descarta. Esta petición es bastante más pesada que la del xml previa, ya que tiene que obtener todo el contenido de la página web en la que aparece el desglose del itinerario en formato html. El parseo de la página también es más lento que en el paso previo, ya que tiene que ir elemento por elemento iterando en los elementos hijos del html.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\columnwidth]{BeaconEvent}
-	\label{fig:eventBeacon}
-\end{figure}
+En el primer método, utilizando una librería de peticiónes HTTP, se manda una consulta por GET a la API de TITSA que nos devuelve una respuesta en XML, esta respuesta se parsea con un Handler de XML. Al mismo tiempo, se inicia la petición a la página de TITSA y utilizando JSOUP, se obtiene el contenido de la página web. De este contenido en html, recopilamos únicamente el recorrido de los autobuses y el resto se descarta. Esta petición es bastante más pesada que la del xml previa, ya que tiene que obtener todo el contenido de la página web en la que aparece el desglose del itinerario en formato html. El parseo de la página también es más lento que en el paso previo, ya que tiene que ir elemento por elemento iterando en los elementos hijos del html.
 
 
 Utilizando ambos conjuntos de datos, se va creando una estructura con los datos, donde se almacena la información sobre cada elemento. En última instancia se van añadiendo estos elementos a la vista utilizando un adaptador y una estructura para visualizar listas.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\columnwidth]{BeaconEvent}
-	\label{fig:eventBeacon}
+	\includegraphics[width=120mm,height=170mm]{autobuses}
+	\caption{Podemos conocer en tiempo real, autobuses que se acercan a la parada, junto con su destino y tiempo de llegada de la parada identificada por un beacon.}
+	\label{fig:autobuses}
 \end{figure}
 
 
@@ -230,12 +230,6 @@ Ampliar este caso de uso sólo conllevaría asociar los nuevos identificadores d
 
 El objetivo de este caso de uso sigue siendo el de proporcionar información de eventos e información de interés para el usuario; sin embargo, se han desligado de la parte de la entrada automática, al que hacíamos mención en el análisis previo, ya que en la mayoría de los casos no es necesaria esta funcionalidad.  
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\columnwidth]{TitsaOnTheMoveList}
-	\caption{Podemos conocer en tiempo real, autobuses que se acercan a la parada, junto con su destino y tiempo de llegada.}
-	\label{fig:titsaOnTheMoveList}
-\end{figure}
 
 \subsubsection{Despliegue}
 
@@ -247,12 +241,13 @@ En este caso, sería necesario colocar un beacon en sitios de interés donde pue
 
 Mediante el uso de los beacons, permitimos a la aplicación identificar en que localización se encuentra el usuario. En este caso, hemos utilizado la información RSS de la página web eventosUll (referencia). Esta página posee diferentes enlaces RSS, actualmente no están separados por ubicación sino por categorías variadas (ocio, eventos, deportes, tecnologías,etc) sin embargo lo hemos tomado de ejemplo porque es algo que ya está en funcionamiento y que proporciona información sobre eventos actuales relacionados con la Universidad de la Laguna. 
 
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\columnwidth]{BeaconEvent}
-	\label{fig:eventBeacon}
+	\includegraphics[width=120mm,height=170mm]{Eventos}
+	\caption{Podemos conocer eventos asociados a un RSS de la página web de eventos.ull.}
+	\label{fig:eventos}
 \end{figure}
-
 
 La aplicación ha sido programada enlazando la dirección MAC de los beacons con diferentes links RSS de la página web de eventos. Al detectar un beacon, se reconoce a qué información queremos acceder y se procede a realizar una petición utilizando el link identificado por el beacon: 
 
@@ -264,8 +259,9 @@ En un principio, se planteó el filtrar los eventos para obtener los cercanos a 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\columnwidth]{BeaconEvent}
-	\label{fig:eventBeacon}
+	\includegraphics[width=\columnwidth]{eventsRss}
+	\caption{Las diferentes categorías de los RSS de la página web de eventos.ull.es}
+	\label{fig:eventsRss}
 \end{figure}
 
 
@@ -273,8 +269,9 @@ La petición se realiza utilizando la misma librería de peticiónes HTTP que en
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\columnwidth]{BeaconEvent}
-	\label{fig:eventBeacon}
+	\includegraphics[width=\columnwidth]{eventsPage}
+	\caption{La página web de eventos, donde podemos tener más información de un evento concreto.}
+	\label{fig:eventsPage}
 \end{figure}
 
 \subsubsection{Dificultades}
@@ -303,10 +300,10 @@ Este caso de uso tiene como objetivo controlar la asistencia de los alumnos a la
 
 Para solucionar estos problemas se ha optado por las siguientes soluciones: 
 
-Como servidor se ha utilizado "Couchbase Server", una base de datos distribuida no-SQL, orientada a documentos y de código abierto. Por otro lado, se ha configurado en la aplicación móvil una base de datos "Couchbase Lite" que sirve de paso intermedio e interactúa con "Sync Gateway" para sincronizar los datos de la base de datos del dispositivo al servidor, y viceversa.
+Como servidor se ha utilizado \textit{"`Couchbase Server"'}, una base de datos distribuida no-SQL, orientada a documentos y de código abierto. Por otro lado, se ha configurado en la aplicación móvil una base de datos \textit{"`Couchbase Lite"'} que sirve de paso intermedio e interactúa con \textit{"`Sync Gateway"'} para sincronizar los datos de la base de datos del dispositivo al servidor, y viceversa.
 
 
-Para almacenar los datos del usuario se ha hecho uso de la API de preferencias de android, el cual almacena los datos en el dispositivo móvil en un espacio compartido para toda la aplicación. De esta manera, hemos almacenado datos como "Nombre de Usuario", "Número Das" o "DNI", los cuales solo serán visibles para el usuario de la aplicación y servirán para dejar registradas las asistencias con estos datos. Al mismo tiempo, se almacena también la dirección MAC del dispositivo móvil para evitar replicaciones o falsos positivos.
+Para almacenar los datos del usuario se ha hecho uso de la API de preferencias de android, el cual almacena los datos en el dispositivo móvil en un espacio compartido para toda la aplicación. De esta manera, hemos almacenado datos como \textit{"`Nombre de Usuario"'}, \textit{"`Número Das"'} o \textit{"`DNI"'}, los cuales solo serán visibles para el usuario de la aplicación y servirán para dejar registradas las asistencias con estos datos. Al mismo tiempo, se almacena también la dirección MAC del dispositivo móvil para evitar replicaciones o falsos positivos.
 
 
 En cuanto al área de acción a partir de la cual es posible guardar la asistencia, se ha optado por establecer un perímetro dentro del aula delimitado por las paredes del aula, menos cierto margen, de manera que el aula quede cubierta y los exteriores no se tengan en cuenta. 
@@ -322,8 +319,9 @@ En cuanto se accede al módulo de asistencia, la aplicación comienza a escanear
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\columnwidth]{BeaconEvent}
-	\label{fig:eventBeacon}
+	\includegraphics[width=120mm,height=170mm]{ConfirmarAsistencia}
+	\caption{Pantalla de confirmación de asistencia en la localización.}
+	\label{fig:confirmarAsistencia}
 \end{figure}
 
 Si no se encuentra en la zona delimitada, igualmente la aplicación muestra su ubicación en el mapa para que pueda corregir su posición. Una vez que acceda al área se muestra un mensaje de confirmación con el aula en la que se encuentra. En este momento se debe confirmar pulsando un botón de que deseas registrar la asistencia. Previamente el usuario ha debido introducir sus datos en la aplicación y ya deben estar guardados. Estos datos son los que utiliza la aplicación, junto con la dirección MAC del dispositivo desde el cual se manda la petición de registro. Otro control es almacenar una hora junto con los demás datos, a la hora de enviar la información al servidor, asegurándonos de que realmente el usuario ha estado en el aula a dicha hora.
@@ -333,8 +331,9 @@ Los datos que se almacenan en el servidor tienen la siguiente estructura, sin em
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\columnwidth]{BeaconEvent}
-	\label{fig:eventBeacon}
+	\includegraphics[width=\columnwidth]{couchDBstucture}
+	\caption{La estructura de los datos del usuario en CouchBase Server.}
+	\label{fig:couchDBstucture}
 \end{figure}
 
 
@@ -379,10 +378,6 @@ Las dificultades de este caso de uso radican principalmente en situar al usuario
 \subsubsection{Ampliación}
 
 Para ampliar este caso de uso se deberían incluir nuevos beacons, nuevas imagenes de las localizaciones (Exteriores o interiores) y nuevas áreas; Las áreas podrían ofrecer diferentes funcionalidades aparte de la información de la localización.
-
-
-
-
 
 
 \section{Despliegue}

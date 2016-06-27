@@ -9,7 +9,7 @@
 %
 
 \cleardoublepage
-\chapter{Tecnologías} \label{chap:polytopes} %Cambiar por el label adecuado. 
+\chapter{Tecnologías} \label{chap:Tecnologias} 
 
 En este capítulo se habla de las principales tecnologías que han sido utilizadas durante la elaboración de este TFG.
 
@@ -210,7 +210,7 @@ En el caso del estadio de Cleveland, los beacons se encargan de proveer al usuar
 Otro despliegue exitoso de esta tecnología ha sido en el Aeropuerto Internacional de Orlando , donde mediante el uso de los beacons y de una aplicación móvil propia han sido capaces de proporcionar una serie de funcionalidades de vital importancia en una infraestructura como el aeropuerto: 
 
 \begin{itemize}
-\item Navegación paso por paso a través de cerca de1000 establecimientos o servicios dentro del aeropuerto. 
+\item Navegación paso por paso a través de cerca de 1000 establecimientos o servicios dentro del aeropuerto. 
 \item Actualizaciones inmediatas de la información de los vuelos. 
 \item Intrucciones a puntos de interés criticos como puntos de recogida de equipaje, puertas de embarque o puestos de información.
 \end{itemize}
@@ -226,8 +226,79 @@ El siguiente punto sería ampliar la opción a los establecimientos de ofrecer a
 
 %Articulos sacados de: \cite{URL::Ariculo} http://www.securedgenetworks.com/blog/3-brilliant-examples-of-how-beacon-technology-is-transforming-mobility
 
-\subsection{¿Qué empresas trabajan con esta tecnología?}
 
+\section{CouchBase Server}
+
+Couchbase Server es una base de datos NoSQL con una arquitectura distribuida orientada al rendimiento, escalabilidad y disponibilidad. Da la oportunidad a los desarrolladores a construir aplicaciones de manera sencialla y más rápida combinando la flexibilidad del JSON y la tecnología NoSQL.
+
+\subsection{¿Por qué utilizar Couchbase Server?}
+
+Hemos decidido utilizar esta tecnología por su flexibilidad y potencia para almacenar documentos fácilmente. Además es muy sencillo integrarla con la tecnología móvil mediante el uso de una base de datos reducida dentro del dispositivo móvil y sincronizándola con la base de datos principal del servidor mediante una puerta de sincronización.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\columnwidth]{couchbaseexplanation}
+	\caption{Sincronización de CouchBase Server con CouchBase Lite mediante Sync Gateway}
+	\label{fig:couchbaseexplanation}
+\end{figure}
+
+En este caso se ha configurado el servidor en un ordenador portátil haciendo uso de las indicaciones de la página web del producto. Se procederá a desglosar brevemente los pasos seguidos a la hora de configurar el servidor.
+
+
+\subsection{Configuración de la arquitectura}
+
+Para configurar el servidor se han seguido los siguientes pasos: 
+
+
+\begin{itemize}
+\item Descargar la versión Community del producto desde la página web siguiendo el enlace: http://www.couchbase.com/nosql-databases/downloads . 
+\item Seguir los pasos de la página de desarrolladores para la intallación y configuración: http://developer.couchbase.com/documentation/server/4.5/getting-started/installing.html y 
+%http://developer.couchbase.com/documentation/server/4.5/install/init-setup.html#topic12527 . 
+\item Una vez configurado CouchBase Server procedemos a descargar Sync Gateway que será el servicio que se encarge de sincronizar el contenido del nuestra aplicación al servidor, para ello lo descargaremos de la página al igual que el servidor siguiendo el link: http://www.couchbase.com/nosql-databases/downloads .
+\item Para vincular el servidor con Sync Gateway es necesario hacer uso de un fichero de configuración con el que lanzaremos el servicio Sync Gateway.
+\item Una vez configurado Sync Gateway, ya tenemos el canal de configuración entre el servidor y la aplicación, para utilizar la base de datos móvil seguiremos los pasos desglosados en: http://developer.couchbase.com/documentation/mobile/1.2/develop/training/build-first-android-app/index.html .
+\end{itemize}
+
+
+En este caso, se ha tenido que conectar el dispositivo al ordenador, tanto el ordenador como el dispositivo móvil han de estar en la misma red y hemos utilizado la dirección IP de la máquina para realizar las peticiones del móvil al servidor (alojado en el portátil) al utilizar la API. De esta manera se ha comprobado el funcionamiento del servidor, del servicio de sincronización y de la base de datos versión lite en el dispositivo móvil.
+
+
+\section{La librería AltBeacon}
+
+
+\subsection{¿Qué es AltBeacon?}
+
+Se puede definir AltBeacon como una especificación que: 
+
+\begin{itemize}
+\item Define el formato del mensaje publicitario que los beacons transmiten a través de BLE (Bluetooth Low Energy).
+\item Intenta crear un mercado abierto y competitivo para implementaciones usando proximidad con los beacons.
+\item Puede ser utilizada por todos gratuitamente, sin cuotas ni compromisos.
+\item No favorece a ningún proveedor sobre otro. Las limitaciones vienen determinadas por los estándares técnicos del proveedor.
+\end{itemize}
+
+A continuación se profundizará en el funcionamiento y configuración de la librería AltBeacon, librería que cumple con la especificación AltBeacon y que se ha utilizado para trabajar en Android.
+
+\subsection{Configuración}
+
+Para trabajar con esta librería en Android Studio solo hemos tenido que importarla mediante el uso de Gradle a nuestro proyecto como se explica en : 
+
+https://altbeacon.github.io/android-beacon-library/configure.html
+
+También es posible descargarla desde la página oficial, donde además podremos econtrar diferentes versiones de la misma, para ello podemos hacer uso del siguiente enlace y seleccionar la versión deseada: 
+
+https://altbeacon.github.io/android-beacon-library/download.html
+
+\subsection{Funcionamiento}
+
+Prácticamente la funcionalidad de esta librería se centra en dos elementos principales: 
+
+\begin{itemize}
+\item \textit{''Monitoring''} que sería algo así como supervisar, saber que beacons se encuentran en una región o si ha entrado o salido un beacon de una región.
+\item \textit{''Ranging''} que hace referencia a rastrear, permitiendo saber a que distancia se encuentran los beacons en todo momento dentro de una región.
+\end{itemize}
+
+Utilizando estas dos funcionalidades la aplicación es capaz de controlar, monitoreando y rastreando los distintos beacons en una determinada región. En la página web de la libraría se pueden encontrar ejemplos básicos de como se realizan estas dos funciones en la sección \textit{''Samples''}, además en la sección \textit{''Documentación''} se pueden encontrar también algunos artículos, que pueden resultar interesantes dependiendo del tipo de aplicación que estes desarrollando.
 
 
 

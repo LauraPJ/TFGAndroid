@@ -20,17 +20,25 @@ Actualmente las posibilidades de las aplicaciones móviles para entornos univers
 
 En un principio, estas aplicaciones se enfocaban a atraer alumnos, centrandose en la calidad de la universidad y mostrando las posibilidades que ofrecían, sin embargo, con el paso de los años y el desarrollo creciente de las aplicaciones móviles, se muestra un cambio en esta estrategia. Ahora las aplicaciones tienen una doble función, no sólo buscan el acceso de nuevos estudiantes sino que también intentan mejorar la experiencia de los alumnos existentes y acercar a los nuevos a la experiencia de la universidad. 
 
+
 Algunos ejemplos posibles los encontramos en el marketplace de google:
 
-%No se si se pueden poner imagenes de aplicaciones universitarias en el marketplace.
+\begin{itemize}
+\item Universidad Galileo: \cite{URL::galileo}
+\item Univerisidad de Valladolid: \cite{URL::valladolid}
+\item Universidad de Oviedo: \cite{URL::oviedo}
+\end{itemize}
+
 
 Uno de los hechos que podemos observar es que las universidades están intentando obtener una solución rápida para desarrollar su app, una de estas soluciones es la creación de plantillas web optimizadas de su sitio web, lo que podemos considerar una opción rápida con un coste bajo.
 
- Hoy en día casi todos los estudiantes tienen acceso a un dispositivo móvil y cuentan con una tarifa de internet. En un futuro próximo con la aparición de estos dispositivos ya nos surge la pregunta ¿ Serán capaces estos dispositivos de transformar la educación ? y en caso aformativo ¿De que manera? 
+
+Hoy en día casi todos los estudiantes tienen acceso a un dispositivo móvil y cuentan con una tarifa de internet. En un futuro próximo con la aparición de estos dispositivos ya nos surge la pregunta ¿Serán capaces estos dispositivos de transformar la educación? y en caso aformativo ¿De que manera? 
 
 \section {Posibles casos de uso de la tecnología beacon en entornos universitarios}
 
 Como mencionaba antes, una de las posibilidades que se presentan para explotar esta tecnología se encuentra en las instituciones de enseñanza, las cuales podrían utilizar los beacons para facilitar a sus alumnos, profesores y demás personal involucrado  una serie de servicios de gran utilidad.
+
 
 Sin embargo, para utilizar esta tecnología es necesario cumplir una serie de condiciones:
 
@@ -42,6 +50,7 @@ Sin embargo, para utilizar esta tecnología es necesario cumplir una serie de co
 \end{itemize}
 
 En el caso de dispositivos Apple no es necesario tener activado el bluetooth ya que el SO se encarga de captar las señales BLE, aparte tampoco es necesario que la app esté despierta ya que nuevamente el SO se encarga de despertar a la aplicación involucrada. Sin embargo Apple no ha desarrollado un IBeacon físico aún, aunque en un futuro, se espera que sus dispositivos móviles puedan funcionar como un beacon bidirecional. Cabe destacar que existen librerías que se encargan de realizar estas mismas funcionalidades para mantener el móvil despierto a la escucha de posibles beacon para otros Sistemas Operativos, pero a diferencia de Apple esta funcionalidad no está integrada directamente en el Sistema Operativo por lo que no presenta el mismo nivel de control.
+
 
 Asimismo, podemos afirmar que prácticamente la mayoría de las universidades cuentan con una disposición amplia en lo que se refiere a servicios y despliegue de medios. Como ejemplo, podemos coger la Universidad de la Laguna, la cual cuenta con una red WiFi con un rango de cobertura casi completo de sus instalaciones y una amplia carta de servicios disponibles para sus alumnos. Además cuenta con una serie de Beacons, que podrían ser instalados fácilmente en lugares estratégicos. 
 
@@ -69,7 +78,7 @@ Como interesados podríamos destacar:
 
 El funcionamiento sería el siguiente: 
 
-El usuario transita por las inmediaciones del campus universitario. En cuanto entra en el rango delimitado por el beacon, su móvil vibra. El usuario mira su móvil y ha recibido una notificación de la aplicación de la Universidad. La notificación le informa que ha entrado en el rango del campus y si quiere entrar al sistema de navegación. Si el usuario acepta, la aplicación le muestra el camino mostrándole en todo momento su ubicación como un punto de color sobre el mapa de la ULL. Este mapa tiene marcados puntos de interés que contienen información de diferente tipo dependiendo del punto marcado: nombre, historia, página web, teléfono de contacto, trámites asociados... son algunos de los datos que podría mostrar. El mapa se va actualizando dependiendo de la posición del usuario permitiendo volver a la vista más alejada en cualquier momento para una visualización más general.
+El usuario transita por las inmediaciones del campus universitario. El usuario accede al sistema de navegación dentro de la aplicación. La aplicación le muestra entonces el camino mostrándole en todo momento su ubicación como un punto de color sobre el mapa del campus. Este mapa tiene marcados puntos de interés que contienen información de diferente tipo dependiendo del punto marcado: nombre, historia, página web, teléfono de contacto, trámites asociados... son algunos de los datos que podría mostrar. El mapa se va actualizando dependiendo de la posición del usuario permitiendo volver a la vista más alejada en cualquier momento para una visualización más general.
 
 
 \subsection{Descarga automática de material}
@@ -95,7 +104,7 @@ El personal de la Ull tendría la aplicación en su móvil, al acercarse a la ba
 
 El funcionamiento sería el siguiente: 
 
-Los alumnos transitan los interiores de la Universidad de camino a sus clases. Los beacons están desplegados en las inmediaciones de lugares de interés, tipo aularium, paraninfo, clases que se utilicen a modo de salas de reuniones o seminarios. Al pasar por las inmediaciones de estos lugares de interés la aplicación alertaría al usuario de eventos que se celebran en esos lugares, proporcionándole información de diversa índole: ponientes, tema de la charla, acceso, teléfono de contacto u otra información similar.  Al mismo tiempo, la aplicación también cuenta con un tablón donde se muestran posibles eventos futuros. Estos eventos pueden ser muy variados y corresponder a diferentes tipos de actividades. Al mismo tiempo se podría confirmar la entrada al evento en el caso de haberla, mediante un código de acceso identificativo generado al realizar el pago del evento.
+Los alumnos transitan los interiores de la Universidad de camino a sus clases. Los beacons están desplegados en las inmediaciones de lugares de interés, tipo aularium, paraninfo, clases que se utilicen a modo de salas de reuniones o seminarios. Al pasar por las inmediaciones de estos lugares de interés, la aplicación sería capaz de proporcionar al usuario información de diversa índole: ponientes, tema de la charla, acceso, teléfono de contacto u otra información similar.  Al mismo tiempo, la aplicación también cuenta con un tablón donde se muestran posibles eventos futuros. Estos eventos pueden ser muy variados y corresponder a diferentes tipos de actividades. Al mismo tiempo se podría confirmar la entrada al evento en el caso de haberla, mediante un código de acceso identificativo generado al realizar el pago del evento.
 
 \begin{figure}[H]
 	\centering
@@ -145,6 +154,7 @@ En un aspecto más recreativo, se podría tener en cuenta el uso de los beacons 
 Teniendo en cuenta los medios de transporte que utilizan los estudiantes, uno de los principales es el autobus. Este medio de transporte puede llegar a ser el día a día de muchos de los estudiantes que no cuentan con vehículo propio o que simplemente prefieren utilizar el autobus. 
 
 Este caso de uso contempla lo siguiente: 
+
 
 El estudiante llega a una parada de autobus y utilizando su dispositivo móvil, consulta los autobuses que van a pasar por la parada; la aplicación le permite obtener información de los diferentes autobuses, el itinerario y los minutos que faltan para que llege a la parada, asimismo también enlazaría con la web de la compañía de transporte para más información sobre las líneas y los itinerarios en caso de necesitar más información que la proporcionada por la aplicación.
 
@@ -310,7 +320,7 @@ En cuanto al área de acción a partir de la cual es posible guardar la asistenc
 
 \subsubsection{Despliegue}
 
-En este caso, para poder realizar este proceso es necesario utilizar la trilateración por lo que, como ya hemos explicado, es necesario desplegar al menos 3 beacons. Para las pruebas se ha utilizado el aula 2.1 del Edificio de Ingeniería Informática. Estos beacons no tienen que ser necesariamente por aula ya cada beacon cubre un área de 70 metros aproximadamente; teniendo en cuenta que las paredes crean interferencias en la señal, probablemente se podrían utilizar 3 beacons para cubrir dos aulas, pero habría que hacer un estudio de la localización y las interferencias para poder asegurarlo. 
+En este caso, para poder realizar este proceso es necesario utilizar la trilateración \cite{URL::trilateracion} por lo que, es necesario desplegar al menos 3 beacons. Para las pruebas se ha utilizado el aula 2.1 del Edificio de Ingeniería Informática. Estos beacons no tienen que ser necesariamente por aula ya cada beacon cubre un área de 70 metros aproximadamente; teniendo en cuenta que las paredes crean interferencias en la señal, probablemente se podrían utilizar 3 beacons para cubrir dos aulas, pero habría que hacer un estudio de la localización y las interferencias para poder asegurarlo. 
 
 \subsubsection{Funcionamiento}
 
@@ -356,18 +366,13 @@ En este caso se ha tomado como referencias algunas zonas del edificio y se han c
 
 \subsubsection{Despliegue}
 
-En este caso, también en necesario utilizar el algoritmo de trilateración, es necesario desplegar al menos 3 beacons.
+En este caso, también en necesario utilizar el algoritmo de trilateración, por lo que hemos tenido que desplegar 3 beacons en el lugar que queríamos visualizar, en el edificio de Física y Matemáticas en la primera planta, se han puesto en las esquinas de la zona principal, conserjería, cerca de los ascensores y en la entrada a los pasillos pricipales.
 
 \subsubsection{Funcionamiento}
 
 
 En cuanto se accede al módulo de guía, la aplicación comienza a escanear las inmediaciones buscando beacons. Cuando detecta más de 3 beacons, la aplicación carga la imagen de dicha la localización, en este caso el plano del edificio de Física y Matemáticas, una versión reducida para la parte en la que nos encontremos y comprueba que el alumno se encuentra dentro de algunas de las posibles zonas, en cuanto se entre en alguna se mostrará la información relacionada con esta posición. Ahora mismo las acciones de la zona se limitan a mostrar un pequeño texto con información generada teniendo en cuenta que el usuario necesite guiarse en las intalaciones, es decir, no se conoce las instalaciones.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\columnwidth]{BeaconEvent}
-	\label{fig:eventBeacon}
-\end{figure}
 
 Ya que este caso de uso podría ser útil para un rango más amplio de personas por su naturaleza de guía, se ha decidido ofrecer soporte en Inglés a la hora de mostrar las indicaciones.
 
@@ -380,8 +385,54 @@ Las dificultades de este caso de uso radican principalmente en situar al usuario
 Para ampliar este caso de uso se deberían incluir nuevos beacons, nuevas imagenes de las localizaciones (Exteriores o interiores) y nuevas áreas; Las áreas podrían ofrecer diferentes funcionalidades aparte de la información de la localización.
 
 
+\subsection{Acceso al Parking}
+
+\subsubsection{Objetivo}
+
+El objetivo principal de este caso de uso es permitir a usuario acceder al parking utilizando la aplicación móvil. Actualmente el acceso al parking se formaliza utilizando tarjetas de acceso magnetizadas, el objetivo principal es poder sustituir este método por uno más sencillo y más sostenible a largo plazo. 
+
+\subsubsection{Despliegue}
+
+En este caso, también en necesario utilizar el algoritmo de trilateración, por lo que hemos tenido que desplegar 3 beacons en la entrada del parking, se ha utilizado el parking del edificio central, disponiendo los beacons en posiciones previamente seleccionadas como se muestra en la siguiente imagen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=140mm,height=120mm]{Parking}
+	\label{fig:parking}
+	\caption{Se puede apreciar la estructura del parking central, los puntos A, B y C señalan las posiciones de los beacons.}
+\end{figure}
+
+\subsubsection{Funcionamiento}
+
+
+En cuanto se accede al módulo de parking, la aplicación muestra una lista con los diferentes parkings y el número de plazas de cada recinto. Esta lista se obtiene mediante una consulta a una API diseñada en colaboración con Alberto Morales, quién se ha encargado de montar el servicio para facilitar a la aplicación la información necesaria. De la lista de parkings, el usuario ha de seleccionar al que quiere acceder, identificando así la imagen y zonas a dibujar. Esta selección da paso a un escáner que comienza a detectar la posición del usuario y a situarlo en la imagen. Si el usuario se encuentra en una de las zonas designadas para entrar o salir del parking, se lanzará la acción, en este caso una petición de abertura contra el servidor. En este caso cada zona posee un identificador de barrera que es el que usa la petición para saber que barrera debe abrir. 
+
+
+Por otro lado esta petición debe ir autentificada, para poder acceder, por lo que la aplicación ha negociado previamente un secreto con el servidor que la identifica y le permite realizar la acción de apertura utilizando un número identificativo basado en la MAC del dispositivo de pruebas.
+
+
+\subsubsection{Dificultades}
+
+En este caso de uso las dificultades han radicado en el hecho de comunicarse con el servidor para realizar las llamadas, la trilateración se ha realizado de la misma manera por lo que no ha habido grandes problemas. Además de estas dificultades, cabe añadir una adicional y es que la seguridad del parking depende del single log in de la ULL, por lo que ha habido que buscar la manera de abordar este tema. Sin embargo, Alberto se ha implicado en todo momento intentado resolver las necesidades de la aplicación de la manera más óptima, lo que ha sido una gran ayuda.
+
+\subsubsection{Ampliación}
+
+Para ampliar este caso de uso se deberían incluir nuevos beacons, 3 mínimo por cada recinto, nuevas imagenes de las localizaciones (Exteriores o interiores) y nuevas áreas; Las áreas serían vitales para definir las acciones de apertura de las barreas. Si las zonas acaban siendo muchas, sería recomendable crear una base de datos  para almacenar las localizaciones, las zonas y las imágenes a cargar.
+
 \section{Despliegue}
 
+El despliegue de estos dispositivos es variable como hemos podido comprobar con los distintos casos de uso. Sin embargo hay ciertas consideraciones que se cumplen en todos los casos, si lo que deseamos es un sistema que detecte entradas y salidas, independientemente de la posición exacta del usuario, simplemente necesitaremos un único beacon como regla general. 
 
 
+Sin embargo, si deseamos conocer la localización más precisa del usuario necesitaremos recurir a un método como la Trilateración \cite{URL::trilateracion}. Serán necesarios mínimos 3 beacons, incrementando el número de beacons es posible aumentar la precisión con la que se percibe la posición del usuario. El algoritmo no es totalmente exacto, puesto que depende de las distancias calculadas a los beacons, sin embargo estas distancias pueden variar. Existen diversos factores que pueden influir en la calidad de la señal del Bluetooth y por tanto distorsionar estas distancias, entre otros factores podemos destacar principalmente:
 
+
+\begin{itemize}
+\item Físicos:  paredes, personas o elementos del entorno principalmente.
+\item Intangibles: interferencias con otras ondas.
+\item Configurables: la intensidad de la señal y por tanto su rango es configurable.
+\end{itemize}
+
+
+Todos estos factores han de ser tomados en cuenta a la hora de realizar el despligue de los beacons, otro factor a tener en cuenta es la altura, los dispositivos es recomendables levantarlos cierta altura del suelo, a la hora de probarlos se ha intentado, en la medida de lo posible, mantenerlos a un nivel elevado sobre la altura de las personas y siempre intentando mantener esta medida de altura para los diferentes beacons. En cuanto al despliegue de la aplicación, el código fuente se encontrará disponible para su descarga en el enlace \cite{URL::repositorioAplicacion}, bajo licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional \cite{URL::licencia}.
+ 

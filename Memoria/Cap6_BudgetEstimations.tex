@@ -12,3 +12,24 @@
 
 En este capítulo se expondrá de manera estimada las estimaciones de recursos necesarias para poner en práctica este despliegue, teniendo en cuenta el estado actual del proyecto. 
 
+Actualmente el despliegue de la aplicación se podría separar en dos partes, por un lado tendríamos la compra de los distintos dispositivos y por otro lado hablaríamos del desarrollo y mantenimiento de la aplicación, por lo que se podría contabilizar de la siguiente manera: 
+
+\begin{itemize}
+\item Para el caso de uso de los autobuses sería necesario un beacon por parada, si solo se cubriesen las paradas dentro de la zona universitaria, como mucho podríamos estar hablando de unos 20 beacons, distribuidos entre anchieta y guajara.
+\item Siguiendo con el caso de uso de los eventos, se podrían calcular unas 10 zonas de eventos principales, nuevamente a distribuir entre guajara y anchieta. Zonas como el paraninfo, el aularium, aulas magnas, bibliotecas o lugares destinados específicamente para la realización de eventos.
+\item Los casos de uso que dependen de la localización dependerían de las zonas que habría que controlar, por lo que habría que hacer un análisis de cada recinto en  el caso del parking, aulas para el módulo de asistencia y edificios o exteriores para el módulo de guía.
+\end{itemize}
+
+
+Teniendo en cuenta que cada dispositivo de Aruba cuesta entre 20 a 30 euros.
+
+ 
+\begin{itemize}
+\item Para cubrir el primer caso de uso sería necesaria una inversión de 400 a 600 euros con lo que se cubrirían 20 paradas de autobus.
+\item Para las 10 zonas de eventos estaríamos hablando de unos 200 a 300 euros, sería posible añadir más beacons si fuera necesario.
+\item Los casos de uso que dependen de la localización son muy relativos, los parkings son cerca de unos 8, teniendo en cuenta que mínimo necesitaríamos unos 3 beacons por recinto, tendríamos un total de 480 a 720 euros, en el caso de la asistencia y guía podríamos calcular para todos los edificios de la ULL unos 100 beacons, con lo que tendríamos cubiertas las facultades en su mayoría con un importe entre 2000 a 3000 eruos.
+\end{itemize}
+
+
+Juntando todo esto nos quedaría un presupuesto de unos 3850 euros de media, y quedarían cubiertas los edificios, parkings y paradas de autobus cercanas al campus. Aparte de los dispositivos habría que añadir el mantenimiento de la aplicación para añadir los datos de los diferentes beacons, incluyendo un servidor para almacenar los datos y realizar las consultas. 
+

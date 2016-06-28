@@ -189,21 +189,22 @@ x================================
 Feb 24
 
 Casos de Uso:
-  95% 1A.- Guagua1. Parada de guagua. Me dice a qué hora viene la siguiente.
+= Tenemos 5 casos de uso.
+
+  100% 1A.- Guagua1. Parada de guagua. Me dice a qué hora viene la siguiente.
   B.- Guagua2. Detecta que salgo de la ULL y me dice a qué hora pasa la
 	    siguiente guagua y en qué parada(s) más cercanas la puedes coger.
-	95% 4C.- Eventos1. Eventos de la ULL. Estoy en una zona de eventos y me da indicaciones
-	    sobre el entorno.
-	D.- Parking2. Estoy delante de la barrera de un parking ULL y la app me
+	100% 4C.- Eventos1. Eventos de la ULL. Estoy en una zona de eventos y me da indicaciones sobre el entorno.
+	50% D.- Parking2. Estoy delante de la barrera de un parking ULL y la app me
 	    indica cuantas plazas libre y ocupadas hay en ese parking.
 	60% 2E.- Parking1. Estoy delante de la barrera de un parking ULL y la app envía
      	una señal al servidor que me abre la barrera.
   F.- Parking3. Esoy  delante de la barrera de un parking ULL y la app	me muestra
 	    opciones correspondientes a esa barrera: entrar, salir, ambas y el usuario
 	    puede decidir y enviar la señal de apertura de la barrera.
-	50% 5G.- Control de presencia en aula magna.
+	100% 5G.- Control de presencia en aula magna.
 	0% 6H.- Orientación en biblioteca
-	20% 3H.- Información de edificio.
+	80% 3H.- Información de edificio.
 	I.- 
 	Pones beacons en un aula y la app detecta que estás en esa aula y envías una
 	señal a algún servidor indicando quién eres (aluXXXXX + DNI +
@@ -397,20 +398,26 @@ x================================
 Planificación:
 +Planificación
 
-- Día 3 : Integración de los módulos de la aplicación usando una barra lateral y
++ Día 3 : Integración de los módulos de la aplicación usando una barra lateral y
 una pantalla inicial donde introducir la información del alumno. Hablar con
 Alberto para dejar claro lo que necesito en cuanto al parking. Petición para
 abrir la barrera con MAC y ALU en principio.
-- Día 5 : Finalizar el módulo de asistencia. Finalizar el módulo de guaguas si queda algún detalle. Finalizar el módulo de eventos si queda algún detalle.
-- Semana del 6 al 10 en Polonia por motivos de trabajo.
-- Día 10 : Añadir los 3 casos de uso a la memoria, con fotos, detalles y bibliografía.
-- Día 12: Haber probado satisfactoriamente los 3 casos de uso que requieren de la localización. Asistencia, guía y parking.
-- Día 15 : Completar los casos de uso que dependen de la localización.
-- Día 18: Añadir los casos de uso restantes a la memoria.
-- En adelante comenzar con la validación de la memoria, realizar el vídeo demo de la aplicación.
-- Dia 26: Entregar memoria F Sande.
++ Día 5 : Finalizar el módulo de asistencia. Finalizar el módulo de guaguas si queda algún detalle. Finalizar el módulo de eventos si queda algún detalle.
++ Semana del 6 al 10 en Polonia por motivos de trabajo.
++ Día 10 : Añadir los 3 casos de uso a la memoria, con fotos, detalles y bibliografía.
++ Día 12: Haber probado satisfactoriamente los 3 casos de uso que requieren de la localización. Asistencia, guía y parking.
+~ Día 15 : Completar los casos de uso que dependen de la localización.
+~ Día 18: Añadir los casos de uso restantes a la memoria.
+~ En adelante comenzar con la validación de la memoria, realizar el vídeo demo de la aplicación.
++ Dia 26: Entregar memoria F Sande.
 - Dia 2 de Julio: Memoria finalizada.
 - Dia 15 al 20 : Presentación
 x================================
+28.junio
+
+- Reestructurar lo que hemos hablado de la Memoria
+- Meter código en el capítulo adecuado (Listings).
+- Revisar lo que hay que hacer respecto a tareas del aula virtual y hacerlas.
+
 x================================
 x================================

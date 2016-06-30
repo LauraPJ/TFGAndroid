@@ -1,0 +1,121 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}La aplicaci\IeC {\'o}n BulletPoint}{33}{chapter.4}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:LaAplicacion}{{4}{33}{La aplicación BulletPoint}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Casos de uso elegidos}{33}{section.4.1}}
+\citation{URL::titsa}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Localizaci\IeC {\'o}n de transporte p\IeC {\'u}blico, horarios e informaci\IeC {\'o}n de la parada}{34}{subsection.4.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{Objetivo}{34}{section*.15}}
+\@writefile{brf}{\backcite{URL::titsa}{{34}{4.1.1}{section*.15}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Actualmente la informaci\IeC {\'o}n mostrada por titsa en su p\IeC {\'a}gina web.}}{34}{figure.4.1}}
+\newlabel{fig:MapaTitsa}{{4.1}{34}{Actualmente la información mostrada por titsa en su página web}{figure.4.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Despliegue}{34}{section*.16}}
+\@writefile{toc}{\contentsline {subsubsection}{Funcionamiento}{35}{section*.17}}
+\newlabel{code:beaconbusstop}{{4.1}{35}{\textit {BusBeaconStop}. Esta clase contiene la información que asocia cada MAC con el ID de la parada de TITSA, añadir un nuevo beacon a una parada implicaría añadir un nuevo elemento a stopsMapId}{lstlisting.4.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.1}\textit  {BusBeaconStop}. Esta clase contiene la informaci\IeC {\'o}n que asocia cada MAC con el ID de la parada de TITSA, a\IeC {\~n}adir un nuevo beacon a una parada implicar\IeC {\'\i }a a\IeC {\~n}adir un nuevo elemento a stopsMapId.}{35}{lstlisting.4.1}}
+\newlabel{code:basedOnLineNumber}{{4.2}{36}{El método \textit {getTimetablesBasedOnLineNumber()} del cliente de TITSA se encarga de obtener los datos de su API y devolver una lista de llegadas}{lstlisting.4.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.2}El m\IeC {\'e}todo \textit  {getTimetablesBasedOnLineNumber()} del cliente de TITSA se encarga de obtener los datos de su API y devolver una lista de llegadas.}{36}{lstlisting.4.2}}
+\newlabel{code:arrival}{{4.3}{37}{La clase Arrival donde quedan contenidos los datos de cada llegada}{lstlisting.4.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.3}La clase Arrival donde quedan contenidos los datos de cada llegada.}{37}{lstlisting.4.3}}
+\citation{URL::Jsoup}
+\@writefile{brf}{\backcite{URL::Jsoup}{{38}{4.1.1}{lstnumber.4.4.62}}}
+\newlabel{code:handler}{{4.4}{39}{El handler se encarga de transformar el fichero XML en elementos de tipo Arrival. \ref {code:arrival}}{lstlisting.4.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.4}El handler se encarga de transformar el fichero XML en elementos de tipo Arrival. \ref  {code:arrival}.}{39}{lstlisting.4.4}}
+\newlabel{code:jsoup}{{4.5}{40}{El método \textit {getCorrectRoute} nos permite obtener el itinerario correcto del autobús}{lstlisting.4.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.5}El m\IeC {\'e}todo \textit  {getCorrectRoute} nos permite obtener el itinerario correcto del autob\IeC {\'u}s.}{40}{lstlisting.4.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Podemos conocer en tiempo real, autobuses que se acercan a la parada, junto con su destino y tiempo de llegada de la parada identificada por un beacon.}}{41}{figure.4.2}}
+\newlabel{fig:autobuses}{{4.2}{41}{Podemos conocer en tiempo real, autobuses que se acercan a la parada, junto con su destino y tiempo de llegada de la parada identificada por un beacon}{figure.4.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Dificultades}{41}{section*.18}}
+\@writefile{toc}{\contentsline {subsubsection}{Ampliaci\IeC {\'o}n}{42}{section*.19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Gesti\IeC {\'o}n de eventos e informaci\IeC {\'o}n}{42}{subsection.4.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Objetivo}{42}{section*.20}}
+\@writefile{toc}{\contentsline {subsubsection}{Despliegue}{42}{section*.21}}
+\citation{URL::eventsull}
+\@writefile{toc}{\contentsline {subsubsection}{Funcionamiento}{43}{section*.22}}
+\@writefile{brf}{\backcite{URL::eventsull}{{43}{4.1.2}{section*.22}}}
+\newlabel{code:rss}{{4.6}{44}{La información de la MAC del beacon queda asociada a un enlace RSS}{lstlisting.4.6}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.6}La informaci\IeC {\'o}n de la MAC del beacon queda asociada a un enlace RSS.}{44}{lstlisting.4.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Las diferentes categor\IeC {\'\i }as de los RSS de la p\IeC {\'a}gina web de eventos.ull.es}}{44}{figure.4.3}}
+\newlabel{fig:eventsRss}{{4.3}{44}{Las diferentes categorías de los RSS de la página web de eventos.ull.es}{figure.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces La p\IeC {\'a}gina web de eventos, donde podemos tener m\IeC {\'a}s informaci\IeC {\'o}n de un evento concreto.}}{45}{figure.4.4}}
+\newlabel{fig:eventsPage}{{4.4}{45}{La página web de eventos, donde podemos tener más información de un evento concreto}{figure.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Podemos conocer eventos asociados a un RSS de la p\IeC {\'a}gina web.}}{46}{figure.4.5}}
+\newlabel{fig:eventos}{{4.5}{46}{Podemos conocer eventos asociados a un RSS de la página web}{figure.4.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Dificultades}{46}{section*.23}}
+\@writefile{toc}{\contentsline {subsubsection}{Ampliaci\IeC {\'o}n}{46}{section*.24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Control de asistencia}{47}{subsection.4.1.3}}
+\@writefile{toc}{\contentsline {subsubsection}{Objetivo}{47}{section*.25}}
+\newlabel{code:loadpreferences}{{4.7}{48}{Para cargar la pantalla de preferencias de un fichero xml en el fragmento \textit {Settings}}{lstlisting.4.7}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.7}Para cargar la pantalla de preferencias de un fichero xml en el fragmento \textit  {Settings}.}{48}{lstlisting.4.7}}
+\newlabel{code:xmlpreferences}{{4.8}{48}{El fichero xml de donde se cargan todas las preferencias}{lstlisting.4.8}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.8}El fichero xml de donde se cargan todas las preferencias.}{48}{lstlisting.4.8}}
+\citation{URL::trilateracion}
+\@writefile{toc}{\contentsline {subsubsection}{Despliegue}{49}{section*.26}}
+\@writefile{brf}{\backcite{URL::trilateracion}{{49}{4.1.3}{section*.26}}}
+\@writefile{toc}{\contentsline {subsubsection}{Funcionamiento}{49}{section*.27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Pantalla de confirmaci\IeC {\'o}n de asistencia en la localizaci\IeC {\'o}n.}}{50}{figure.4.6}}
+\newlabel{fig:confirmarAsistencia}{{4.6}{50}{Pantalla de confirmación de asistencia en la localización}{figure.4.6}{}}
+\newlabel{code:scanAtt}{{4.9}{51}{Utilizando \textit {ScanFragment} comprobamos que el usuario se encuentra dentro de la zona delimitada}{lstlisting.4.9}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.9}Utilizando \textit  {ScanFragment} comprobamos que el usuario se encuentra dentro de la zona delimitada.}{51}{lstlisting.4.9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces La estructura de los datos del usuario en CouchBase Server.}}{52}{figure.4.7}}
+\newlabel{fig:couchDBstucture}{{4.7}{52}{La estructura de los datos del usuario en CouchBase Server}{figure.4.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Dificultades}{52}{section*.28}}
+\@writefile{toc}{\contentsline {subsubsection}{Ampliaci\IeC {\'o}n}{53}{section*.29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Gu\IeC {\'\i }a a trav\IeC {\'e}s del Campus de la Universidad}{53}{subsection.4.1.4}}
+\@writefile{toc}{\contentsline {subsubsection}{Objetivo}{53}{section*.30}}
+\@writefile{toc}{\contentsline {subsubsection}{Despliegue}{53}{section*.31}}
+\@writefile{toc}{\contentsline {subsubsection}{Funcionamiento}{54}{section*.32}}
+\@writefile{toc}{\contentsline {subsubsection}{Dificultades}{54}{section*.33}}
+\newlabel{code:trilaterate}{{4.10}{55}{Los métodos principales para realizar el algoritmo de trilateración con los beacons, calcular la posición del usuario y dibujar en la imagen}{lstlisting.4.10}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.10}Los m\IeC {\'e}todos principales para realizar el algoritmo de trilateraci\IeC {\'o}n con los beacons, calcular la posici\IeC {\'o}n del usuario y dibujar en la imagen.}{55}{lstlisting.4.10}}
+\@writefile{toc}{\contentsline {subsubsection}{Ampliaci\IeC {\'o}n}{56}{section*.34}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.5}Acceso al Parking}{56}{subsection.4.1.5}}
+\@writefile{toc}{\contentsline {subsubsection}{Objetivo}{56}{section*.35}}
+\@writefile{toc}{\contentsline {subsubsection}{Despliegue}{56}{section*.36}}
+\newlabel{fig:parking}{{4.1.5}{57}{Despliegue}{section*.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Se puede apreciar la estructura del parking central, los puntos A, B y C se\IeC {\~n}alan las posiciones de los beacons.}}{57}{figure.4.8}}
+\@writefile{toc}{\contentsline {subsubsection}{Funcionamiento}{57}{section*.37}}
+\@writefile{toc}{\contentsline {subsubsection}{Dificultades}{58}{section*.38}}
+\@writefile{toc}{\contentsline {subsubsection}{Ampliaci\IeC {\'o}n}{58}{section*.39}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Despliegue}{58}{section.4.2}}
+\citation{URL::trilateracion}
+\citation{URL::repositorioAplicacion}
+\citation{URL::licencia}
+\@writefile{brf}{\backcite{URL::trilateracion}{{59}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{URL::repositorioAplicacion}{{59}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{URL::licencia}{{59}{4.2}{section.4.2}}}
+\@setckpt{Cap4_TheApplication}{
+\setcounter{page}{60}
+\setcounter{equation}{0}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{4}
+\setcounter{section}{2}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{8}
+\setcounter{table}{0}
+\setcounter{float@type}{8}
+\setcounter{FBl@b}{0}
+\setcounter{FRobj}{0}
+\setcounter{FRsobj}{0}
+\setcounter{FBcnt}{0}
+\setcounter{ALC@line}{0}
+\setcounter{ALC@rem}{0}
+\setcounter{ALC@depth}{0}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{34}
+\setcounter{lstnumber}{37}
+\setcounter{section@level}{1}
+\setcounter{lstlisting}{10}
+}

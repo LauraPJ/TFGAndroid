@@ -17,14 +17,12 @@ MASTER   = memoria-TFG-Laura.tex
 SRC      =                                                          \
 						Preface.tex 			                    \
 						Cap1_Goals.tex                              \
-						Cap2_SoftwareTools.tex                      \
-						Cap3_Technology.tex                         \
-						Cap4_TheApplication.tex                     
-						#\
-						#Cap5_Deployment.tex		                \
-						#Cap6_.tex                                  \
-						#Cap7_SummaryClonclusions.tex               \
-						#Cap8_Budget.tex
+						Cap2_Technology.tex                         \
+						Cap3_BeaconsInStudentEnvironments.tex       \
+						Cap4_TheApplication.tex						\
+						Cap5_ConclusionsAndFutureLinesOfWork.tex	\
+						Cap6_BudgetEstimations.tex                  \
+						
 
 DVI = $(MASTER:.tex=.dvi)
 BIB = $(MASTER:.tex=.bib)

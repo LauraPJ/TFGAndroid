@@ -1,0 +1,167 @@
+%
+% ---------------------------------------------------
+%
+% Proyecto de Final de Carrera:
+% Author: Laura Padrón Jorge <alu0100703511@ull.edu.es>
+% Capítulo: Objetivos 
+% Fichero: Cap1_Goals.tex
+%
+% ----------------------------------------------------
+%
+
+
+\chapter{Beacons en entornos universitarios} \label{chap:BeaconsEntornosUniversitarios}  
+
+
+En este capítulo realizaremos un análisis de los posibles casos de uso de la tecnología beacon en el ámbito universitario.
+
+ 
+\section{Aplicaciones móviles en entornos universitarios}
+
+
+Actualmente las posibilidades de las aplicaciones móviles para entornos universitarios se presentan amplias, cada universidad intenta tener su propia aplicación siguiendo un patrón similar. Realizando una investigación general de las aplicaciones disponibles en el mercado observamos que estas aplicaciones se centran en ofrecer servicios propios (servicio de correo, moodle, chat entre usuarios,etc), mantener al alumno informado y agilizarle los trámites mayoritariamente. 
+
+En un principio, estas aplicaciones se enfocaban a atraer alumnos, centrandose en la calidad de la universidad y mostrando las posibilidades que ofrecían, sin embargo, con el paso de los años y el desarrollo creciente de las aplicaciones móviles, se muestra un cambio en esta estrategia. Ahora las aplicaciones tienen una doble función, no sólo buscan el acceso de nuevos estudiantes sino que también intentan mejorar la experiencia de los alumnos existentes y acercar a los nuevos a la experiencia de la universidad. 
+
+
+
+Algunos ejemplos posibles los encontramos en el marketplace de google:
+
+\begin{itemize}
+\item Universidad Galileo: \cite{URL::galileo}
+\item Univerisidad de Valladolid: \cite{URL::valladolid}
+\item Universidad de Oviedo: \cite{URL::oviedo}
+\end{itemize}
+
+
+Uno de los hechos que podemos observar es que las universidades están intentando obtener una solución rápida para desarrollar su app, una de estas soluciones es la creación de plantillas web optimizadas de su sitio web, lo que podemos considerar una opción rápida con un coste bajo.
+
+
+Hoy en día casi todos los estudiantes tienen acceso a un dispositivo móvil y cuentan con una tarifa de internet. En un futuro próximo con la aparición de estos dispositivos ya nos surge la pregunta ¿Serán capaces estos dispositivos de transformar la educación? y en caso aformativo ¿De que manera? 
+
+\section {Posibles casos de uso de la tecnología beacon en entornos universitarios}
+
+Como mencionaba antes, una de las posibilidades que se presentan para explotar esta tecnología se encuentra en las instituciones de enseñanza, las cuales podrían utilizar los beacons para facilitar a sus alumnos, profesores y demás personal involucrado  una serie de servicios de gran utilidad.
+
+
+Sin embargo, para utilizar esta tecnología es necesario cumplir una serie de condiciones:
+
+\begin{itemize}
+\item Tener instalada la aplicación en su dispositivo móvil.
+\item Tener activado el bluetooth.
+\item La aplicación ha de estar "despierta".
+\item Los beacons han de estar desplegados y configurados correctamente en lugares clave donde el rango sea óptimo.
+\end{itemize}
+
+En el caso de dispositivos Apple no es necesario tener activado el bluetooth ya que el SO se encarga de captar las señales BLE, aparte tampoco es necesario que la app esté despierta ya que nuevamente el SO se encarga de despertar a la aplicación involucrada. Sin embargo Apple no ha desarrollado un IBeacon físico aún, aunque en un futuro, se espera que sus dispositivos móviles puedan funcionar como un beacon bidirecional. Cabe destacar que existen librerías que se encargan de realizar estas mismas funcionalidades para mantener el móvil despierto a la escucha de posibles beacon para otros Sistemas Operativos, pero a diferencia de Apple esta funcionalidad no está integrada directamente en el Sistema Operativo por lo que no presenta el mismo nivel de control.
+
+
+Asimismo, podemos afirmar que prácticamente la mayoría de las universidades cuentan con una disposición amplia en lo que se refiere a servicios y despliegue de medios. Como ejemplo, podemos coger la Universidad de la Laguna, la cual cuenta con una red WiFi con un rango de cobertura casi completo de sus instalaciones y una amplia carta de servicios disponibles para sus alumnos. Además cuenta con una serie de Beacons, que podrían ser instalados fácilmente en lugares estratégicos. 
+
+Partiendo de esta base, procederemos a explorar posibles casos de uso para los beacons tomando el contexto universitario y del alumnado como referente:
+
+\subsection{Guía a través del Campus de la Universidad}
+
+Este caso de uso cubre la funcionalidad destacada de un beacon, el posicionamiento y guía tanto en exteriores como en interiores. 
+
+Como interesados podríamos destacar: 
+
+\begin{itemize}
+\item Personal invitado a jornadas o eventos en instalaciones de la Universidad.
+\item Alumnos de intercambio en programas internacionales.
+\item Alumnos de nuevo acceso.
+\item Personas con discapacidad.
+\end{itemize}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\columnwidth]{locationMobileBeacon}
+	\caption{Servicios de localización a través de la Universidad}
+	\label{fig:beaconLocation}
+\end{figure}
+
+El funcionamiento sería el siguiente: 
+
+
+El usuario transita por las inmediaciones del campus universitario. El usuario accede al sistema de navegación dentro de la aplicación. La aplicación le muestra entonces el camino mostrándole en todo momento su ubicación como un punto de color sobre el mapa del campus. Este mapa tiene marcados puntos de interés que contienen información de diferente tipo dependiendo del punto marcado: nombre, historia, página web, teléfono de contacto, trámites asociados... son algunos de los datos que podría mostrar. El mapa se va actualizando dependiendo de la posición del usuario permitiendo volver a la vista más alejada en cualquier momento para una visualización más general.
+
+
+\subsection{Descarga automática de material}
+
+Este caso de uso resultaría muy útil para personal lectivo y para estudiantes, los cuales accederían de manera más sencilla al material dado. También sería aplicable para ponentes de charlas los cuales no tendrían que colgar sus apuntes en alguna plataforma externa o llevarlos consigo en  un almacenamiento externo para compartirlo al finalizar.
+
+El funcionamiento sería el siguiente: 
+
+
+El profesor o ponente lleva consigo un beacon y sus estudiantes u oyentes tienen instalados en sus dispositivos la aplicación. El profesor es capaz de introducir en su aplicación con el perfil de profesor (el poniente con su correspondiente perfil), indicaciones del material a utilizar en el evento. El profesor carga consigo el pequeño dispositivo e indica a sus alumnos que conecten el bluetooth y abran la aplicación, al entrar en el rango, la aplicación pedirá permiso al alumno para descargarse el contenido indicado por el profesor. Si el alumno acepta, la aplicación pasaría a abrir  el contenido indicado por la página correspondiente.
+
+
+\subsection{Acceso al parking y conteo de número de vehículos estacionados}
+
+
+Este caso de uso proporcionaría información muy útil a los usuarios del parking de la universidad, informando del número coches estacionados en el parking y de las plazas restantes a ocupar en tiempo real.
+
+El funcionamiento sería el siguiente: 
+
+
+El personal de la Ull tendría la aplicación en su móvil, al acercarse a la barrera del parking, el usuario activaría el bluetooth de su móvil. El beacon por su parte registraría un nuevo punto entrando en el rango de acción del parking. La aplicación comprobaría que el usuario está autorizado a entrar en el parking y procedería a abrir la puerta del parking dejando entrar al vehículo. Cuando el vehículo saliese del rango del beacon por el rango interior, la aplicación registraría entonces un nuevo acceso al parking y contabilizaría otro vehículo dentro de parking. Al salir del parking el proceso sería el mismo, por lo tanto la aplicación sería capaz de informar al usuario de las plazas ocupadas en tiempo real.
+
+
+\subsection{Gestión de eventos e información, entrada automática}
+
+El funcionamiento sería el siguiente: 
+
+
+Los alumnos transitan los interiores de la Universidad de camino a sus clases. Los beacons están desplegados en las inmediaciones de lugares de interés, tipo aularium, paraninfo, clases que se utilicen a modo de salas de reuniones o seminarios. Al pasar por las inmediaciones de estos lugares de interés, la aplicación sería capaz de proporcionar al usuario información de diversa índole: ponientes, tema de la charla, acceso, teléfono de contacto u otra información similar.  Al mismo tiempo, la aplicación también cuenta con un tablón donde se muestran posibles eventos futuros. Estos eventos pueden ser muy variados y corresponder a diferentes tipos de actividades. Al mismo tiempo se podría confirmar la entrada al evento en el caso de haberla, mediante un código de acceso identificativo generado al realizar el pago del evento.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\columnwidth]{BeaconEvent}
+	\label{fig:eventBeacon}
+\end{figure}
+
+\subsection{Despacho del profesorado e información}
+
+El funcionamiento podría abarcarse de dos maneras, por un lado, podría utilizarse para proveer a los alumnos de información acerca del grupo de despachos, aclarando que profesores tienen el despacho en la zona, horario de tutorías, correo electrónico de contacto, horario de corrección de exámenes, etc. De esta manera el alumno al acercarse a la zona sería capaz de saber información de todos los profesores, o si buscase a alguno en particular, la aplicación le daría la opción de elegir su nombre de una lista y simplemente comprobar si tiene su despacho en esa zona. 
+
+Por otro lado, este caso de uso podría abarcarse para proporcionar una información adicional, comprobando si el profesor está en la zona en ese momento y se encuentra disponible. El profesor tendrá un perfil de la aplicación con un código identificativo que le distingue de los demás profesores. Estos datos se guardarían en un servicio externo, y el beacon sería el encargado de registrar las entradas y salidas de los profesores. En cuanto al estado de disponibilidad, sería un dato que actualizaría el profesor desde su perfil de profesor en la aplicación. Los alumnos recibirían estos estados desde su lado de la aplicación y serían capaces de saber cuando el profesor se encuentra disponible mediante la aplicación. 
+
+\subsection{Información y descuentos para usuarios de la APP}
+
+Este caso de uso no solo dependería de la universidad, sino de establecimientos comerciales interesados. La idea sería la siguiente: 
+
+La universidad en colaboración con un establecimiento comercial le entrega un beacon. La aplicación contaría con un perfil para el dueño del establecimiento, donde sería capaz de introducir información que quiere que se muestre al usuario al pasar cerca de su establecimiento, mensajes de información, descuentos u ofertas especiales por ejemplo. El usuario al pasar por las inmediaciones del establecimeinto recibe en su aplicación una notificación del establecimiento con la información introducida por el dueño anteriormente. Al aceptar la notificación, el usuario podría ser redirigido a la página web del establecimiento para ver las ofertas. En cualquier caso el establecimiento ha conseguido captar la atención de un posible cliente, y el usuario se benefiaría de ofertas y descuentos. 
+
+\subsection{Control de asistencia}
+
+Este caso de uso podría ir ligado al de Descarga automática de material, el funcionamiento sería el siguiente: 
+
+El alumno conectaría el bluetooth de su móvil al iniciar la clase, en este momento la aplicación detectaría los dispositivos con los identificadores de alu de los alumnos y los dejaría registrados a la clase en el horario establecido. Los profesores serían capaces en todo momento desde su perfil de profesor de consultar asistencia. Si lo unimos con la descarga automática de material que ya habíamos mencionado en apartados anteriores, proporcionaría comodidad tanto a alumnos como a profesores. Sin embargo, un impedimento podría ser el rango del beacon o la necesidad de activar el bluetooth ya que, si el alumno no tiene batería en el móvil, tendría que haber un método secundario. 
+
+\subsection{Control de acceso a instalaciones}
+
+En control de acceso a las aulas y edificios puede ser un tema abordable mediante el uso de estos dispositivos, los lectores de tarjetas pasarían a ser algo innecesario. El alumno simplemente tendría que activar el bluetooth cerca del punto de acceso, se comprobaría su identificador y procedería a darle a acceso o a informarle de su falta de permiso para acceder. El acceso a estos puntos podría quedar guardado en algún tipo de plataforma donde se monitorizen los accesos dependiendo de la seguridad de acceso al aula.
+
+\subsection{Biblioteca Informativa}
+
+Otro posible uso que se le podría dar a esta tecnología tiene que ver con las bibliotecas o lugares de almacenamiento de material. El alumno se acercaría a la biblioteca buscando un libro específico, en la aplicación estaría registrado la localización de los libros disponibles en los estantes, lo que le indicaría al alumno la posición del libro que busca. Para lugares amplios donde hay gran cantidad de material, incluso podría guiar al usuario como un punto por las instalaciones hasta llegar a su objetivo, informarle de si quedan ejemplares disponibles o de fecha prevista de entrada de algún material, de esta manera el alumno agilizaría su búsqueda en gran medida.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\columnwidth]{BibliotecaSalamanca}
+	\caption{La biblioteca de la Universidad de Salamanca (USAL) contiene más de 1.000.000 de ejemplares lo que puede hacer dificil la localización de algunos títulos.}
+	\label{fig:bibliotecaUSAL}
+\end{figure}
+
+\subsection{Actividades interactivas por el Campus, jornadas de acogida u otros eventos}
+
+En un aspecto más recreativo, se podría tener en cuenta el uso de los beacons para organizar juegos o actividades divertidas para los alumnos. Estos eventos dependerían de los organizadores, pero podrían consistir en alguna actividad que implicase movimiento y colaboración. Los alumnos tendrían que registrarse con su identificador, una ruta a través del campus con adivinanzas o puzzles que tengan que ver con diferentes temáticas por ejemplo fomentaría a los alumnos a trabajar en equipo y utilizar su ingenio.Al mismo tiempo se podría aplicar algún tipo de recompensa para los ganadores, descuentos o bonos tramitados por medio de la aplicación, lo que fomentaría la participación estudiantil.
+
+\subsection{Localización de transporte público, horarios e información de la parada}
+
+Teniendo en cuenta los medios de transporte que utilizan los estudiantes, uno de los principales es el autobus. Este medio de transporte puede llegar a ser el día a día de muchos de los estudiantes que no cuentan con vehículo propio o que simplemente prefieren utilizar el autobus. 
+
+Este caso de uso contempla lo siguiente: 
+
+
+El estudiante llega a una parada de autobus y utilizando su dispositivo móvil, consulta los autobuses que van a pasar por la parada; la aplicación le permite obtener información de los diferentes autobuses, el itinerario y los minutos que faltan para que llege a la parada, asimismo también enlazaría con la web de la compañía de transporte para más información sobre las líneas y los itinerarios en caso de necesitar más información que la proporcionada por la aplicación.

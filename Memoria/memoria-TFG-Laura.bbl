@@ -1,0 +1,179 @@
+\begin{thebibliography}{10}
+
+\bibitem{URL::trilateracion}
+{Algoritmo de Trilateración utilizado}.
+\newblock \url{https://github.com/lemmingapex/Trilateration}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::oviedo}
+{Aplicación de la Universidad de Oviedo}.
+\newblock
+  \url{https://play.google.com/store/apps/details?id=es.uniovi.innova.unioviapp}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::valladolid}
+{Aplicación de la Universidad de Valladolid}.
+\newblock
+  \url{https://play.google.com/store/apps/details?id=com.pocketuniversity.uva}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::galileo}
+{Aplicación de la Universidad Galileo}.
+\newblock \url{https://play.google.com/store/apps/details?id=edu.galileo.ges}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::importGradle}
+{Dependencia Gradle de AltBeacon}.
+\newblock
+  \url{https://altbeacon.github.io/android-beacon-library/configure.html}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::altbeaconSamples}
+Ejemplos de utilización de la libería altbeacon.
+
+\bibitem{URL::licencia}
+{Licencia Creative CommonsReconocimiento-NoComercial-CompartirIgual 4.0
+  Internacional}.
+\newblock \url{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es_ES}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::Android}
+{Android}.
+\newblock {Android}.
+\newblock \url{https://www.android.com/}, 2008.
+\newblock [Disponible electrónicamente; Último acceso enero de 2016].
+
+\bibitem{URL::IOS7}
+{Apple Inc.}
+\newblock Ios7.
+\newblock \url{https://es.wikipedia.org/wiki/IOS_7}, 2014.
+\newblock [Disponible electrónicamente; Último acceso enero de 2016].
+
+\bibitem{URL::Beacon}
+Beacon.
+\newblock \url{http://meridianapps.com/news/2014/11/04/beacons}, 2014.
+\newblock [Disponible electrónicamente; Último acceso enero de 2016].
+
+\bibitem{URL::couchbaseDownload}
+Descarga de couchbase server.
+\newblock \url{http://www.couchbase.com/nosql-databases/downloads}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::couchBaseLite}
+Guía de desarrollo usando couchbase lite.
+\newblock
+  \url{http://developer.couchbase.com/documentation/mobile/1.2/develop/training/build-first-android-app/index.html}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::couchBaseGuide}
+Guía de instalación de couchbase server.
+\newblock
+  \url{http://developer.couchbase.com/documentation/server/4.5/getting-started/installing.html}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::eventsull}
+Página web de eventos de la universidad de la laguna.
+\newblock \url{http://eventos.ull.es/}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::Github}
+{Github}.
+\newblock {Github}.
+\newblock \url{https://github.com/}, 2008.
+\newblock [Disponible electrónicamente; Último acceso enero de 2016].
+
+\bibitem{URL::versionAltBeacon}
+{Google, Inc.}
+\newblock {Diferentes versiones de Alt Beacon}.
+\newblock
+  \url{https://altbeacon.github.io/android-beacon-library/download.html}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::eclipseADT}
+{Google, Inc.}
+\newblock {Eclipse con ADT plugin}.
+\newblock
+  \url{https://marketplace.eclipse.org/content/android-development-tools-eclipse},
+  2012.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::Gradle}
+Gradle.
+\newblock \url{http://gradle.org/}, 2007.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::Incompatibilidades}
+Discusiones del funcionamiento de altbeacon en android deep sleep mode.
+\newblock \url{https://github.com/AltBeacon/android-beacon-library/issues/21}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::AndroidStudio}
+{IntelliJ}.
+\newblock {Android Studio}.
+\newblock \url{https://developer.android.com/studio/index.html}, 2014.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::IntelliJIDEA}
+{IntelliJ IDEA}.
+\newblock Intellij idea.
+\newblock \url{https://www.jetbrains.com/idea/}, 2001.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::Bluetooth}
+{Jaap Haartsen y Mattisson Sven}.
+\newblock Bluetooth.
+\newblock \url{https://es.wikipedia.org/wiki/Bluetooth}, 1994.
+\newblock [Disponible electrónicamente; Último acceso enero de 2016].
+
+\bibitem{URL::Jsoup}
+Librería jsoup para parseo de html.
+\newblock \url{https://jsoup.org/download}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::LaTeX}
+{LaTeX3 Project}.
+\newblock Latex.
+\newblock \url{https://www.latex-project.org/}, 1985.
+\newblock [Disponible electrónicamente; Último acceso enero de 2016].
+
+\bibitem{URL::repositorioAplicacion}
+{Laura Padron Jorge}.
+\newblock {Repositorio de la aplicación BulletPoint}.
+\newblock \url{https://github.com/ccetsii/BulletPoint}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::manualLatex}
+Manual de latex en español.
+\newblock \url{http://www.fing.edu.uy/~canale/latex.pdf}, 2004.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::Articulo}
+Danny Mareco.
+\newblock 3 brilliant example of how beacon technology is transforming
+  mobility.
+\newblock
+  \url{http://www.securedgenetworks.com/blog/3-brilliant-examples-of-how-beacon-technology-is-transforming-mobility}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::BluetoothLowEnergy}
+{Nokia}.
+\newblock Bluetooth low energy.
+\newblock \url{https://en.wikipedia.org/wiki/Bluetooth_low_energy}, 2010.
+\newblock [Disponible electrónicamente; Último acceso enero de 2016].
+
+\bibitem{URL::PATFL}
+Plataforma del programa de apoyo a trabajos finales libres.
+\newblock \url{http://osl.ull.es/programa-apoyo-trabajos-finales-libres/}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::titsa}
+Página web de transportes interurbanos de tenerife, sa.
+\newblock \url{http://www.titsa.com/}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
+\bibitem{URL::UUID}
+Uuid.
+\newblock \url{https://en.wikipedia.org/wiki/Universally_unique_identifier}.
+\newblock [Disponible electrónicamente; Último acceso enero de 2016].
+
+\end{thebibliography}

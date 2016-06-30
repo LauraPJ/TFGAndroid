@@ -10,7 +10,7 @@
 
 \chapter{La aplicación BulletPoint} \label{chap:LaAplicacion} 
 
-Basándonos en el análisis de casos de uso realizado en el capítulo posterior, en este capítulo se discutirán los casos de uso que han sido elegidos e implementados en la aplicación BulletPoint. Hablaremos de la aplicación centrándonos en el desarrollo y en diferentes partes a destacar del código que puedan resultar interesantes.
+Basándonos en el análisis de casos de uso realizado en el capítulo posterior en este capítulo se discutirán los casos de uso que han sido elegidos e implementados en la aplicación BulletPoint. Hablaremos de la aplicación centrándonos en el desarrollo y en diferentes partes a destacar del código que puedan resultar interesantes.
 
 
 \section{Casos de uso elegidos}
@@ -25,7 +25,7 @@ A continuación se desglosarán los distintos casos de uso en los que tendremos 
 \subsubsection{Objetivo}
 
 
-El objetivo de este caso de uso es el conocer, en tiempo real, qué autobuses pasan por la parada en la que nos encontramos, hacia donde se dirigen, y cuánto tiempo falta para que llegen a la parada. En caso de necesidad de información adicional, la aplicación está preparada para enviarnos a navegar por la página web \cite{URL::titsa} de la empresa Transportes interurbanos de Tenerife, S.A.(TITSA), donde podemos ver más datos sobre el autobús seleccionado.
+El objetivo de este caso de uso es el conocer, en tiempo real, qué autobuses pasan por la parada en la que nos encontramos, hacia donde se dirigen, y cuánto tiempo falta para que llegen a la parada. En caso de necesidad de información adicional, la aplicación está preparada para enviarnos a navegar por la página web de la empresa (TITSA) , donde podemos ver más datos sobre el autobús seleccionado.
 
 \begin{figure}[H]
 	\centering
@@ -67,7 +67,7 @@ La aplicación ha sido programada enlazando los números identificativos de la p
 \lstinputlisting[float, floatplacement=H, caption={La clase Arrival donde quedan contenidos los datos de cada llegada.}, label={code:arrival}]
 {listings/Arrival.java} %% LISTING
 
-Aparte de esta información por cada autobus se incluye un link a modo de botón, que redireciona al usuario a la página web de TITSA con el identificador de la línea, con lo que el usuario puede obtener más información en caso de duda.
+A parte de esta información por cada autobus se incluye un link a modo de botón, que redireciona al usuario a la página web de TITSA con el identificador de la línea, con lo que el usuario puede obtener más información en caso de duda.
 
 
 En un principio, la idea era utilizar simplemente la API de TITSA, puesto que se creía que proporcionaría toda esta información, sin embargo en algunos casos, los destinos no se correspondían, y las rutas salían erróneas. Ante esta situación, nos pusimos en contacto con alguien que estaba involucrado en esta API quien nos comentó que esto ocurría en algunos casos por la manera en la que estaba planteada la API.
@@ -83,7 +83,7 @@ En el primer método, utilizando una librería de peticiónes HTTP, se manda una
 
 Al mismo tiempo, se inicia la petición a la página de TITSA y utilizando la librería Jsoup \cite{URL::Jsoup}, se obtiene el contenido de la página web. De este contenido en html, recopilamos únicamente el recorrido de los autobuses y el resto se descarta como podemos ver en el listado \ref{code:jsoup}. Esta petición es bastante más pesada que la del xml previa, ya que tiene que obtener todo el contenido de la página web en la que aparece el desglose del itinerario en formato html. El parseo de la página también es más lento que en el paso previo, ya que tiene que ir elemento por elemento iterando en los elementos hijos del html.
 
-\lstinputlisting[float, floatplacement=T,caption={El método \textit{getCorrectRoute} nos permite obtener el itinerario correcto del autobús.}, label={code:jsoup}]
+\lstinputlisting[float, floatplacement=H,caption={El método \textit{getCorrectRoute} nos permite obtener el itinerario correcto del autobús.}, label={code:jsoup}]
 {listings/HttpClientTitsaJsoup.java} %% LISTING
 
 \begin{figure}[H]
@@ -129,13 +129,18 @@ En este caso, sería necesario colocar un beacon en sitios de interés donde pue
 \subsubsection{Funcionamiento}
 
 
-Mediante el uso de los beacons, permitimos a la aplicación identificar en que localización se encuentra el usuario. En este caso, hemos utilizado la información RSS de la página web eventos.ull \cite{URL::eventsull}. Esta página posee diferentes enlaces RSS, actualmente no están separados por ubicación sino por categorías variadas (ocio, eventos, deportes, tecnologías,etc), sin embargo lo hemos tomado de ejemplo porque es algo que ya está en funcionamiento y que proporciona información sobre eventos actuales relacionados con la Universidad de la Laguna. 
+Mediante el uso de los beacons, permitimos a la aplicación identificar en que localización se encuentra el usuario. En este caso, hemos utilizado la información RSS de la página web eventosUll (referencia). Esta página posee diferentes enlaces RSS, actualmente no están separados por ubicación sino por categorías variadas (ocio, eventos, deportes, tecnologías,etc) sin embargo lo hemos tomado de ejemplo porque es algo que ya está en funcionamiento y que proporciona información sobre eventos actuales relacionados con la Universidad de la Laguna. 
 
 
-La aplicación ha sido programada enlazando la dirección MAC de los beacons con diferentes links RSS de la página web de eventos como podemos apreciar en el listado \ref{code:rss}. Al detectar un beacon, se reconoce a qué información queremos acceder y se procede a realizar una petición utilizando el link identificado por el beacon: 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=120mm,height=170mm]{Eventos}
+	\caption{Podemos conocer eventos asociados a un RSS de la página web de eventos.ull.}
+	\label{fig:eventos}
+\end{figure}
 
-\lstinputlisting[float, floatplacement=H, caption={La información de la MAC del beacon queda asociada a un enlace RSS.}, label={code:rss}]
-{listings/RssBeaconInfo.java} %% LISTING
+La aplicación ha sido programada enlazando la dirección MAC de los beacons con diferentes links RSS de la página web de eventos. Al detectar un beacon, se reconoce a qué información queremos acceder y se procede a realizar una petición utilizando el link identificado por el beacon: 
+
 
 La petición se lanza sobre el link el cual nos devuelve un archivo XML que procedemos a tratar para sacar la información que nos interesa. Para no sobrecargar la aplicación con demasiada información del evento hemos decidido utilizar sólo los datos más relevantes. En principio, el título y la fecha del evento. Al mismo tiempo, sobre cada evento se incluye un link que al seleccionar nos envía a la página web del evento seleccionado para darnos más información sobre él (localización en un mapa, manera de inscribirse al evento, etc) sin embargo, esta información no la contienen todos los eventos.
 
@@ -144,7 +149,7 @@ En un principio, se planteó el filtrar los eventos para obtener los cercanos a 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=85mm,height=70mm]{eventsRss}
+	\includegraphics[width=\columnwidth]{eventsRss}
 	\caption{Las diferentes categorías de los RSS de la página web de eventos.ull.es}
 	\label{fig:eventsRss}
 \end{figure}
@@ -157,13 +162,6 @@ La petición se realiza utilizando la misma librería de peticiónes HTTP que en
 	\includegraphics[width=\columnwidth]{eventsPage}
 	\caption{La página web de eventos, donde podemos tener más información de un evento concreto.}
 	\label{fig:eventsPage}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=80mm,height=120mm]{Eventos}
-	\caption{Podemos conocer eventos asociados a un RSS de la página web.}
-	\label{fig:eventos}
 \end{figure}
 
 \subsubsection{Dificultades}
@@ -195,15 +193,8 @@ Para solucionar estos problemas se ha optado por las siguientes soluciones:
 Como servidor se ha utilizado \textit{"`Couchbase Server"'}, una base de datos distribuida no-SQL, orientada a documentos y de código abierto. Por otro lado, se ha configurado en la aplicación móvil una base de datos \textit{"`Couchbase Lite"'} que sirve de paso intermedio e interactúa con \textit{"`Sync Gateway"'} para sincronizar los datos de la base de datos del dispositivo al servidor, y viceversa.
 
 
-Para almacenar los datos del usuario se ha hecho uso de la API de preferencias de android como podemos apreciar en los listados \ref{code:loadpreferences} y \ref{code:xmlpreferences}, el cual almacena los datos en el dispositivo móvil en un espacio compartido para toda la aplicación. De esta manera, hemos almacenado datos como \textit{"`Nombre de Usuario"'}, \textit{"`Número Das"'} o \textit{"`DNI"'}, los cuales solo serán visibles para el usuario de la aplicación y servirán para dejar registradas las asistencias con estos datos.
+Para almacenar los datos del usuario se ha hecho uso de la API de preferencias de android, el cual almacena los datos en el dispositivo móvil en un espacio compartido para toda la aplicación. De esta manera, hemos almacenado datos como \textit{"`Nombre de Usuario"'}, \textit{"`Número Das"'} o \textit{"`DNI"'}, los cuales solo serán visibles para el usuario de la aplicación y servirán para dejar registradas las asistencias con estos datos. Al mismo tiempo, se almacena también la dirección MAC del dispositivo móvil para evitar replicaciones o falsos positivos.
 
-\lstinputlisting[float, floatplacement=H, caption={Para cargar la pantalla de preferencias de un fichero xml en el fragmento \textit{Settings}.},label={code:loadpreferences}]
-{listings/SettingsActivity.java} %% LISTING
-
-\vspace{5mm}
-\lstinputlisting[language=xml, caption={El fichero xml de donde se cargan todas las preferencias.},label={code:xmlpreferences}]
-{listings/preferences.xml} %% LISTING
-\vspace{5mm}
 
 En cuanto al área de acción a partir de la cual es posible guardar la asistencia, se ha optado por establecer un perímetro dentro del aula delimitado por las paredes del aula, menos cierto margen, de manera que el aula quede cubierta y los exteriores no se tengan en cuenta. 
 
@@ -214,17 +205,14 @@ En este caso, para poder realizar este proceso es necesario utilizar la trilater
 \subsubsection{Funcionamiento}
 
 
-En cuanto se accede al módulo de asistencia, la aplicación comienza a escanear las inmediaciones buscando beacons. Cuando detecta más de 3 beacons, la aplicación carga la imagen de dicha localización y comprueba que el alumno se encuentra dentro de la zona delimitada para registrar la asistencia, listado \ref{code:scanAtt}.
+En cuanto se accede al módulo de asistencia, la aplicación comienza a escanear las inmediaciones buscando beacons. Cuando detecta más de 3 beacons, la aplicación carga la imagen de dicha localización y comprueba que el alumno se encuentra dentro de la zona delimitada para registrar la asistencia.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=80mm,height=120mm]{ConfirmarAsistencia}
+	\includegraphics[width=120mm,height=170mm]{ConfirmarAsistencia}
 	\caption{Pantalla de confirmación de asistencia en la localización.}
 	\label{fig:confirmarAsistencia}
 \end{figure}
-
-\lstinputlisting[float, floatplacement=H, caption={Utilizando \textit{ScanFragment} comprobamos que el usuario se encuentra dentro de la zona delimitada.},label={code:scanAtt}]
-{listings/scanAtt.java} %% LISTING
 
 Si no se encuentra en la zona delimitada, igualmente la aplicación muestra su ubicación en el mapa para que pueda corregir su posición. Una vez que acceda al área se muestra un mensaje de confirmación con el aula en la que se encuentra. En este momento se debe confirmar pulsando un botón de que deseas registrar la asistencia. Previamente el usuario ha debido introducir sus datos en la aplicación y ya deben estar guardados. Estos datos son los que utiliza la aplicación, junto con la dirección MAC del dispositivo desde el cual se manda la petición de registro. Otro control es almacenar una hora junto con los demás datos, a la hora de enviar la información al servidor, asegurándonos de que realmente el usuario ha estado en el aula a dicha hora.
 
@@ -258,12 +246,7 @@ En este caso se ha tomado como referencias algunas zonas del edificio y se han c
 
 \subsubsection{Despliegue}
 
-En este caso, también en necesario utilizar el algoritmo de trilateración (en el listado \ref{code:trilaterate} podemos observar los métodos principales para utilizar la trilateración), por lo que hemos tenido que desplegar 3 beacons en el lugar que queríamos visualizar, en el edificio de Física y Matemáticas en la primera planta, se han puesto en las esquinas de la zona principal, conserjería, cerca de los ascensores y en la entrada a los pasillos pricipales.
-
-
-\lstinputlisting[float, floatplacement=H, caption={Los métodos principales para realizar el algoritmo de trilateración con los beacons, calcular la posición del usuario y dibujar en la imagen.},label={code:trilaterate}]
-{listings/trilaterate.java} %% LISTING
-
+En este caso, también en necesario utilizar el algoritmo de trilateración, por lo que hemos tenido que desplegar 3 beacons en el lugar que queríamos visualizar, en el edificio de Física y Matemáticas en la primera planta, se han puesto en las esquinas de la zona principal, conserjería, cerca de los ascensores y en la entrada a los pasillos pricipales.
 
 \subsubsection{Funcionamiento}
 
@@ -333,6 +316,17 @@ Sin embargo, si deseamos conocer la localización más precisa del usuario neces
 
 Todos estos factores han de ser tomados en cuenta a la hora de realizar el despligue de los beacons, otro factor a tener en cuenta es la altura, los dispositivos es recomendables levantarlos cierta altura del suelo, a la hora de probarlos se ha intentado, en la medida de lo posible, mantenerlos a un nivel elevado sobre la altura de las personas y siempre intentando mantener esta medida de altura para los diferentes beacons. En cuanto al despliegue de la aplicación, el código fuente se encontrará disponible para su descarga en el enlace \cite{URL::repositorioAplicacion}, bajo licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional \cite{URL::licencia}.
  
+\section{Desarrollo}
+
+En esta sección nos centraremos en el desarrollo más técnico de la aplicación, se mostrarán distintas partes del esqueleto de \textit{BulletPoint} comentando las partes relevantes del código.
+
+\subsection{Clase \textit{MainActivity}}
+
+Esta clase constituye el esqueleto de toda la aplicación dirige toda la navegación, lo que supone reemplazar los distintos fragmentos e indicar al fragmento que módulo ha sido elegido. En este caso ya que todos los módulos han de pasar por dos fragmentos similares, se ha decidido utilizar un Bundle con la
+
+
+
+
 
 
 

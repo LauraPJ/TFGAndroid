@@ -32,7 +32,7 @@ Android Studio \cite{URL::AndroidStudio} es el IDE (Entorno de Desarrollo Integr
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\columnwidth]{androidstudio}
+	\includegraphics[width=\linewidth]{androidstudio}
 	\caption{Android Studio, un IDE flexible e intuitivo.}
 	\label{fig:androidstudio}
 \end{figure}
@@ -104,7 +104,7 @@ Para quienes no conozcan este término, en el marco en el que nos movemos, hace 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\columnwidth]{beaconPhone}
+	\includegraphics[width=\linewidth]{beaconPhone}
 	\caption{Representación de un beacon emitiendo mediante Bluetooth a un dispositivo móvil}
 	\label{fig:beaconBluetooth}
 \end{figure}
@@ -120,7 +120,7 @@ Los beacons usan Bluetooth Low Energy (BLE) \cite{URL::BluetoothLowEnergy}, una 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\columnwidth]{estimoteBeaconInside}
+	\includegraphics[width=0.7\linewidth]{estimoteBeaconInside}
 	\caption{Interior de un beacon de Estimote}
 	\label{fig:beaconInside}
 \end{figure}
@@ -137,8 +137,8 @@ Este identificador se divide en tres partes:
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=100mm, height=30mm]{identity}
-	\caption{Numeros identificativos de los beacons}
+	\includegraphics[width=0.7\linewidth]{identity}
+	\caption{Números identificativos de los beacons}
 	\label{fig:beaconId}
 \end{figure}
 
@@ -156,7 +156,7 @@ Las aplicaciones que trabajan con beacons suelen definir acciones en tres rangos
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\columnwidth]{BeaconsRange}
+	\includegraphics[width=\linewidth]{BeaconsRange}
 	\caption{Ejemplificación del rango de un beacon}
 	\label{fig:beaconRange}
 \end{figure}
@@ -171,7 +171,7 @@ Las beacons son compatibles con todos los dispositivos que soporten el protocolo
 En dispositivos con IOS7 \cite{URL::IOS7} o superior, el dispositivo puede estar constantemente buscando dispositivos BLE y activar a las aplicaciones implicadas cuando entran en el rango de los beacons, incluso estando cerradas las aplicaciones.
 
 
-En dispositivos Android \cite{URL::Android} el sistema operativo no está preparado para escanear dispositivos BLE, por lo que son las aplicaciones las que se tienen que encargar de escanear las proximidades buscando beacons, esto supone que las aplicaciones tienen que estar funcionando y despiertas (aunque sea en segundo plano). Existen librerías que solucionan esta limitación, haciendo que la aplicación escanee cada cierto tiempo incluso en segundo plano o estando en ahorro de energía, pero no es muy eficaz y suele tener incompatibilidades ya que induce conflictos con el sistema operativo. Un ejemplo de estas incompatibilidades lo podemos ver en este hilo de discusión \cite{URL::Incompatibilidades} de los desarrolladores de la librería AltBeacon, librería que se ha usado para \textit{BulletPoint} y que mencionaremos más tarde.
+En dispositivos Android \cite{URL::Android} el sistema operativo no está preparado para escanear dispositivos BLE, por lo que son las aplicaciones las que se tienen que encargar de escanear las proximidades buscando beacons, esto supone que las aplicaciones tienen que estar funcionando y despiertas (aunque sea en segundo plano). Existen librerías que solucionan esta limitación, haciendo que la aplicación escanee cada cierto tiempo incluso en segundo plano o estando en ahorro de energía, pero no es muy eficaz y suele tener incompatibilidades ya que induce conflictos con el sistema operativo. Un ejemplo de estas incompatibilidades lo podemos ver en este hilo de discusión \cite{URL::Incompatibilidades} de los desarrolladores de la librería AltBeacon, librería que se ha usado para \BulletPoint{} y que mencionaremos más tarde.
 
 Por último en dispositivos Windows Phone \cite{URL:WindowsPhone} o Blackberry \cite{URL:Blackberry} existen diferentes niveles de compatibilidad pero en los que soportan BLE, su funcionamiento es similar al de los dispositivos Android, por lo que no nos pararemos a analizarlo. 
 
@@ -209,7 +209,7 @@ Este ejemplo es bastante significativo para nosotros ya que se aplicó en el mis
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\columnwidth]{ClevedonApp}
+	\includegraphics[width=\linewidth]{ClevedonApp}
 	\caption{La aplicación de Clevedon School}
 	\label{fig:clevedonApp}
 \end{figure}
@@ -238,7 +238,7 @@ Dos de los ejemplos más conocidos han sido los despliegues que se han realizado
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\columnwidth]{LevisStadium}
+	\includegraphics[width=0.8\linewidth]{LevisStadium}
 	\caption{La aplicación de Levi's Stadium}
 	\label{fig:levisStadium}
 \end{figure}
@@ -266,7 +266,7 @@ Otro despliegue exitoso de esta tecnología ha sido en el aeropuerto internacion
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\columnwidth]{orlandoAirport}
+	\includegraphics[width=\linewidth]{orlandoAirport}
 	\caption{La aplicación del Aeropuerto Internacional de Orlando}
 	\label{fig:orlandoAirport}
 \end{figure}
@@ -286,7 +286,7 @@ Hemos decidido utilizar esta tecnología por su flexibilidad y potencia para alm
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\columnwidth]{couchbaseexplanation}
+	\includegraphics[width=\linewidth]{couchbaseexplanation}
 	\caption{Sincronización de CouchBase Server con CouchBase Lite mediante Sync Gateway}
 	\label{fig:couchbaseexplanation}
 \end{figure}
@@ -362,7 +362,7 @@ A diferencia de esta, y muchas veces confundida con ella por la similitud del t�
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\columnwidth]{trilateration}
+	\includegraphics[width=0.6\linewidth]{trilateration}
 	\caption{En el algoritmo de trilateración se utilizan las localizaciones conocidas de varios puntos de referencia y la distancia medida entre el sujeto y cada punto de referencia.}
 	\label{fig:trilateration}
 \end{figure}

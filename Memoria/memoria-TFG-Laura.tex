@@ -8,7 +8,7 @@
 %
 % ----------------------------------------------------
 %
-\documentclass[spanish,a4paper,14pt,oneside]{extreport}
+\documentclass[spanish,a4paper,12pt,oneside]{extreport}
 %\documentclass[a4paper, twoside, 12pt]{book}
 \usepackage[a4paper]{geometry}
 \usepackage[spanish]{babel}
@@ -32,7 +32,11 @@
 \usepackage[pdftex=true,colorlinks=false,urlcolor=blue,plainpages=false,pagebackref=true,citecolor=red]{hyperref} %hiperenlaces y backcites 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Comandos para escribir "siempre igual"
-\newcommand{\BulletPoint}{\texttt{BulletPoint.{ Tecnología beacon en entornos universitarios}}}
+\newcommand{\BulletP}{\texttt{BulletPoint.{ Tecnología beacon en entornos universitarios}}}
+
+\newcommand{\llCoMP}{\texttt{llCoMP}{}}
+\newcommand{\BulletPoint}{\texttt{BulletPoint}{}}
+
 
 %%% Traducimos el pseudocodigo
 \renewcommand{\algorithmicwhile}{\textbf{mientras}}
@@ -87,8 +91,8 @@
 \definecolor{lightlightgray}{gray}{0.9}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Evitar partir palabras al final de la línea
-%\hyphenpenalty=10000
-%\tolerance=1000
+\hyphenpenalty=10000
+\tolerance=1000
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Para listados de código
 \usepackage{listings}
@@ -165,7 +169,7 @@
 
 \HRule
 \begin{flushright}
-        {\Huge \BulletPoint{}} \\[2.5mm]
+        {\Huge \BulletP{}} \\[2.5mm]
         {\Large Laura Padrón Jorge} \\[5mm]
 
 
@@ -397,7 +401,8 @@ Application for Android, Java, mobile devices, programming, Beacons.
 %\end{appendix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{chapter}{Bibliografía}
-\bibliographystyle{plain}
+%\bibliographystyle{plain}
+\bibliographystyle{bmc_article} 
 \renewcommand{\bibname}{Bibliografía}   %  Para que no aparezca Índice de figuras
 \bibliography{bibliografia}
 

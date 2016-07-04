@@ -4,7 +4,7 @@
         NonLinearLeastSquaresSolver nlSolver = new NonLinearLeastSquaresSolver(trilaterationFunction, new org.apache.commons.math3.fitting.leastsquares.LevenbergMarquardtOptimizer());
 
         LeastSquaresOptimizer.Optimum optimum = nlSolver.solve();
-        // the center
+        // The center of the point where the user is.
         double[] centroid = optimum.getPoint().toArray();
         return new Point(centroid[0],centroid[1]);
     }

@@ -24,7 +24,7 @@ Android Studio \cite{URL::AndroidStudio} es el IDE (Entorno de Desarrollo Integr
 
 \begin{itemize}
 \item Un sistema de compilación basado en Gradle\cite{URL::Gradle} que ha simplificado tanto la inserción de dependencias de las distintas librerías que se han tenido que utilizar, como la compilación de la aplicación.
-\item Un emulador rápido y fácil de utilizar que ha ayudado a visualizar las distintas pantallas durante el desarrollo aunque no ha sido de mucha utilidad para probar el funcionamiento al ser dependiente la app de la tecnología Bluetooth.
+\item Un emulador rápido y fácil de utilizar que ha ayudado a visualizar las distintas pantallas durante el desarollo aunque no ha sido de mucha utilidad para probar el funcionamiento al ser dependiente la app de la tecnología Bluetooth.
 \item La facilidad para publicar cambios a aplicaciones ya funcionando sin tener que eliminar y volver a crear un nuevo APK parando la app.
 \item Un sistema de visualización de las diferentes pantallas muy completo, con soporte visual para añadir componentes y cambiar atributos fácilmente.
 \item Un sistema de depuración, con una interfaz sencilla e intuitiva.
@@ -70,7 +70,7 @@ A continuación se revisan las distintas tecnologías utilizadas en el desarroll
 
 Android es un sistema operativo que emplea Linux en la interfaz del hardware.  Los componentes del SO subyacentes se codifican en C o C++ pero las aplicaciones se desarrollan en Java. De esta manera Android asegura una amplia operatividad en una gran variedad de dispositivos debido a dos hechos: la interfaz en Linux ofrece gran potencia y funcionalidad para aprovechar el hardware, mientras que el desarrollo de las aplicaciones en Java permite que Android sea accesible para un gran número de programadores conocedores del código.
 
-Este SO fue diseñado principalmente para dispositivos móviles con pantalla táctil: smartphones, tablets y otros dispositivos como televisores o automóviles. Fue desarrollado inicialmente por Android Inc., empresa que fue respaldada económicamente por Google y más tarde adquirida por esta misma empresa.
+Este SO fue diseñado principalmente para dispositivos móviles con pantalla táctil: smartphones, tablets y otros dispositivos como televisores o automóviles. Fue desarrollado inicialmente por Android Inc., empresa que fue respaldada económicamente por Google y más tarde aquirida por esta misma empresa.
 
 Actualmente tiene una gran comunidad de desarrolladores creando aplicaciones para extender la funcionalidad de los dispositivos. A fecha de hoy existen más de un millón de aplicaciones disponibles para la tienda oficial de Apps de Android, Google Play \cite{URL::GooglePlay} sin tener en cuenta las aplicaciones de otras tiendas no oficiales, como por ejemplo, la tienda de aplicaciones de Samsung Apps \cite{URL::SamsungApps}.
 
@@ -93,8 +93,8 @@ A continuación se intentará responder a las preguntas más frecuentes que nos 
 
 \begin{figure}[!h]
         \begin{floatrow}
-        \ffigbox{\includegraphics[width=\textwidth/2]{estimoteBeacon}}{\caption{Uno de los beacons de la compañía Estimote}\label{fig:estimote_Beacon}}
-        \ffigbox{\includegraphics[width=\textwidth/2]{estimoteSticker}}{\caption{Uno de los beacons de la compañía Estimote en formato Pegatina}\label{fig:estimote_Beacon_Sticker}}
+        \ffigbox{\includegraphics[width=\textwidth/2]{estimoteBeacon}}{\caption{Uno de los beacons de la compañia Estimote}\label{fig:estimote_Beacon}}
+        \ffigbox{\includegraphics[width=\textwidth/2]{estimoteSticker}}{\caption{Uno de los beacons de la compañia Estimote en formato Pegatina}\label{fig:estimote_Beacon_Sticker}}
         \end{floatrow}
 \end{figure}
 
@@ -112,7 +112,7 @@ Para quienes no conozcan este término, en el marco en el que nos movemos, hace 
 El funcionamiento de un beacon es sencillo: El dispositivo emite una señal ininterrumpida (véase Figura \ref{fig:beaconBluetooth}) que es captada por los dispositivos móviles dentro de su radio de cobertura. La señal nos ofrece información que sirve para detectar y localizar estos dispositivos. Esta señal es captada por una aplicación previamente instalada en un dispositivo móvil que esté programada para recibirla y reaccionar de manera acorde a la información recibida.
 
 
-Hay que tener en cuenta que esta señal es unidireccional: los beacons son capaces de enviar pero no están preparados para recibir. También hay que tener en cuenta, que la mayoría de los beacon actuales en el mercado transmiten información preconfigurada, confiando en la aplicación móvil para utilizar la información; sin embargo es muy posible que esto cambie en un futuro, ampliando las posibilidades de los beacons.
+Hay que tener en cuenta que esta señal es unidireccional: los beacons son capaces de enviar pero no están preparados para recibir. También hay que tener en cuenta, que la mayoría de los beacon actuales en el mercado transmiten información preconfigurada, confiando en la aplicacion móvil para utilizar la información; sin embargo es muy posible que esto cambie en un futuro, ampliando las posibilidades de los beacons.
 
 \subsubsection{¿Como funcionan estos dispositivos?}
 
@@ -132,7 +132,7 @@ Este identificador se divide en tres partes:
 \begin{itemize}
 \item \textit{"`UUID"'} \cite{URL::UUID} : corresponde con una ID dada por el fabricante e identifica el beacon en cuestión, nosotros utilizaremos el término MAC para referirnos a este identificador. \label{el:mac}
 \item ID Superior : configurables y utilizadas con un significado específico que puede identificar una acción o parámetro. 
-\item ID Inferior: configurables y utilizadas al igual que la superior con un significado específico que se puede usar para identificar una acción o parámetro.
+\item ID Inferior: customconfigurablesizables y utilizadas al igual que la superior con un significado específico que se puede usar para identificar una acción o parámetro.
 \end{itemize}
 
 \begin{figure}[h]
@@ -187,7 +187,7 @@ Las principales ventajas que se distinguen a la hora de hablar de los beacons so
 \item A diferencia de la tecnología GPS, sigue funcionando con precisión en el interior de los edificios.
 \end{itemize}
 
-En cuanto a las desventajas, podemos destacar las siguientes:
+En cuanto a las desventajes, podemos destacar las siguientes:
 
 \begin{itemize}
 \item Dependen de aplicaciones instaladas en el dispositivo móvil para funcionar. 
@@ -243,7 +243,7 @@ Dos de los ejemplos más conocidos han sido los despliegues que se han realizado
 	\label{fig:levisStadium}
 \end{figure}
 
-Por un lado tenemos el despliegue del estadio de Levi's , cuya intención ha sido la de ayudar a sus seguidores a navegar por el estadio dadas sus dimensiones. En este caso los beacons (de la compañía Aruba Networks) se utilizan en conjunto con puntos de acceso y repetidores situados por toda la infraestructura de manera que queda el estadio cubierto. Con la aplicación los fanes también son capaces de ver repeticiones de las jugadas y pedir comida directamente desde sus dispositivos móviles.
+Por un lado tenemos el despliegue del estadio de Levi's , cuya intención ha sido la de ayudar a sus seguidores a navegar por el estadio dadas sus dimensiones. En este caso los beacons (de la comañía Aruba Networks) se utilizan en conjunto con puntos de acceso y repetidores situados por toda la infraestructura de manera que queda el estadio cubierto. Con la aplicación los fanes también son capaces de ver repeticiones de las jugadas y pedir comida directamente desde sus dispositivos móviles.
 
 
 Un punto importante de este  despliegue ha sido la monitorización continua del funcionamiento de los beacons, incluyendo si están en funcionamiento o necesitan batería nueva. Los beacons son también más económicos que los puntos de acceso WiFi, lo cual les ha beneficiado.
@@ -261,7 +261,7 @@ Otro despliegue exitoso de esta tecnología ha sido en el aeropuerto internacion
 \begin{itemize}
 \item Navegación paso por paso a través de cerca de 1000 establecimientos o servicios dentro del aeropuerto. 
 \item Actualizaciones inmediatas de la información de los vuelos. 
-\item Instrucciones a puntos de interés críticos como puntos de recogida de equipaje, puertas de embarque o puestos de información.
+\item Intrucciones a puntos de interés criticos como puntos de recogida de equipaje, puertas de embarque o puestos de información.
 \end{itemize}
 
 \begin{figure}[H]
@@ -373,7 +373,7 @@ En el desarrollo de la aplicación se ha utilizado un algoritmo de trilateració
 
 En nuestro caso, las posiciones de los beacons son determinadas en una imagen separados entre sí a menos de 70 metros. Los beacons se sitúan en estas posiciones elegidas en la imagen y se obtiene una posición ``X'' e ``Y'' que queda registrada para cada beacon en la aplicación (Listado \ref{code:trilaterate}). 
 
-Las distancias medidas hasta la posición de cada beacon vienen dadas por la distancia registrada por la aplicación. Aparte de estos dos datos, para obtener una posición ``X'' e ``Y'' donde representar el punto, es necesario aplicar una escala que convierta los metros a píxeles. Tras la aplicación del algoritmo de trilateración, se consigue como resultado la posición del usuario en la imagen representado por ``X'' e ``Y'' en píxeles.
+Las distancias medidas hasta la posición de cada beacon vienen dadas por la distancia registrada por la aplicación. Aparte de estos dos datos, para obtener una posición ``X'' e ``Y'' donde representar el punto, es necesario aplicar una escala que convierta los metros a pixeles. Tras la aplicación del algoritmo de trilateración, se consigue como resultado la posición del usuario en la imagen representado por ``X'' e ``Y'' en pixeles.
 
 \lstinputlisting[float, floatplacement=H,caption={Usamos el algoritmo de trilateración, utilizando las posiciones de los beacons y las distancias. El algoritmo los resuelve y devuelve una posición ``X'' e ``Y'' que transformamos en un objeto de la clase \textit{Point} }, label={code:trilaterate}]
 {listings/trilaterateexp.java} %% LISTING

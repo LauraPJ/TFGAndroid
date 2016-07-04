@@ -36,7 +36,7 @@ El objetivo de este caso de uso es el conocer, en tiempo real, qué autobuses pa
 
 \subsubsection{Despliegue}
 
-En este caso, sería necesario colocar un beacon en cada parada de autobuses. De esta manera cada parada de autobús queda identificada por un beacon. Si el usuario se encuentra cercano a dos paradas, la aplicación considera que le interesa la información de la parada más cercana a su posición y le proporcionará información únicamente de esta parada con el objetivo de no confundir al usuario.
+En este caso, sería necesario colocar un beacon en cada parada de guaguas. De esta manera cada parada de guagua queda identificada por un beacon. Si el usuario se encuentra cercano a dos paradas, la aplicación considera que le interesa la información de la parada más cercana a su posición y le proporcionará información únicamente de esta parada con el objetivo de no confundir al usuario.
 
 \subsubsection{Funcionamiento}
 
@@ -67,7 +67,7 @@ La aplicación ha sido programada enlazando los números identificativos de la p
 \lstinputlisting[float, floatplacement=H, caption={La clase \textit{Arrival} donde quedan contenidos los datos de cada llegada.}, label={code:arrival}]
 {listings/Arrival.java} %% LISTING
 
-Aparte de esta información, por cada autobús se incluye un enlace a modo de botón que remite al usuario a la página web de TITSA con el identificador de la línea. Así el usuario puede obtener más información adicional en caso de precisarla.
+Aparte de esta información, por cada autobús se incluye un enlace a modo de botón que redireciona al usuario a la página web de TITSA con el identificador de la línea. Así el usuario puede obtener más información adicional en caso de precisarla.
 
 
 En un principio nuestra idea era utilizar simplemente la API de TITSA, puesto que se creía que proporcionaría toda esta información; sin embargo, en algunos casos los destinos no se correspondían con la realidad y las rutas aparecían erróneas. Ante esta situación, se contactó con personal de  TITSA involucrado en el desarrollo de esta API quien nos comentó que esto ocurría en algunos casos por la manera en la que estaba planteada la API.
@@ -76,7 +76,7 @@ En un principio nuestra idea era utilizar simplemente la API de TITSA, puesto qu
 La solución que se adoptó, fue utilizar ambos métodos para obtener la información completa. Dichos métodos serán desglosados a continuación: 
 
 
-En el primer método, utilizando una librería de peticiones HTTP, se envía una consulta por GET a la API de TITSA que devuelve una respuesta en XML. Esta respuesta se parsea con un handler de XML (véase Listado \ref{code:handler}). 
+En el primer método, utilizando una librería de peticiónes HTTP, se envía una consulta por GET a la API de TITSA que devuelve una respuesta en XML. Esta respuesta se parsea con un handler de XML (véase Listado \ref{code:handler}). 
 
 \lstinputlisting[float, floatplacement=H,caption={El handler se encarga de transformar el fichero XML en elementos de tipo \textit{Arrival} (véase Listado \ref{code:arrival}).}, label={code:handler}]
 {listings/XmlHandler.java} %% LISTING
@@ -93,7 +93,7 @@ Al mismo tiempo, se inicia la petición a la página de TITSA y utilizando la li
 	\label{fig:autobuses}
 \end{figure}
 
-Utilizando ambos conjuntos de datos, se va creando una estructura con los mismos, donde se almacena la información sobre cada elemento. En última instancia vamos añadiéndolos a la vista utilizando un adaptador y una estructura para visualizarlos.
+Utilizando ambos conjuntos de datos, se va creando una estructura con los mismos, donde se almacena la información sobre cada elemento. En última instancia vamos añadiendólos a la vista utilizando un adaptador y una estructura para visualizarlos.
 
 
 \subsubsection{Dificultades}
@@ -109,7 +109,7 @@ Al plantear este caso de uso se han detectado las siguientes dificultades:
 
 \subsubsection{Ampliación}
 
-Ampliar este caso de uso sólo conllevaría asociar los nuevos identificadores de los beacons a nuevos identificadores de parada. Por ello podemos afirmar que sería relativamente sencillo desplegar una red de beacons en las paradas de autobús de TITSA. 
+Ampliar este caso de uso sólo conllevaría asociar los nuevos identificadores de los beacons a nuevos identificadores de parada. Por ello podemos afirmar que sería relativamente sencillo desplegar una red de beacons en las paradas de guagua de TITSA. 
 
 
 \subsection{Gestión de eventos e información}
@@ -122,7 +122,7 @@ El objetivo de este caso de uso sigue siendo el de proporcionar información de 
 \subsubsection{Despliegue}
 
 
-En este caso, sería necesario colocar un beacon en sitios de interés donde puedan tener lugar eventos. Al mismo tiempo, también es necesaria una fuente de datos donde alojar la información de los eventos. De esta manera cada beacon hace referencia a una fuente de información de eventos. Si el usuario se encuentra cercano a dos beacons, la aplicación considera que le interesa la información del beacon más cercano a su posición. Si se desplaza a otra posición y se acerca a otro beacon, la información sería diferente.
+En este caso, sería necesario colocar un beacon en sitios de interés donde puedan tener lugar eventos. Al mismo tiempo, también es necesaria una fuente de datos donde alojar la información de los eventos. De esta manera cada beacon referenciaría a una fuente de información de eventos. Si el usuario se encuentra cercano a dos beacons, la aplicación considera que le interesa la información del beacon más cercano a su posición. Si se desplaza a otra posición y se acerca a otro beacon, la información sería diferente.
 
 \subsubsection{Funcionamiento}
 
@@ -244,7 +244,7 @@ En este caso las dificultades han sido de diversa índole: se ha tenido que conf
 
 \subsubsection{Ampliación}
 
-Para ampliar este caso de uso se deberían incluir nuevos beacons, nuevas imágenes de las localizaciones y nuevas áreas de registro; sin embargo, el envío de datos sería prácticamente el mismo. Si se decidiese cambiar en un futuro los datos a almacenar en el servidor, sería posible sin mucho esfuerzo.
+Para ampliar este caso de uso se deberían incluir nuevos beacons, nuevas imagenes de las localizaciones y nuevas áreas de registro; sin embargo, el envío de datos sería practicamente el mismo. Si se decidiese cambiar en un futuro los datos a almacenar en el servidor, sería posible sin mucho esfuerzo.
 
 \subsection{Guía a través del campus de la universidad}
 
@@ -266,7 +266,7 @@ En este caso, también es necesario utilizar el algoritmo de trilateración. En 
 \subsubsection{Funcionamiento}
 
 
-En cuanto se accede al módulo de guía, la aplicación comienza a escanear las inmediaciones buscando beacons. Cuando detecta más de 2 beacons, la aplicación carga la imagen de dicha localización, en este caso el plano del edificio de Física y Matemáticas, una versión reducida para la parte en la que nos encontremos y comprueba que el usuario se encuentra dentro de algunas de las posibles zonas. En cuanto se entre en alguna se mostrará la información relacionada con esta posición. En el estado actual de \BulletPoint{} las acciones de la zona se limitan a mostrar un pequeño texto con información generada teniendo en cuenta que el usuario necesite guiarse en las instalaciones, es decir, no conoce las instalaciones.
+En cuanto se accede al módulo de guía, la aplicación comienza a escanear las inmediaciones buscando beacons. Cuando detecta más de 2 beacons, la aplicación carga la imagen de dicha localización, en este caso el plano del edificio de Física y Matemáticas, una versión reducida para la parte en la que nos encontremos y comprueba que el usuario se encuentra dentro de algunas de las posibles zonas. En cuanto se entre en alguna se mostrará la información relacionada con esta posición. En el estado actual de \BulletPoint{} las acciones de la zona se limitan a mostrar un pequeño texto con información generada teniendo en cuenta que el usuario necesite guiarse en las intalaciones, es decir, no conoce las instalaciones.
 
 
 Ya que este caso de uso podría ser útil para un rango más amplio de usuarios por su naturaleza de guía, se ha decidido ofrecer soporte en inglés a la hora de mostrar las indicaciones.
@@ -277,7 +277,7 @@ Las dificultades de este caso de uso radican principalmente en situar al usuario
 
 \subsubsection{Ampliación}
 
-Para ampliar este caso de uso se deberían incluir nuevos beacons, nuevas imágenes de las localizaciones (exteriores o interiores) y nuevas áreas. Las áreas podrían ofrecer diferentes funcionalidades aparte de la información de la localización.
+Para ampliar este caso de uso se deberían incluir nuevos beacons, nuevas imagenes de las localizaciones (exteriores o interiores) y nuevas áreas. Las áreas podrían ofrecer diferentes funcionalidades aparte de la información de la localización.
 
 
 \subsection{Acceso al parking}
@@ -300,7 +300,7 @@ En este caso, también es necesario utilizar el algoritmo de trilateración, por
 \subsubsection{Funcionamiento}
 
 
-En cuanto se accede al módulo de parking de \BulletPoint{}, la aplicación muestra una lista con los diferentes aparcamientos y el número de plazas de cada recinto. Esta lista se obtiene mediante una consulta a una API diseñada en colaboración con Alberto Morales, quien se ha encargado de configurar el servicio para facilitar a la aplicación la información necesaria. De la lista de aparcamientos, el usuario ha de seleccionar al que quiere acceder, identificando así la imagen y zonas a dibujar. Esta selección da paso a un escáner que comienza a detectar la posición del usuario y a situarlo en la imagen. Si el usuario se encuentra en una de las zonas designadas para entrar o salir del parking, se lanzará la acción, que en este caso consiste en una petición de apertura contra el servidor. En este caso cada zona posee un identificador de barrera que es el que usa la petición para determinar que barrera debe abrir. 
+En cuanto se accede al módulo de parking de \BulletPoint{}, la aplicación muestra una lista con los diferentes parkings y el número de plazas de cada recinto. Esta lista se obtiene mediante una consulta a una API diseñada en colaboración con Alberto Morales, quien se ha encargado de configurar el servicio para facilitar a la aplicación la información necesaria. De la lista de parkings, el usuario ha de seleccionar al que quiere acceder, identificando así la imagen y zonas a dibujar. Esta selección da paso a un escáner que comienza a detectar la posición del usuario y a situarlo en la imagen. Si el usuario se encuentra en una de las zonas designadas para entrar o salir del parking, se lanzará la acción, que en este caso consiste en una petición de apertura contra el servidor. En este caso cada zona posee un identificador de barrera que es el que usa la petición para determinar que barrera debe abrir. 
 
 
 Por otro lado esta petición debe ir autentificada, para poder acceder, por lo que la aplicación ha negociado previamente un secreto con el servidor que la identifica y le permite realizar la acción de apertura utilizando un número identificativo basado en la MAC del dispositivo de pruebas.
@@ -312,14 +312,14 @@ En este caso de uso las dificultades han radicado en el hecho de comunicarse con
 
 \subsubsection{Ampliación}
 
-Para ampliar este caso de uso se deberían incluir nuevos beacons, 3 mínimo por cada recinto, nuevas imágenes de las localizaciones (exteriores o interiores) y nuevas áreas; Las áreas serían esenciales para definir las acciones de apertura de las barreas. Si las zonas acaban siendo muchas, sería recomendable crear una base de datos  para almacenar las localizaciones, las zonas y las imágenes a cargar.
+Para ampliar este caso de uso se deberían incluir nuevos beacons, 3 mínimo por cada recinto, nuevas imagenes de las localizaciones (exteriores o interiores) y nuevas áreas; Las áreas serían esenciales para definir las acciones de apertura de las barreas. Si las zonas acaban siendo muchas, sería recomendable crear una base de datos  para almacenar las localizaciones, las zonas y las imágenes a cargar.
 
 \section{Despliegue}
 
 El despliegue de estos dispositivos es variable como hemos podido comprobar con los distintos casos de uso. Sin embargo hay ciertas consideraciones comunes a en todos los casos, si lo que deseamos es un sistema que detecte entradas y salidas, independientemente de la posición exacta del usuario, simplemente necesitaremos un único beacon como regla general. 
 
 
-Sin embargo, si se pretende conocer la localización más precisa del usuario necesitaremos recurrir a un método como la trilateración \cite{URL::trilateracion}. Serán necesarios un mínimo de 3 beacons. Incrementando el número de beacons es posible aumentar la precisión con la que se percibe la posición del usuario. El algoritmo no es totalmente exacto, puesto que depende de las distancias calculadas a los beacons, sin embargo estas distancias pueden variar. Existen diversos factores que pueden influir en la calidad de la señal del Bluetooth y por tanto distorsionar estas distancias, entre otros factores podemos destacar principalmente:
+Sin embargo, si se pretende conocer la localización más precisa del usuario necesitaremos recurir a un método como la trilateración \cite{URL::trilateracion}. Serán necesarios un mínimo de 3 beacons. Incrementando el número de beacons es posible aumentar la precisión con la que se percibe la posición del usuario. El algoritmo no es totalmente exacto, puesto que depende de las distancias calculadas a los beacons, sin embargo estas distancias pueden variar. Existen diversos factores que pueden influir en la calidad de la señal del Bluetooth y por tanto distorsionar estas distancias, entre otros factores podemos destacar principalmente:
 
 
 \begin{itemize}
@@ -329,7 +329,7 @@ Sin embargo, si se pretende conocer la localización más precisa del usuario ne
 \end{itemize}
 
 
-Todos estos factores han de ser tomados en cuenta a la hora de realizar el despliegue de los beacons. Otro factor a tener en cuenta es la altura. Los dispositivos es recomendables levantarlos cierta altura sobre el nivel del suelo. A la hora de probarlos se ha intentado, en la medida de lo posible, mantenerlos a un nivel elevado sobre la altura de las personas y siempre intentando mantener esta medida de altura para los diferentes beacons. En cuanto al despliegue de la aplicación, el código fuente de \BulletPoint{} se encuentra disponible para su descarga en \cite{URL::repositorioAplicacion}, bajo licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional \cite{URL::licencia}.
+Todos estos factores han de ser tomados en cuenta a la hora de realizar el despligue de los beacons. Otro factor a tener en cuenta es la altura. Los dispositivos es recomendables levantarlos cierta altura sobre el nivel del suelo. A la hora de probarlos se ha intentado, en la medida de lo posible, mantenerlos a un nivel elevado sobre la altura de las personas y siempre intentando mantener esta medida de altura para los diferentes beacons. En cuanto al despliegue de la aplicación, el código fuente de \BulletPoint{} se encuentra disponible para su descarga en \cite{URL::repositorioAplicacion}, bajo licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional \cite{URL::licencia}.
 
 
 

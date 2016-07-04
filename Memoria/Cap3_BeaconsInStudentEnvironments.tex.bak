@@ -19,10 +19,15 @@ En este capítulo realizaremos un análisis de los posibles casos de uso de la t
 \section{Aplicaciones móviles en entornos universitarios}
 
 
-Actualmente las posibilidades de las aplicaciones móviles para entornos universitarios se presentan amplias.  Cada universidad intenta tener su propia aplicación siguiendo un patrón similar, puesto que todas parten de necesidades similares. Realizando una investigación general de las aplicaciones disponibles en el mercado observamos que estas aplicaciones se centran en ofrecer servicios propios (servicio de correo, Moodle, chat entre usuarios, etc.), mantener al alumnado informado y agilizarle los trámites mayoritariamente. 
+Actualmente las posibilidades de las aplicaciones móviles para entornos universitarios se presentan amplias.  Cada universidad intenta tener su propia aplicación siguiendo un patrón similar, puesto que todas parten de necesidades similares. Realizando una investigación general de las aplicaciones disponibles en el mercado observamos que estas aplicaciones se centran en ofrecer servicios propios (servicio de correo, moodle, chat entre usuarios, etc.), mantener al alumnado informado y agilizarle los trámites mayoritariamente. 
 
 En un principio, estas aplicaciones se enfocaban a atraer estudiantes, centrándose en la calidad de la universidad y mostrando las posibilidades que ofrecían. Sin embargo, con el paso de los años y el desarrollo creciente de las aplicaciones móviles, se muestra un cambio en esta estrategia. Ahora las aplicaciones tienen una doble función y no sólo buscan el acceso de nuevos estudiantes, sino que también intentan mejorar la experiencia del alumnado ya matriculado y acercar a los nuevos a la experiencia de la universidad. 
 Algunos ejemplos posibles los encontramos en el marketplace de Google \cite{URL::galileo, URL::valladolid, URL::oviedo}
+%\begin{itemize}
+%\item \cite{URL::galileo}
+%\item \cite{URL::valladolid}
+%\item \cite{URL::oviedo}
+%\end{itemize}
 
 
 Uno de los hechos que podemos observar es que las universidades están intentando obtener una solución rápida para desarrollar su app. Una de estas soluciones es la creación de plantillas web optimizadas de su sitio web, lo que podemos considerar una opción rápida con un coste bajo.
@@ -71,7 +76,7 @@ Como interesados podríamos destacar:
 	\label{fig:beaconLocation}
 \end{figure}
 
-El funcionamiento sería el siguiente: el usuario transita por las inmediaciones del campus universitario. El usuario accede al sistema de navegación dentro de la aplicación, la cual le muestra entonces su ubicación como un punto de color sobre el mapa del campus. Este mapa tiene marcados puntos de interés que contienen información de diferente tipo dependiendo del punto marcado: nombre, historia, página web, teléfono de contacto, trámites asociados... son algunos de los datos que podría mostrar. El mapa se va actualizando dependiendo de la posición del usuario permitiendo volver a la vista más alejada en cualquier momento para una visualización más general.
+El funcionamiento sería el siguiente: el usuario transita por las inmediaciones del campus universitario. El usuario accede al sistema de navegación dentro de la aplicación, la cual le muestra entonces el indocándole  en todo momento su ubicación como un punto de color sobre el mapa del campus. Este mapa tiene marcados puntos de interés que contienen información de diferente tipo dependiendo del punto marcado: nombre, historia, página web, teléfono de contacto, trámites asociados... son algunos de los datos que podría mostrar. El mapa se va actualizando dependiendo de la posición del usuario permitiendo volver a la vista más alejada en cualquier momento para una visualización más general.
 
 
 \subsection{Descarga automática de material} \label{sec:descargaautomatica}
@@ -102,15 +107,15 @@ El funcionamiento sería el siguiente: el alumnado transita los interiores de la
 
 \subsection{Despacho del profesorado e información}
 
-El funcionamiento podría ser abarcado de dos maneras. Por un lado, podría utilizarse para proveer al alumnado de información acerca del grupo de despachos, aclarando que profesorado tiene el despacho en la zona, horario de tutorías, correo electrónico de contacto, horario de corrección de exámenes, etc. De esta manera el alumnado al acercarse a la zona sería capaz de acceder a información de todo el profesorado, o si buscase a alguno en particular, la aplicación le daría la opción de elegir su nombre de una lista y simplemente comprobar si tiene su despacho en esa zona. 
+El funcionamiento podría abarcarse de dos maneras. Por un lado, podría utilizarse para proveer al alumnado de información acerca del grupo de despachos, aclarando que profesorado tiene el despacho en la zona, horario de tutorías, correo electrónico de contacto, horario de corrección de exámenes, etc. De esta manera el alumnado al acercarse a la zona sería capaz de acceder a información de todo el profesorado, o si buscase a alguno en particular, la aplicación le daría la opción de elegir su nombre de una lista y simplemente comprobar si tiene su despacho en esa zona. 
 
-Por otro lado, este caso de uso podría ampliarse para proporcionar una información adicional, comprobando si el profesorado está en la zona en ese momento y se encuentra disponible. El profesor tendrá un perfil de la aplicación con un código identificativo que le distingue de los demás profesores. Estos datos se guardarían en un servicio externo, y la app sería la encargada acceder a este servicio consultando las entradas y salidas del profesorado. De esta manera el alumnado sería capaz de saber cuando el profesor se encuentra disponible en las cercanías mediante la aplicación. En cuanto al estado de disponibilidad, sería un dato que actualizaría el profesor desde su perfil en la aplicación. 
+Por otro lado, este caso de uso podría ampliarse para proporcionar una información adicional, comprobando si el profesorado está en la zona en ese momento y se encuentra disponible. El profesor tendrá un perfil de la aplicación con un código identificativo que le distingue de los demás profesores. Estos datos se guardarían en un servicio externo, y la app sería la encargadada acceder a este servicio consultando las entradas y salidas del profesorado. De esta manera el alumnado sería capaz de saber cuando el profesor se encuentra disponible en las cercanías mediante la aplicación. En cuanto al estado de disponibilidad, sería un dato que actualizaría el profesor desde su perfil en la aplicación. 
 
 \subsection{Información y descuentos para usuarios de la app}
 
 Este caso de uso no solo dependería de la universidad, sino de establecimientos comerciales interesados. La idea sería la siguiente: la universidad en colaboración con un establecimiento comercial le entrega un beacon. La aplicación contaría con un perfil para el dueño del establecimiento, donde sería capaz de introducir información que desea que se muestre al usuario al pasar cerca de su establecimiento, mensajes de información, descuentos u ofertas especiales por ejemplo. 
 
-El usuario al pasar por las inmediaciones del establecimiento recibe en su aplicación una notificación del establecimiento con la información introducida por el dueño anteriormente. Al aceptar la notificación, el usuario podría ser redirigido a la página web del establecimiento para ver las ofertas. En cualquier caso el establecimiento ha conseguido captar la atención de un posible cliente, y el usuario se beneficiaría de ofertas y descuentos. 
+El usuario al pasar por las inmediaciones del establecimeinto recibe en su aplicación una notificación del establecimiento con la información introducida por el dueño anteriormente. Al aceptar la notificación, el usuario podría ser redirigido a la página web del establecimiento para ver las ofertas. En cualquier caso el establecimiento ha conseguido captar la atención de un posible cliente, y el usuario se benefiaría de ofertas y descuentos. 
 
 \subsection{Control de asistencia}
 
@@ -139,4 +144,4 @@ En un ámbito más recreativo, se podría tener en cuenta el uso de los beacons 
 
 Uno de los transportes más utilizados por el alumnado de la universidad es el autobús. Este medio de transporte puede llegar a ser el día a día de muchos de los estudiantes que no cuentan con vehículo propio o que simplemente prefieren utilizar este medio de transporte. 
 
-Este caso de uso contempla lo siguiente: el estudiante llega a una parada de autobús y utilizando su dispositivo móvil, consulta los autobuses que van a pasar por la parada. La aplicación le permite obtener información de los diferentes autobuses, el itinerario y el tiempo restante para que llegue a la parada.  Asimismo enlazaría con la web de la compañía de transporte para información adicional sobre líneas e itinerarios.
+Este caso de uso contempla lo siguiente: el estudiante llega a una parada de autobus y utilizando su dispositivo móvil, consulta los autobuses que van a pasar por la parada. La aplicación le permite obtener información de los diferentes autobuses, el itinerario y el tiempo restante para que llegue a la parada.  Asimismo enlazaría con la web de la compañía de transporte para información adicional sobre líneas e itinerarios.

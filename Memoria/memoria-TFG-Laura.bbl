@@ -97,6 +97,12 @@ Página web de eventos de la universidad de la laguna.
   2012.
 \newblock [Disponible electrónicamente; Último acceso junio de 2016].
 
+\bibitem{URL::GPS}
+Sistema de posicionamiento global.
+\newblock
+  \url{https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global}.
+\newblock [Disponible electrónicamente; Último acceso junio de 2016].
+
 \bibitem{URL::Gradle}
 Gradle.
 \newblock \url{http://gradle.org/}, 2007.

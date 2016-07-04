@@ -21,45 +21,45 @@ Warning--to sort, need author or key in URL::valladolid
 Warning--to sort, need author or key in URL::oviedo
 Warning--to sort, need author or key in URL::trilateracion
 Warning--to sort, need author or key in URL::licencia
-You've used 31 entries,
+You've used 32 entries,
             2118 wiz_defined-function locations,
-            669 strings with 8412 characters,
-and the built_in function-call counts, 5786 in all, are:
-= -- 582
-> -- 103
+            674 strings with 8533 characters,
+and the built_in function-call counts, 5953 in all, are:
+= -- 599
+> -- 104
 < -- 0
-+ -- 55
++ -- 56
 - -- 24
-* -- 157
-:= -- 811
-add.period$ -- 103
-call.type$ -- 31
-change.case$ -- 117
+* -- 161
+:= -- 830
+add.period$ -- 106
+call.type$ -- 32
+change.case$ -- 121
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 217
-empty$ -- 702
+cite$ -- 39
+duplicate$ -- 224
+empty$ -- 725
 format.name$ -- 24
-if$ -- 1370
+if$ -- 1412
 int.to.chr$ -- 0
-int.to.str$ -- 31
+int.to.str$ -- 32
 missing$ -- 0
-newline$ -- 168
+newline$ -- 173
 num.names$ -- 24
-pop$ -- 262
+pop$ -- 271
 preamble$ -- 1
-purify$ -- 86
+purify$ -- 89
 quote$ -- 0
-skip$ -- 193
+skip$ -- 199
 stack$ -- 0
-substring$ -- 155
-swap$ -- 31
+substring$ -- 160
+swap$ -- 32
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 124
+type$ -- 128
 warning$ -- 7
 while$ -- 24
-width$ -- 33
-write$ -- 313
+width$ -- 34
+write$ -- 322
 (There were 11 warnings)

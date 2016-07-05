@@ -1,12 +1,4 @@
-package com.bulletpoint.ull.bulletpoint.beaconInterfaces;
-
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
-/**
- * The class BeaconBusStop, storing the information.
- */
+//The class BeaconBusStop, stores the information that relates each beacon to a stop identifier.
 public class BeaconBusStop {
 
     private static final Map<String, String> stopsMapId;

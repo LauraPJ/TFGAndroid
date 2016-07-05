@@ -20,7 +20,7 @@ Como ya hemos mencionado previamente, estos casos de uso se incluyen como parte 
 
 A continuación se desglosarán los distintos casos de uso en los que tendremos que pensar de ahora en adelante como módulos, junto con la explicación del caso de uso y su funcionamiento se incluirán algunos de los detalles más importantes de la implementación de cada uno.
 
-\subsection{Localización de transporte público, horarios e información de la parada}
+\subsection{Localización de transporte público, horarios e \\información de la parada}
 
 \subsubsection{Objetivo}
 
@@ -41,34 +41,29 @@ En este caso, sería necesario colocar un beacon en cada parada de autobuses. De
 \subsubsection{Funcionamiento}
 
 
-Mediante el uso de los beacons, permitimos a la aplicación identificar en que parada se encuentra el usuario. La aplicación asocia la MAC \ref{el:mac} de un beacon con el número identificativo de la parada. Este número identificativo de la parada es lo que utiliza TITSA para identificar sus paradas en la API y en toda su web. En el listado \ref{code:beaconbusstop}
+Mediante el uso de los beacons, permitimos a la aplicación identificar en que parada se encuentra el usuario. La aplicación asocia la MAC \ref{el:mac} de un beacon con el número identificativo de la parada. Este número identificativo de la parada es lo que utiliza TITSA para identificar sus paradas en la API y en toda su web. 
 
-\vspace{5mm}
+
+La aplicación ha sido programada enlazando los números identificativos de la parada con la dirección MAC de los beacons. En el listado \ref{code:beaconbusstop} se puede apreciar como se relaciona cada MAC con el número identificativo de la parada.
+
 
 \lstinputlisting[float, floatplacement=H,caption={\textit{BusBeaconStop}. Esta clase contiene la información que asocia cada MAC con el ID de la parada de TITSA. Añadir un nuevo beacon a una parada implica añadir un nuevo elemento a \textit{stopsMapId}.}, label={code:beaconbusstop}]
 {listings/BeaconBusStop.java} %% LISTING
 
-\vspace{5mm}
 
-La aplicación ha sido programada enlazando los números identificativos de la parada con la dirección MAC de los beacons. Cuando la aplicación detecta un beacon, es capaz de reconocer la parada en la que se encuentra el usuario. Una vez la aplicación conoce los datos de la parada, se procede a realizar dos peticiones de comunicación con el servicio de TITSA: 
+Cuando la aplicación detecta un beacon, es capaz de reconocer la parada en la que se encuentra el usuario. Una vez la aplicación conoce los datos de la parada, se procede a realizar dos peticiones de comunicación con el servicio de TITSA: 
 
 
 \begin{itemize}
 \item La primera petición se hace sobre la API de TITSA y nos proporciona la información de los autobuses y el tiempo restante para que llegue dicho autobús a la parada. Cabe destacar que para poder utilizar esta API se contactó con TITSA, cuyo personal nos proporcionó una API KEY para poder trabajar con ella. Podemos ver el método principal en el listado \ref{code:basedOnLineNumber}.
-
-\vspace{5mm}
-\lstinputlisting[float, floatplacement=H,caption={El método \textit{getTimetablesBasedOnLineNumber()} del cliente de TITSA se encarga de obtener los datos de su API y devolver una lista de llegadas.}, label={code:basedOnLineNumber}]
-{listings/HttpClientTitsa.java} %% LISTING
-\vspace{5mm}
-
 \item La segunda petición se realiza sobre la web de TITSA directamente. El objetivo de esta petición es obtener para cada autobús la información de su recorrido. Para ello se obtiene el código de la página en HTML extrayendo la información relativa a su itinerario. La información no se encuentra en un formato óptimo en algunos casos, pero esta información proviene de TITSA y ofrece una información necesaria para usuario. 
 \end{itemize}
 
-\lstinputlisting[float, floatplacement=H, caption={La clase \textit{Arrival} donde quedan contenidos los datos de cada llegada.}, label={code:arrival}]
-{listings/Arrival.java} %% LISTING
 
 Aparte de esta información, por cada autobús se incluye un enlace a modo de botón que remite al usuario a la página web de TITSA con el identificador de la línea. Así el usuario puede obtener más información adicional en caso de precisarla.
 
+\lstinputlisting[float, floatplacement=H, caption={La clase \textit{Arrival} donde quedan contenidos los datos de cada llegada.}, label={code:arrival}]
+{listings/Arrival.java} %% LISTING
 
 En un principio nuestra idea era utilizar simplemente la API de TITSA, puesto que se creía que proporcionaría toda esta información; sin embargo, en algunos casos los destinos no se correspondían con la realidad y las rutas aparecían erróneas. Ante esta situación, se contactó con personal de  TITSA involucrado en el desarrollo de esta API quien nos comentó que esto ocurría en algunos casos por la manera en la que estaba planteada la API.
 
@@ -77,14 +72,20 @@ La solución que se adoptó, fue utilizar ambos métodos para obtener la informa
 
 
 En el primer método, utilizando una librería de peticiones HTTP, se envía una consulta por GET a la API de TITSA que devuelve una respuesta en XML. Esta respuesta se parsea con un handler de XML (véase Listado \ref{code:handler}). 
-
+\vspace{5mm}
 \lstinputlisting[float, floatplacement=H,caption={El handler se encarga de transformar el fichero XML en elementos de tipo \textit{Arrival} (véase Listado \ref{code:arrival}).}, label={code:handler}]
 {listings/XmlHandler.java} %% LISTING
 
+
 Al mismo tiempo, se inicia la petición a la página de TITSA y utilizando la librería Jsoup \cite{URL::Jsoup}, se obtiene el contenido de la página web. De este contenido en HTML, recopilamos únicamente el recorrido de los autobuses y el resto se descarta como podemos ver en el listado \ref{code:jsoup}. Esta petición es bastante más pesada que la del XML previa, ya que tiene que obtener todo el contenido de la página web en la que aparece el desglose del itinerario en formato HTML. El parseo de la página también es más lento que en el paso previo, ya que debe ir elemento por elemento iterando en los elementos hijos del HTML.
 
-\lstinputlisting[float, floatplacement=T,caption={El método \textit{getCorrectRoute()} nos permite obtener el itinerario correcto del autobús.}, label={code:jsoup}]
+\lstinputlisting[float, floatplacement=H,caption={El método \textit{getTimetablesBasedOnLineNumber()} del cliente de TITSA se encarga de obtener los datos de su API y devolver una lista de llegadas.}, label={code:basedOnLineNumber}]
+{listings/HttpClientTitsa.java} %% LISTING
+
+\lstinputlisting[float, floatplacement=H,caption={El método \textit{getCorrectRoute()} nos permite obtener el itinerario correcto del autobús.}, label={code:jsoup}]
 {listings/HttpClientTitsaJsoup.java} %% LISTING
+
+Utilizando ambos conjuntos de datos, se va creando una estructura con los mismos, donde se almacena la información sobre cada elemento. En última instancia vamos añadiéndolos a la vista utilizando un adaptador y una estructura para visualizarlos.
 
 \begin{figure}[H]
 	\centering
@@ -92,9 +93,6 @@ Al mismo tiempo, se inicia la petición a la página de TITSA y utilizando la li
 	\caption{\BulletPoint{} permite conocer en tiempo real, autobuses que se acercan a la parada, junto con su destino y tiempo de llegada de la parada identificada por un beacon.}
 	\label{fig:autobuses}
 \end{figure}
-
-Utilizando ambos conjuntos de datos, se va creando una estructura con los mismos, donde se almacena la información sobre cada elemento. En última instancia vamos añadiéndolos a la vista utilizando un adaptador y una estructura para visualizarlos.
-
 
 \subsubsection{Dificultades}
 
@@ -160,7 +158,7 @@ La petición se realiza utilizando la misma librería de peticiones HTTP que en 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=60mm,height=100mm]{Eventos}
-	\caption{Podemos conocer eventos asociados a un RSS del portal web.}
+	\caption{Usando \BulletPoint{} podemos conocer eventos asociados a un RSS del portal web.}
 	\label{fig:eventos}
 \end{figure}
 
@@ -198,19 +196,20 @@ Para almacenar los datos del usuario, se ha hecho uso de la API de preferencias 
 \lstinputlisting[float, floatplacement=H, caption={Para cargar la pantalla de preferencias de un fichero XML en el fragmento \textit{Settings}.},label={code:loadpreferences}]
 {listings/SettingsActivity.java} %% LISTING
 
-\vspace{5mm}
 \lstinputlisting[float, floatplacement=H,language=xml, caption={El fichero XML de donde se cargan todas las preferencias.},label={code:xmlpreferences}]
 {listings/preferences.xml} %% LISTING
-\vspace{5mm}
 
 En cuanto al área de acción a partir de la cual es posible registrar la asistencia, se ha optado por establecer un perímetro dentro del aula delimitado por las paredes de la misma, descartando cierto margen y de manera que el aula quede cubierta y los exteriores no se tengan en cuenta. 
 
 \subsubsection{Despliegue}
 
-En este caso, para poder realizar este proceso es necesario utilizar la trilateración \cite{URL::trilateracion} por lo que, es necesario desplegar al menos 3 beacons. Para las pruebas se ha utilizado el aula 2.1 del Edificio de Ingeniería Informática. Estos beacons no tienen que ser necesariamente por aula ya cada beacon cubre un área de 70 metros de radio aproximadamente; teniendo en cuenta que las paredes crean interferencias en la señal, probablemente se podrían utilizar 3 beacons para cubrir dos aulas, pero habría que hacer un estudio de la localización y las interferencias para poder asegurarlo. 
+En este caso, para poder realizar este proceso es necesario utilizar la trilateración \cite{URL::trilateracion} por lo que, es necesario desplegar al menos 3 beacons. Para las pruebas se ha utilizado el aula 2.1 del Edificio de Ingeniería Informática. 
+
+\vspace{5mm}
+
+Estos beacons no tienen que ser necesariamente por aula ya cada beacon cubre un área de 70 metros de radio aproximadamente; teniendo en cuenta que las paredes crean interferencias en la señal, probablemente se podrían utilizar 3 beacons para cubrir dos aulas, pero habría que hacer un estudio de la localización y las interferencias para poder asegurarlo. 
 
 \subsubsection{Funcionamiento}
-
 
 En cuanto se accede al módulo de asistencia, la aplicación comienza a escanear las inmediaciones buscando beacons. Cuando detecta más de 2 beacons, la aplicación carga la imagen de dicha localización y comprueba que el alumno se encuentra dentro de la zona delimitada para registrar la asistencia, listado \ref{code:scanAtt}.
 
@@ -223,6 +222,8 @@ En cuanto se accede al módulo de asistencia, la aplicación comienza a escanear
 
 \lstinputlisting[float, floatplacement=H, caption={Utilizando \textit{ScanFragment} se comprueba que el usuario se encuentra dentro de la zona delimitada.},label={code:scanAtt}]
 {listings/scanAtt.java} %% LISTING
+
+\vspace{10mm}
 
 Si no se encuentra en la zona delimitada, igualmente la aplicación muestra su ubicación en el mapa para que pueda corregir su posición. Una vez que acceda al área, se muestra un mensaje de confirmación con el aula en la que se encuentra. En este momento se debe confirmar (Véase Figura \ref{fig:confirmarAsistencia}) pulsando un botón de que el usuario desea registrar la asistencia. Previamente el usuario ha debido introducir sus datos en la aplicación y éstos deben estar almacenados. Estos datos junto con la dirección MAC del dispositivo desde el cual se envía la petición de registro son los que utiliza la aplicación. Otro control es almacenar la hora junto con los demás datos cuando se confirme la asistencia, asegurándonos así de que realmente el usuario ha estado en el aula a dicha hora.
 
